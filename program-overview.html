@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSK Redesign | Accessibility Ready</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <style>
+        .high-contrast {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+        }
+
+
+        .high-contrast section,
+        .high-contrast div,
+        .high-contrast header,
+        .high-contrast footer,
+        .high-contrast nav {
+            background-color: #000000 !important;
+            background-image: none !important;
+            border-color: #ffff00 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target text elements */
+        .high-contrast h1,
+        .high-contrast h2,
+        .high-contrast h3,
+        .high-contrast h4,
+        .high-contrast h5,
+        .high-contrast h6,
+        .high-contrast p,
+        .high-contrast span,
+        .high-contrast a,
+        .high-contrast li {
+            color: #ffff00 !important;
+        }
+
+        /* Target Buttons and Interactive Elements */
+        .high-contrast button {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+            border: 2px solid #ffff00 !important;
+        }
+
+        .high-contrast {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target the Accessibility Bar specifically */
+        .high-contrast div[class*="bg-[#f8fafc]"] {
+            background-color: #111111 !important;
+            border-color: #ffff00 !important;
+        }
+
+        /* Fix for all buttons in high contrast */
+        .high-contrast button {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+            border: 1px solid #ffff00 !important;
+        }
+
+        /* Normal state for buttons */
+        .font-btn {
+            transition: all 0.3s ease;
+            color: #475569;
+            /* slate-600 */
+        }
+
+        /* Active state - isse green color fix hoga */
+        .font-btn.active {
+            background-color: #059669 !important;
+            /* emerald-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+
+<body class="transition-all duration-300">
+    <div id="header-placeholder"></div>
+    
+    <section class="pt-24 pb-16 bg-white">
+    <div class="container mx-auto px-6 border-b border-slate-100 pb-12">
+        <h1 class="text-emerald-600 font-black uppercase tracking-widest text-xs mb-4">Detailed Framework</h1>
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+            Program <span class="text-emerald-500">Overview</span> & Structure
+        </h2>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-12">
+            
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold">01</div>
+                <h4 class="text-xl font-black text-slate-900">Universal Screening</h4>
+                <p class="text-slate-500 leading-relaxed text-sm">
+                    Bharat ke har bacche (0-18 years) ki screening ki jati hai. Ismein ghar par (ASHA), Anganwadi aur sarkari schoolon mein Mobile Health Teams (MHT) dwara jaanch shamil hai.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold">02</div>
+                <h4 class="text-xl font-black text-slate-900">Early Intervention</h4>
+                <p class="text-slate-500 leading-relaxed text-sm">
+                    Jaise hi kisi vikaar (4Ds) ka pata chalta hai, bacche ko turant **DEIC (District Early Intervention Centre)** refer kiya jata hai jahan experts ki team unka management karti hai.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold">03</div>
+                <h4 class="text-xl font-black text-slate-900">Tertiary Care</h4>
+                <p class="text-slate-500 leading-relaxed text-sm">
+                    Major surgeries jaise Cardiac ya Cochlear Implants ke liye bacchon ko bade medical institutes mein refer kiya jata hai, jiska poora kharch sarkaar uthati hai.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <div class="bg-white rounded-[3rem] shadow-xl overflow-hidden border border-slate-100">
+            <div class="p-10 border-b border-slate-100">
+                <h3 class="text-2xl font-black text-slate-900">Target Age Groups & Screening Points</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50">
+                            <th class="p-6 text-xs font-black uppercase tracking-widest text-slate-400">Target Group</th>
+                            <th class="p-6 text-xs font-black uppercase tracking-widest text-slate-400">Age Category</th>
+                            <th class="p-6 text-xs font-black uppercase tracking-widest text-slate-400">Screening Tool/Point</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-50">
+                        <tr>
+                            <td class="p-6 font-bold text-slate-900">Newborns (Institutional)</td>
+                            <td class="p-6 text-slate-500">At Birth</td>
+                            <td class="p-6"><span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Delivery Points</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-slate-900">Newborns (Home-based)</td>
+                            <td class="p-6 text-slate-500">Birth to 6 Weeks</td>
+                            <td class="p-6"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">ASHA Visits</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-slate-900">Pre-School Children</td>
+                            <td class="p-6 text-slate-500">6 Weeks to 6 Years</td>
+                            <td class="p-6"><span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Anganwadi Centres</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-slate-900">School Age Children</td>
+                            <td class="p-6 text-slate-500">6 Years to 18 Years</td>
+                            <td class="p-6"><span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Govt / Govt-Aided Schools</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-black text-slate-900 mb-16">The Referral Pathway</h3>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 relative">
+            
+            <div class="flex-1 p-8 rounded-[2rem] bg-slate-50 border border-slate-100 relative">
+                <h5 class="font-black text-emerald-600 mb-2">Identification</h5>
+                <p class="text-xs text-slate-500">Field screening by MHT / ASHA / Facility Doctors</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-right text-slate-200 hidden md:block"></i>
+
+            <div class="flex-1 p-8 rounded-[2rem] bg-emerald-600 text-white relative shadow-xl shadow-emerald-200">
+                <h5 class="font-black text-white mb-2">Diagnosis (DEIC)</h5>
+                <p class="text-xs text-emerald-100">Confirmation and therapeutic management at District level</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-right text-slate-200 hidden md:block"></i>
+
+            <div class="flex-1 p-8 rounded-[2rem] bg-slate-50 border border-slate-100 relative">
+                <h5 class="font-black text-emerald-600 mb-2">Treatment</h5>
+                <p class="text-xs text-slate-500">Free Surgery / Treatment at Tertiary Care Hospitals</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="pt-24 pb-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-emerald-600 font-black uppercase tracking-[0.3em] text-xs mb-4">Core Framework</h1>
+        <h2 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+            Understanding the <span class="text-emerald-500">4 'D's</span>
+        </h2>
+        <p class="text-slate-500 mt-6 max-w-2xl mx-auto text-lg">
+            RBSK covers 32 specific health conditions for early detection and free management.
+        </p>
+    </div>
+</section>
+
+<section class="py-16 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-8">
+            
+            <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 hover:border-blue-500 transition-all group">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-[2rem] flex items-center justify-center text-4xl group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Defects at Birth</h3>
+                        <p class="text-sm text-slate-400 font-bold uppercase tracking-widest">Early Detection at Birth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600 font-medium">
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i> Neural Tube Defect
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i> Down's Syndrome
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i> Cleft Lip & Palate
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i> Club Foot (Talipes)
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i> Congenital Heart Disease
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i> Congenital Cataract
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 hover:border-amber-500 transition-all group">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-20 h-20 bg-amber-50 text-amber-600 rounded-[2rem] flex items-center justify-center text-4xl group-hover:bg-amber-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Deficiencies</h3>
+                        <p class="text-sm text-slate-400 font-bold uppercase tracking-widest">Nutritional Monitoring</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600 font-medium">
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i> Severe Anaemia
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i> Vitamin A Deficiency
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i> Vitamin D Deficiency
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i> Severe Malnutrition (SAM)
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i> Goiter (Iodine Def.)
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 hover:border-red-500 transition-all group">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-20 h-20 bg-red-50 text-red-600 rounded-[2rem] flex items-center justify-center text-4xl group-hover:bg-red-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-virus"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Childhood Diseases</h3>
+                        <p class="text-sm text-slate-400 font-bold uppercase tracking-widest">Health & Hygiene</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600 font-medium">
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i> Skin Conditions (Scabies)
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i> Otitis Media (Ear Inf.)
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i> Rheumatic Heart Disease
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i> Reactive Airway Disease
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i> Dental Caries
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 hover:border-emerald-500 transition-all group">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-20 h-20 bg-emerald-50 text-emerald-600 rounded-[2rem] flex items-center justify-center text-4xl group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Developmental Delays</h3>
+                        <p class="text-sm text-slate-400 font-bold uppercase tracking-widest">Milestones & Growth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600 font-medium">
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i> Vision Impairment
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i> Hearing Impairment
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i> Neuromotor Impairment
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i> Autism / ADHD
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i> Learning Disability
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-white transition-colors">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i> Language Delay
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <h3 class="text-3xl font-black text-center mb-16 text-slate-900">Official List of 32 Conditions</h3>
+        
+        <div class="space-y-4">
+            <div class="grid grid-cols-12 bg-slate-900 text-white p-4 rounded-2xl font-bold text-xs uppercase tracking-widest">
+                <div class="col-span-2">S.No</div>
+                <div class="col-span-7">Health Condition</div>
+                <div class="col-span-3 text-right">Age Group</div>
+            </div>
+            
+            <div class="grid grid-cols-12 bg-white border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all items-center">
+                <div class="col-span-2 font-black text-emerald-600">01</div>
+                <div class="col-span-7 text-slate-700 font-bold">Neural Tube Defect</div>
+                <div class="col-span-3 text-right text-xs font-bold text-slate-400 italic">At Birth</div>
+            </div>
+            
+            <div class="grid grid-cols-12 bg-white border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all items-center">
+                <div class="col-span-2 font-black text-emerald-600">02</div>
+                <div class="col-span-7 text-slate-700 font-bold">Severe Acute Malnutrition (SAM)</div>
+                <div class="col-span-3 text-right text-xs font-bold text-slate-400 italic">6wks - 6yrs</div>
+            </div>
+            </div>
+        
+        <div class="mt-12 text-center">
+            <button class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-emerald-600 transition-all">
+                Download Full Medical PDF <i class="fa-solid fa-download ml-2"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-slate-50">
+    <div class="container mx-auto px-6">
+        
+        <div class="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 overflow-hidden border border-slate-100">
+            
+            <div class="p-8 bg-white border-b border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900">Official Checklist: 32 Health Conditions</h3>
+                    <p class="text-sm text-slate-500 font-medium">Standard list of ailments covered under RBSK Free Management.</p>
+                </div>
+                <button class="flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-slate-900 transition-all shadow-lg shadow-emerald-100">
+                    <i class="fa-solid fa-file-pdf"></i> Download PDF List
+                </button>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50">
+                            <th class="p-5 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100">S.No</th>
+                            <th class="p-5 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100">Category (The 4 'D's)</th>
+                            <th class="p-5 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100">Health Condition Name</th>
+                            <th class="p-5 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 text-right">Reference</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-50">
+                        
+                        <tr class="hover:bg-blue-50/30 transition-colors">
+                            <td class="p-5 font-bold text-slate-400 text-sm">01-09</td>
+                            <td class="p-5">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Defects at Birth</span>
+                            </td>
+                            <td class="p-5 space-y-2">
+                                <div class="text-sm font-bold text-slate-700">1. Neural Tube Defect | 2. Down's Syndrome | 3. Cleft Lip & Palate</div>
+                                <div class="text-sm font-bold text-slate-700">4. Club Foot | 5. DDH | 6. Congenital Cataract</div>
+                                <div class="text-sm font-bold text-slate-700">7. Deafness | 8. Heart Diseases | 9. Retinopathy</div>
+                            </td>
+                            <td class="p-5 text-right"><i class="fa-solid fa-circle-info text-blue-300"></i></td>
+                        </tr>
+
+                        <tr class="hover:bg-amber-50/30 transition-colors">
+                            <td class="p-5 font-bold text-slate-400 text-sm">10-14</td>
+                            <td class="p-5">
+                                <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Deficiencies</span>
+                            </td>
+                            <td class="p-5 space-y-2">
+                                <div class="text-sm font-bold text-slate-700">10. Severe Anaemia | 11. Vitamin A Deficiency (Bitot's Spot)</div>
+                                <div class="text-sm font-bold text-slate-700">12. Vitamin D Deficiency (Rickets) | 13. SAM | 14. Goiter</div>
+                            </td>
+                            <td class="p-5 text-right"><i class="fa-solid fa-circle-info text-amber-300"></i></td>
+                        </tr>
+
+                        <tr class="hover:bg-red-50/30 transition-colors">
+                            <td class="p-5 font-bold text-slate-400 text-sm">15-20</td>
+                            <td class="p-5">
+                                <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Childhood Diseases</span>
+                            </td>
+                            <td class="p-5 space-y-2">
+                                <div class="text-sm font-bold text-slate-700">15. Skin Conditions | 16. Otitis Media (Ear) | 17. Rheumatic Heart Disease</div>
+                                <div class="text-sm font-bold text-slate-700">18. Reactive Airway Disease | 19. Dental Caries | 20. Convulsive Disorders</div>
+                            </td>
+                            <td class="p-5 text-right"><i class="fa-solid fa-circle-info text-red-300"></i></td>
+                        </tr>
+
+                        <tr class="hover:bg-emerald-50/30 transition-colors">
+                            <td class="p-5 font-bold text-slate-400 text-sm">21-29</td>
+                            <td class="p-5">
+                                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Dev. Delays</span>
+                            </td>
+                            <td class="p-5 space-y-2">
+                                <div class="text-sm font-bold text-slate-700">21. Vision | 22. Hearing | 23. Neuromotor | 24. Motor Delay</div>
+                                <div class="text-sm font-bold text-slate-700">25. Cognitive | 26. Language | 27. Autism | 28. Learning Disorder</div>
+                                <div class="text-sm font-bold text-slate-700">29. ADHD (Attention Deficit)</div>
+                            </td>
+                            <td class="p-5 text-right"><i class="fa-solid fa-circle-info text-emerald-300"></i></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="p-5 font-bold text-slate-400 text-sm">30-32</td>
+                            <td class="p-5">
+                                <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Others</span>
+                            </td>
+                            <td class="p-5 space-y-2">
+                                <div class="text-sm font-bold text-slate-700">30. Congenital Hypothyroidism | 31. Sickle Cell Anaemia | 32. Thalassemia</div>
+                            </td>
+                            <td class="p-5 text-right"><i class="fa-solid fa-circle-info text-slate-300"></i></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="p-6 bg-slate-50 text-center">
+                <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                    <i class="fa-solid fa-circle-exclamation mr-2"></i> Screened by Mobile Health Teams (MHT) & Delivery Point Staff
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+        
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-slate-900 mb-2">Bacchon ki 32 Bimariyon ki List</h2>
+            <p class="text-slate-500 font-medium">In sabhi bimariyon ka ilaaj RBSK ke antargat bilkul muft hai.</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <div class="bg-blue-50/50 rounded-3xl p-2 border border-blue-100">
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-baby text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-blue-900">Janam se hone wale Vikaar (Defects)</h3>
+                </div>
+                <div class="bg-white rounded-2xl p-6 grid md:grid-cols-2 gap-y-3 gap-x-8 text-slate-700">
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-blue-500"></i> Kate huye hont ya talu </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-blue-500"></i> Tedhe-medhe pair (Club Foot) </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-blue-500"></i> Janam se dundhla dikhna (Cataract) </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-blue-500"></i> Dil mein chhed ya dil ki bimari </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-blue-500"></i> Sunne mein mushkil (Deafness) </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-blue-500"></i> Reedh ki haddi ki samasya </div>
+                </div>
+            </div>
+
+            <div class="bg-amber-50/50 rounded-3xl p-2 border border-amber-100">
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 bg-amber-500 text-white rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-apple-whole text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-amber-900">Shareer mein hone wali Kami (Deficiencies)</h3>
+                </div>
+                <div class="bg-white rounded-2xl p-6 grid md:grid-cols-2 gap-y-3 gap-x-8 text-slate-700">
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-amber-500"></i> Khoon ki bhari kami (Anaemia) </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-amber-500"></i> Vitamin A aur D ki kami </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-amber-500"></i> Ati-kuposhan (SAM) </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-amber-500"></i> Gale mein gheng-rog (Goiter) </div>
+                </div>
+            </div>
+
+            <div class="bg-red-50/50 rounded-3xl p-2 border border-red-100">
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 bg-red-600 text-white rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-virus text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-red-900">Bacchon ki Aam Bimariyan (Diseases)</h3>
+                </div>
+                <div class="bg-white rounded-2xl p-6 grid md:grid-cols-2 gap-y-3 gap-x-8 text-slate-700">
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-red-500"></i> Daanton mein kida lagna </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-red-500"></i> Kaan ka behna ya infection </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-red-500"></i> Tvacha (Skin) ki bimariyan </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-red-500"></i> Mirgi ya daure padna </div>
+                </div>
+            </div>
+
+            <div class="bg-emerald-50/50 rounded-3xl p-2 border border-emerald-100">
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 bg-emerald-600 text-white rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-emerald-900">Vikaas mein deri (Delays)</h3>
+                </div>
+                <div class="bg-white rounded-2xl p-6 grid md:grid-cols-2 gap-y-3 gap-x-8 text-slate-700">
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-emerald-500"></i> Chalne aur Bolne mein deri </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-emerald-500"></i> Padhne-likhne mein mushkil </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-emerald-500"></i> Dhyan na laga pana (ADHD) </div>
+                    <div class="flex items-center gap-2"> <i class="fa-solid fa-check text-emerald-500"></i> Samajik vyavhaar (Autism) </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-12 bg-slate-900 rounded-[2.5rem] p-8 text-center">
+            <p class="text-white text-lg mb-6">Kya aapke bacche mein inme se koi bhi lakshan dikh rahe hain?</p>
+            <a href="tel:102" class="inline-flex items-center gap-3 bg-emerald-500 text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-emerald-400 transition-all">
+                <i class="fa-solid fa-phone-volume"></i> 102 par Call Karein
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="pb-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-2xl transition-all group">
+                <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-100">
+                    <i class="fa-solid fa-baby text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-4">Defects at Birth</h3>
+                <ul class="space-y-2 text-sm text-slate-600 font-medium">
+                    <li>• Neural Tube Defect</li>
+                    <li>• Down's Syndrome</li>
+                    <li>• Cleft Lip & Palate</li>
+                    <li>• Talipes (Club Foot)</li>
+                    <li>• Developmental Dysplasia of Hip</li>
+                    <li>• Congenital Cataract</li>
+                    <li>• Congenital Deafness</li>
+                    <li>• Congenital Heart Diseases</li>
+                    <li>• Retinopathy of Prematurity</li>
+                </ul>
+            </div>
+
+            <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-2xl transition-all">
+                <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-100">
+                    <i class="fa-solid fa-apple-whole text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-4">Deficiencies</h3>
+                <ul class="space-y-2 text-sm text-slate-600 font-medium">
+                    <li>• Anaemia (Severe)</li>
+                    <li>• Vitamin A Deficiency (Bitot's spot)</li>
+                    <li>• Vitamin D Deficiency (Rickets)</li>
+                    <li>• Severe Acute Malnutrition (SAM)</li>
+                    <li>• Goiter / Iodine Deficiency</li>
+                </ul>
+            </div>
+
+            <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-2xl transition-all">
+                <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-100">
+                    <i class="fa-solid fa-virus-covid text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-4">Diseases</h3>
+                <ul class="space-y-2 text-sm text-slate-600 font-medium">
+                    <li>• Skin Conditions (Scabies/Fungal)</li>
+                    <li>• Otitis Media (Ear Infection)</li>
+                    <li>• Rheumatic Heart Disease</li>
+                    <li>• Reactive Airway Disease</li>
+                    <li>• Dental Caries</li>
+                    <li>• Convulsive Disorders</li>
+                </ul>
+            </div>
+
+            <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-2xl transition-all">
+                <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-100">
+                    <i class="fa-solid fa-brain text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-4">Developmental Delays</h3>
+                <ul class="space-y-2 text-sm text-slate-600 font-medium">
+                    <li>• Vision Impairment</li>
+                    <li>• Hearing Impairment</li>
+                    <li>• Neuromotor Impairment</li>
+                    <li>• Motor Delay</li>
+                    <li>• Cognitive Delay</li>
+                    <li>• Language Delay</li>
+                    <li>• Behavior Disorder (Autism)</li>
+                    <li>• Learning Disorder</li>
+                    <li>• ADHD</li>
+                    <li class="text-emerald-600 font-bold mt-2">• Adolescent Health (New)</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="pb-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-8">
+            
+            <div class="p-10 border border-blue-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-3xl flex items-center justify-center text-blue-600">
+                        <i class="fa-solid fa-baby text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Defects at Birth</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Early Detection at Birth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Neural Tube Defect</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Down's Syndrome</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Cleft Lip & Palate</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Club Foot (Talipes)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Congenital Heart Disease</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Congenital Cataract</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-amber-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-amber-100 rounded-3xl flex items-center justify-center text-amber-600">
+                        <i class="fa-solid fa-apple-whole text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Deficiencies</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Nutritional Monitoring</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Severe Anaemia</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Vitamin A Deficiency</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Vitamin D Deficiency</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Severe Malnutrition (SAM)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Goiter (Iodine Def.)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-red-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-red-50 rounded-3xl flex items-center justify-center text-red-600">
+                        <i class="fa-solid fa-virus text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Childhood Diseases</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Health & Hygiene</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Skin Conditions (Scabies)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Otitis Media (Ear Inf.)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Rheumatic Heart Disease</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Reactive Airway Disease</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Dental Caries</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-emerald-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-emerald-50 rounded-3xl flex items-center justify-center text-emerald-600">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Developmental Delays</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Milestones & Growth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Vision Impairment</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Hearing Impairment</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Neuromotor Impairment</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Autism / ADHD</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Learning Disability</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Language Delay</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="pb-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-8">
+            
+            <div class="p-10 border border-blue-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-3xl flex items-center justify-center text-blue-600">
+                        <i class="fa-solid fa-baby text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Defects at Birth</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Early Detection at Birth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Neural Tube Defect</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Down's Syndrome</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Cleft Lip & Palate</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Club Foot (Talipes)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Congenital Heart Disease</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Congenital Cataract</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-amber-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-amber-100 rounded-3xl flex items-center justify-center text-amber-600">
+                        <i class="fa-solid fa-apple-whole text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Deficiencies</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Nutritional Monitoring</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Severe Anaemia</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Vitamin A Deficiency</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Vitamin D Deficiency</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Severe Malnutrition (SAM)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-amber-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Goiter (Iodine Def.)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-red-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-red-50 rounded-3xl flex items-center justify-center text-red-600">
+                        <i class="fa-solid fa-virus text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Childhood Diseases</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Health & Hygiene</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Skin Conditions (Scabies)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Otitis Media (Ear Inf.)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Rheumatic Heart Disease</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Reactive Airway Disease</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-red-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Dental Caries</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-emerald-100 rounded-[3rem] bg-white shadow-sm">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-emerald-50 rounded-3xl flex items-center justify-center text-emerald-600">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Developmental Delays</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Milestones & Growth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Vision Impairment</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Hearing Impairment</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Neuromotor Impairment</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Autism / ADHD</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Learning Disability</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                        <span class="text-sm font-bold text-slate-700">Language Delay</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="pb-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-8">
+            
+            <div class="p-10 border border-blue-100 rounded-[3rem] bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-3xl flex items-center justify-center text-blue-600">
+                        <i class="fa-solid fa-baby text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Defects at Birth</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Early Detection at Birth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Neural Tube Defect</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Down's Syndrome</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Cleft Lip & Palate</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Talipes (Club Foot)</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Developmental Dysplasia of Hip</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Congenital Cataract</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Congenital Deafness</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Congenital Heart Disease</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-blue-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Retinopathy of Prematurity</span></div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-amber-100 rounded-[3rem] bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-amber-100 rounded-3xl flex items-center justify-center text-amber-600">
+                        <i class="fa-solid fa-apple-whole text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Deficiencies</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Nutritional Monitoring</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Anaemia (Severe)</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Vitamin A Deficiency</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Vitamin D Deficiency</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Severe Acute Malnutrition</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-amber-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Goiter / Iodine Deficiency</span></div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-red-100 rounded-[3rem] bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-red-50 rounded-3xl flex items-center justify-center text-red-600">
+                        <i class="fa-solid fa-virus text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Diseases</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Health & Hygiene</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Skin Conditions (Scabies)</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Otitis Media (Ear Inf.)</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Rheumatic Heart Disease</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Reactive Airway Disease</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Dental Caries</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Convulsive Disorders</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-red-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Tuberculosis (Adolescent)</span></div>
+                </div>
+            </div>
+
+            <div class="p-10 border border-emerald-100 rounded-[3rem] bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="w-16 h-16 bg-emerald-50 rounded-3xl flex items-center justify-center text-emerald-600">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900">Developmental Delays</h3>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Milestones & Growth</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Vision Impairment</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Hearing Impairment</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Neuromotor Impairment</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Motor Delay</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Cognitive Delay</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Language Delay</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Behavior Disorder (Autism)</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Learning Disorder</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Attention Deficit Hyperactivity</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Congenital Hypothyroidism</span></div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100"><i class="fa-solid fa-circle-check text-emerald-500 text-[10px]"></i><span class="text-xs font-bold text-slate-700">Sickle Cell Anaemia / Beta Thalassemia</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<div id="footer-placeholder"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

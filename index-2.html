@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSK Redesign | Accessibility Ready</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <style>
+        .high-contrast {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+        }
+
+
+        .high-contrast section,
+        .high-contrast div,
+        .high-contrast header,
+        .high-contrast footer,
+        .high-contrast nav {
+            background-color: #000000 !important;
+            background-image: none !important;
+            border-color: #ffff00 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target text elements */
+        .high-contrast h1,
+        .high-contrast h2,
+        .high-contrast h3,
+        .high-contrast h4,
+        .high-contrast h5,
+        .high-contrast h6,
+        .high-contrast p,
+        .high-contrast span,
+        .high-contrast a,
+        .high-contrast li {
+            color: #ffff00 !important;
+        }
+
+        /* Target Buttons and Interactive Elements */
+        .high-contrast button {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+            border: 2px solid #ffff00 !important;
+        }
+
+        .high-contrast {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target the Accessibility Bar specifically */
+        .high-contrast div[class*="bg-[#f8fafc]"] {
+            background-color: #111111 !important;
+            border-color: #ffff00 !important;
+        }
+
+        /* Fix for all buttons in high contrast */
+        .high-contrast button {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+            border: 1px solid #ffff00 !important;
+        }
+
+        /* Normal state for buttons */
+        .font-btn {
+            transition: all 0.3s ease;
+            color: #475569;
+            /* slate-600 */
+        }
+
+        /* Active state - isse green color fix hoga */
+        .font-btn.active {
+            background-color: #059669 !important;
+            /* emerald-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+
+<body class="transition-all duration-300">
+
+<div id="header-placeholder"></div>
+
+    <section
+        class="relative w-full min-h-[550px] md:min-h-[600px] bg-[#064e3b] overflow-hidden flex items-center py-12">
+
+        <div class="absolute top-0 left-0 w-full h-full opacity-40 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-600 rounded-full blur-[150px]">
+            </div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-lime-400 rounded-full blur-[120px] opacity-20"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <div
+                            class="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/30 px-3 py-1.5 rounded-full">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-emerald-300 text-[10px] font-bold uppercase tracking-widest">National
+                                Child Health Mission</span>
+                        </div>
+
+                        <h1 class="text-4xl md:text-6xl font-black text-white leading-[1.1] tracking-tight">
+                            Healthy Kids, <br>
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-lime-300">Stronger
+                                India</span>
+                        </h1>
+
+                        <p class="text-base md:text-lg text-emerald-100/80 max-w-md leading-relaxed font-medium">
+                            RBSK ensures universal health screening for children from birth to 18 years, providing free
+                            treatment and early intervention services.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-emerald-500 hover:bg-emerald-600 text-[#064e3b] px-8 py-3 rounded-full font-bold shadow-xl shadow-emerald-500/30 transition-all transform active:scale-95 text-sm flex items-center gap-2">
+                            Get Started <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                        <button
+                            class="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-full font-bold transition-all backdrop-blur-sm text-sm">
+                            Referral Tracking
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-8 pt-4 border-t border-white/10 w-fit">
+                        <div class="text-white">
+                            <p class="text-3xl font-black">12.4 Cr+</p>
+                            <p class="text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Screened</p>
+                        </div>
+                        <div class="w-px h-10 bg-white/20"></div>
+                        <div class="text-white">
+                            <p class="text-3xl font-black">30+</p>
+                            <p class="text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Conditions
+                                Covered</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:flex justify-center items-center scale-90">
+                    <div
+                        class="relative w-[420px] h-[420px] rounded-full border border-white/10 flex items-center justify-center backdrop-blur-md bg-white/5 shadow-2xl">
+
+                        <div class="text-center p-10">
+                            <div
+                                class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/40">
+                                <i class="fa-solid fa-child-reaching text-white text-3xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-black text-white">4 'D's</h2>
+                            <p class="text-emerald-200 text-[10px] font-bold uppercase tracking-widest mt-1">Health
+                                Priority</p>
+                        </div>
+
+                        <div
+                            class="absolute -top-2 left-8 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-3 rounded-xl shadow-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🏥</span>
+                                <div>
+                                    <p class="text-white font-bold text-[10px]">Defects at Birth</p>
+                                    <p class="text-emerald-400 text-[8px]">Identification</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute top-16 -right-8 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-3 rounded-xl shadow-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🩺</span>
+                                <div>
+                                    <p class="text-white font-bold text-[10px]">Diseases</p>
+                                    <p class="text-emerald-400 text-[8px]">Free Treatment</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute bottom-10 -left-10 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-3 rounded-xl shadow-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🍎</span>
+                                <div>
+                                    <p class="text-white font-bold text-[10px]">Deficiencies</p>
+                                    <p class="text-emerald-400 text-[8px]">Nutrition</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 right-8 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-3 rounded-xl shadow-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🧩</span>
+                                <div>
+                                    <p class="text-white font-bold text-[10px]">Dev. Delays</p>
+                                    <p class="text-emerald-400 text-[8px]">Special Care</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute w-[520px] h-[520px] border border-dashed border-emerald-500/20 rounded-full animate-[spin_40s_linear_infinite]">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <main id="main">
+
+
+
+
+
+
+        <section class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6">
+
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 md:mb-20">
+                    <div class="space-y-6">
+                        <h2 class="text-emerald-600 font-bold uppercase tracking-[0.2em] text-xs md:text-sm">
+                            About the Program
+                        </h2>
+                        <h3 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+                            Comprehensive Care from <br class="hidden md:block">
+                            <span class="text-emerald-600">Birth to 18 Years.</span>
+                        </h3>
+                        <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
+                            Rashtriya Bal Swasthya Karyakram (RBSK) is a pioneering initiative for early identification
+                            of
+                            health conditions and linking them for medical and surgical management, providing holistic
+                            care
+                            for every child in the community.
+                        </p>
+                    </div>
+
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-emerald-50 rounded-[2.5rem] rotate-2 opacity-70 group-hover:rotate-0 transition-transform duration-500">
+                        </div>
+
+                        <div
+                            class="relative bg-white p-3 rounded-[2rem]  border border-slate-100 overflow-hidden transition-transform duration-500 hover:scale-[1.02]">
+                            <img src="assets/images/aboutus.png"
+                                alt="RBSK Early Detection and Intervention Illustration"
+                                class="w-full h-auto rounded-2xl block object-cover">
+
+                            <div
+                                class="absolute bottom-4 right-4 bg-slate-900 text-white px-4 py-2 rounded-xl shadow-xl hidden sm:block border border-white/20">
+                                <p class="text-xs font-bold uppercase tracking-widest opacity-70">Focus Area</p>
+                                <p class="text-lg font-black text-emerald-400">4 'D's</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-emerald-200 transition-all shadow-sm hover:shadow-lg group">
+                        <div
+                            class="w-14 h-14 bg-white text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h4 class="text-2xl font-black text-slate-900 mb-4">Screening Process</h4>
+                        <ul class="space-y-4 text-sm md:text-base text-slate-600">
+                            <li class="flex gap-3">
+                                <span class="text-emerald-500 font-bold">i.</span>
+                                <span><b>CNS:</b> Comprehensive newborn screening performed at delivery points to screen
+                                    for
+                                    birth defects in newborns.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-emerald-500 font-bold">ii.</span>
+                                <span><b>Community Screening:</b> Conducted by Mobile Health Teams (MHT) in Anganwadis
+                                    and
+                                    Government schools.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-emerald-200 transition-all shadow-sm hover:shadow-lg group">
+                        <div
+                            class="w-14 h-14 bg-white text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-hospital-user"></i>
+                        </div>
+                        <h4 class="text-2xl font-black text-slate-900 mb-4">Management & Referral</h4>
+                        <ul class="space-y-4 text-sm md:text-base text-slate-600">
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-check-double text-emerald-500 mt-1"></i>
+                                <span><b>DEIC:</b> Comprehensive management and care under one roof at District Early
+                                    Intervention Centers.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-check-double text-emerald-500 mt-1"></i>
+                                <span><b>Tertiary Care:</b> Specialized surgical management and advanced interventions
+                                    like
+                                    Cochlear implants.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="py-20 bg-white overflow-hidden">
+            <div class="container mx-auto px-6">
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <h2 class="text-emerald-600 font-bold uppercase tracking-[0.2em] text-xs mb-3">Stay Informed
+                        </h2>
+                        <h3 class="text-4xl font-black text-slate-900">News & Latest Updates</h3>
+                    </div>
+                    <a href="#"
+                        class="text-emerald-600 font-bold flex items-center gap-2 hover:gap-4 transition-all group">
+                        View All News <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8">
+
+                    <div
+                        class="lg:col-span-7 relative group cursor-pointer overflow-hidden rounded-[2.5rem] shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=800"
+                            alt="Featured News"
+                            class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent flex flex-col justify-end p-10 text-white">
+                            <span
+                                class="bg-emerald-500 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4">Featured
+                                Announcement</span>
+                            <h4 class="text-3xl font-bold mb-4 leading-tight">National Review Workshop 2026: Enhancing
+                                DEIC Performance Across Districts.</h4>
+                            <p class="text-slate-300 text-sm mb-6 line-clamp-2">The Ministry of Health recently
+                                concluded a three-day workshop focused on digital integration within the RBSK framework
+                                to ensure zero-gap referral tracking.</p>
+                            <div class="flex items-center gap-4 text-xs font-medium text-emerald-400">
+                                <span><i class="fa-regular fa-calendar-check mr-2"></i>March 02, 2026</span>
+                                <span><i class="fa-regular fa-user mr-2"></i>Admin, NHM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 flex flex-col gap-4 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
+
+                        <div
+                            class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-200 transition-all group">
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex flex-col items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-colors">
+                                    <span class="text-emerald-600 font-black text-lg leading-none">28</span>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Feb</span>
+                                </div>
+                                <div class="space-y-1">
+                                    <h5
+                                        class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2">
+                                        New Guidelines for Cochlear Implant Surgeries under RBSK Released.</h5>
+                                    <p class="text-xs text-slate-500">Updated protocols for tertiary care referrals.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-200 transition-all group">
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex flex-col items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-colors">
+                                    <span class="text-emerald-600 font-black text-lg leading-none">25</span>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Feb</span>
+                                </div>
+                                <div class="space-y-1">
+                                    <h5
+                                        class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2">
+                                        Successful 10,000+ Screenings completed in Rural Anganwadis this month.</h5>
+                                    <p class="text-xs text-slate-500">MHT teams achieving record milestones.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-200 transition-all group">
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex flex-col items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-colors">
+                                    <span class="text-emerald-600 font-black text-lg leading-none">20</span>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Feb</span>
+                                </div>
+                                <div class="space-y-1">
+                                    <h5
+                                        class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2">
+                                        Tender Notice: Procurement of New Medical Equipment for DEICs.</h5>
+                                    <p class="text-xs text-slate-500">Official notice for registered vendors.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            /* Custom Scrollbar for News Feed */
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #f1f5f9;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #10b981;
+                border-radius: 10px;
+            }
+        </style>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+
+                <div class="text-center mb-16">
+                    <h2 class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-3">Got Questions?</h2>
+                    <h3 class="text-4xl font-black text-slate-900">Frequently Asked Questions</h3>
+                    <p class="text-slate-500 mt-4">Everything you need to know about the RBSK screening and treatment
+                        process.</p>
+                </div>
+
+                <div class="space-y-4">
+
+                    <div
+                        class="border border-slate-200 rounded-2xl overflow-hidden transition-all hover:border-emerald-300">
+                        <button onclick="toggleFAQ(this)"
+                            class="w-full flex justify-between items-center p-6 text-left bg-slate-50 hover:bg-white transition-colors">
+                            <span class="font-bold text-slate-800 text-lg">What is the age group covered under
+                                RBSK?</span>
+                            <i class="fa-solid fa-chevron-down text-emerald-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 bg-white">
+                            <p class="p-6 text-slate-600 leading-relaxed border-t border-slate-100">
+                                RBSK covers children from birth to 18 years of age. This includes newborns screened at
+                                health facilities, children aged 0-6 years at Anganwadi centers, and school-going
+                                children from 6-18 years in Government and Government-aided schools.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border border-slate-200 rounded-2xl overflow-hidden transition-all hover:border-emerald-300">
+                        <button onclick="toggleFAQ(this)"
+                            class="w-full flex justify-between items-center p-6 text-left bg-slate-50 hover:bg-white transition-colors">
+                            <span class="font-bold text-slate-800 text-lg">What are the "4 Ds" mentioned in the
+                                program?</span>
+                            <i class="fa-solid fa-chevron-down text-emerald-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 bg-white">
+                            <p class="p-6 text-slate-600 leading-relaxed border-t border-slate-100">
+                                The 4 Ds stand for:
+                            <ul class="list-disc ml-5 mt-2 space-y-1">
+                                <li><strong>Defects at Birth:</strong> Neural Tube Defects, Congenital Heart Disease,
+                                    etc.</li>
+                                <li><strong>Deficiencies:</strong> Anaemia, Vitamin A & D deficiency, etc.</li>
+                                <li><strong>Diseases:</strong> Skin conditions, Rheumatic Heart Disease, etc.</li>
+                                <li><strong>Developmental Delays:</strong> Vision/Hearing impairment, Autism, etc.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border border-slate-200 rounded-2xl overflow-hidden transition-all hover:border-emerald-300">
+                        <button onclick="toggleFAQ(this)"
+                            class="w-full flex justify-between items-center p-6 text-left bg-slate-50 hover:bg-white transition-colors">
+                            <span class="font-bold text-slate-800 text-lg">Is the treatment under RBSK free of
+                                cost?</span>
+                            <i class="fa-solid fa-chevron-down text-emerald-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 bg-white">
+                            <p class="p-6 text-slate-600 leading-relaxed border-t border-slate-100">
+                                Yes. All screening, diagnostics, and management services, including major surgeries at
+                                tertiary care hospitals (like heart surgeries or cochlear implants), are provided
+                                completely free of cost to the children identified with the 32 selected health
+                                conditions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border border-slate-200 rounded-2xl overflow-hidden transition-all hover:border-emerald-300">
+                        <button onclick="toggleFAQ(this)"
+                            class="w-full flex justify-between items-center p-6 text-left bg-slate-50 hover:bg-white transition-colors">
+                            <span class="font-bold text-slate-800 text-lg">Where can I get my child screened?</span>
+                            <i class="fa-solid fa-chevron-down text-emerald-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 bg-white">
+                            <p class="p-6 text-slate-600 leading-relaxed border-t border-slate-100">
+                                Screening is conducted at various levels: newborns at delivery points/hospitals,
+                                children (0-6 yrs) at nearest Anganwadi centers by Mobile Health Teams, and older
+                                children (6-18 yrs) at their respective government schools during scheduled team visits.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-12 bg-emerald-50 p-8 rounded-[2rem] text-center border border-emerald-100">
+                    <p class="text-emerald-800 font-medium">Still have questions? Contact your nearest District Early
+                        Intervention Centre (DEIC).</p>
+                    <button class="mt-4 text-emerald-600 font-bold hover:underline flex items-center gap-2 mx-auto">
+                        <i class="fa-solid fa-phone"></i> Find nearest DEIC Center
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function toggleFAQ(element) {
+                const content = element.nextElementSibling;
+                const icon = element.querySelector('i');
+
+                // Close other FAQs if open (Optional)
+                // document.querySelectorAll('.max-h-96').forEach(...)
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = "rotate(0deg)";
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.style.transform = "rotate(180deg)";
+                }
+            }
+        </script>
+
+    </main>
+   <div id="footer-placeholder"></div>
+
+
+
+    <script src="app.js"></script>
+
+    <script>
+
+        function changeFontSize(size) {
+            const html = document.documentElement;
+            if (size === 'small') html.style.fontSize = '14px';
+            else if (size === 'normal') html.style.fontSize = '16px';
+            else if (size === 'large') html.style.fontSize = '20px';
+        }
+
+
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+
+        }
+    </script>
+</body>
+
+</html>

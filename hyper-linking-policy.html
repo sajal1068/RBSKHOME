@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSK Redesign | Accessibility Ready</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <style>
+        .high-contrast {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+        }
+
+
+        .high-contrast section,
+        .high-contrast div,
+        .high-contrast header,
+        .high-contrast footer,
+        .high-contrast nav {
+            background-color: #000000 !important;
+            background-image: none !important;
+            border-color: #ffff00 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target text elements */
+        .high-contrast h1,
+        .high-contrast h2,
+        .high-contrast h3,
+        .high-contrast h4,
+        .high-contrast h5,
+        .high-contrast h6,
+        .high-contrast p,
+        .high-contrast span,
+        .high-contrast a,
+        .high-contrast li {
+            color: #ffff00 !important;
+        }
+
+        /* Target Buttons and Interactive Elements */
+        .high-contrast button {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+            border: 2px solid #ffff00 !important;
+        }
+
+        .high-contrast {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target the Accessibility Bar specifically */
+        .high-contrast div[class*="bg-[#f8fafc]"] {
+            background-color: #111111 !important;
+            border-color: #ffff00 !important;
+        }
+
+        /* Fix for all buttons in high contrast */
+        .high-contrast button {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+            border: 1px solid #ffff00 !important;
+        }
+
+        /* Normal state for buttons */
+        .font-btn {
+            transition: all 0.3s ease;
+            color: #475569;
+            /* slate-600 */
+        }
+
+        /* Active state - isse green color fix hoga */
+        .font-btn.active {
+            background-color: #059669 !important;
+            /* emerald-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+
+<body class="transition-all duration-300">
+    <div id="header-placeholder"></div>
+    <main id="main">
+        <section class="py-20 bg-slate-50 overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2 relative">
+                        <div
+                            class="absolute -top-10 -left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60">
+                        </div>
+                        <div class="relative z-10 p-3 bg-white rounded-[3rem] shadow-2xl border border-slate-100"><img
+                                src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&amp;fit=crop&amp;q=80&amp;w=800"
+                                alt="Secure External Linking" class="rounded-[2.5rem] w-full h-[450px] object-cover">
+                            <div
+                                class="absolute top-8 right-8 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-slate-100 flex items-center gap-2">
+                                <span class="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span><span
+                                    class="text-[10px] font-bold text-slate-600 uppercase tracking-tighter">External
+                                    Links Protocol</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="mb-10">
+                            <div class="flex items-center gap-3 mb-4"><span
+                                    class="h-[3px] w-12 bg-blue-500 rounded-full"></span><span
+                                    class="text-blue-600 font-bold uppercase tracking-[0.2em] text-xs">Official
+                                    Guidelines</span></div>
+                            <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Hyperlinking <span
+                                    class="text-blue-500">Policy</span></h2>
+                        </div>
+                        <div class="space-y-6 text-slate-600 text-base leading-relaxed">
+                            <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm relative group">
+                                <div class="absolute -left-1 top-6 h-10 w-2 bg-blue-500 rounded-r-full"></div>
+                                <p>At many places in this RBSK Web Portal, you will find <strong>links to other
+                                        websites/portals</strong>. These links have been placed for your
+                                    <strong>convenience</strong>.
+                                </p>
+                            </div>
+                            <p class="px-4">Ministry of Health &amp; Family Welfare, Govt. of India is <strong>not in
+                                    any way responsible</strong> for the contents and reliability of the linked websites
+                                and does not necessarily endorse the views expressed by them.</p>
+                            <div
+                                class="flex gap-4 p-6 bg-slate-100/50 rounded-2xl border border-slate-200 border-dashed">
+                                <svg class="w-8 h-8 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                                    </path>
+                                </svg>
+                                <p class="text-sm italic">Mere presence of the link or its listing on this web portal
+                                    should not be assumed as <strong>endorsement of any kind</strong>.</p>
+                            </div>
+                            <div class="p-6 bg-amber-50 rounded-3xl border border-amber-100 text-amber-900">
+                                <p class="font-medium">MoHFW <strong>cannot guarantee</strong> that these links of other
+                                    websites/portals will work all the time. MoHFW has <strong>no control</strong> over
+                                    availability of linked pages.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-10 flex items-center gap-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                            <span>Updated Feb 2026</span><span
+                                class="w-1.5 h-1.5 rounded-full bg-slate-300"></span><span>RBSK Official</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSK Redesign | Accessibility Ready</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>        
+        .high-contrast {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+        }
+        .high-contrast a, .high-contrast button {
+            color: #ffff00 !important;
+            border-color: #ffff00 !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 transition-all duration-300">
+
+    <div class="bg-slate-900 text-white border-b border-slate-700 sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto px-4 h-10 flex justify-between items-center text-[11px] md:text-xs">
+            
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#main" class="hover:text-blue-400 transition">Skip to Main Content</a>
+                <span class="text-slate-600">|</span>
+                <a href="#" class="hover:text-blue-400 transition underline decoration-blue-500">Screen Reader Access</a>
+            </div>
+
+            <div class="flex items-center gap-2 md:gap-6 w-full md:w-auto justify-between md:justify-end">
+                
+                <div class="flex items-center gap-1 bg-slate-800 p-0.5 rounded">
+                    <button onclick="changeFontSize('small')" class="px-2 py-1 hover:bg-slate-700 rounded transition" title="Decrease Font">A-</button>
+                    <button onclick="changeFontSize('normal')" class="px-2 py-1 bg-blue-600 rounded shadow" title="Reset Font">A</button>
+                    <button onclick="changeFontSize('large')" class="px-2 py-1 hover:bg-slate-700 rounded transition" title="Increase Font">A+</button>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleContrast()" class="flex items-center gap-1 border border-slate-600 px-2 py-1 rounded hover:bg-slate-800 transition">
+                        <i class="fa-solid fa-circle-half-stroke text-blue-400"></i>
+                        <span class="hidden sm:inline">Contrast</span>
+                    </button>
+
+                    <div class="relative group">
+                        <select class="bg-slate-800 text-white border border-slate-700 rounded px-2 py-1 outline-none cursor-pointer focus:border-blue-500">
+                            <option>English</option>
+                            <option>हिन्दी</option>
+                            <option>मराठी</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Emblem_of_India.svg" alt="GOI" class="h-12">
+                <div class="h-10 w-[1px] bg-slate-200 hidden sm:block"></div>
+                <div>
+                    <h1 class="font-black text-blue-900 text-xl md:text-2xl leading-none">RBSK</h1>
+                    <p class="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-tighter">Rashtriya Bal Swasthya Karyakram</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden lg:block text-sm font-semibold text-slate-600 hover:text-blue-600">DEIC Locator</a>
+                <button class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg shadow-blue-200 hover:bg-blue-700 transition transform hover:-translate-y-0.5">
+                    Staff Login <i class="fa-solid fa-arrow-right-to-bracket ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative w-full min-h-[700px] bg-[#0f172a] overflow-hidden flex items-center py-20">
+
+    <div class="absolute top-0 left-0 w-full h-full opacity-40 pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-blue-600 rounded-full blur-[180px]"></div>
+        <div class="absolute top-20 right-20 w-80 h-80 bg-emerald-500 rounded-full blur-[150px] opacity-30"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div class="space-y-10">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                        </span>
+                        <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">National Health Mission</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight">
+                        Healthy Childhood, <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Bright Future</span>
+                        <br> for India.
+                    </h1>
+                    
+                    <p class="text-xl text-slate-300 max-w-lg leading-relaxed font-medium">
+                        Ensuring early identification and intervention for children (0-18 years) covering the 4 'D's: Defects, Deficiencies, Diseases, and Developmental Delays.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-5">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold shadow-2xl shadow-blue-600/30 transition-all transform active:scale-95 flex items-center gap-2">
+                        Get Screened Today <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+                    <button class="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 px-10 py-4 rounded-full font-bold transition-all backdrop-blur-sm">
+                        Find DEIC Center
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-10 pt-4">
+                    <div class="text-white">
+                        <p class="text-4xl font-black">12.4 Cr+</p>
+                        <p class="text-[11px] uppercase tracking-widest text-blue-400 font-bold mt-1">Children Screened</p>
+                    </div>
+                    <div class="w-px h-12 bg-white/10"></div>
+                    <div class="text-white">
+                        <p class="text-4xl font-black">384+</p>
+                        <p class="text-[11px] uppercase tracking-widest text-emerald-400 font-bold mt-1">Health Centers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative hidden lg:flex justify-center items-center">
+                <div class="relative w-[500px] h-[500px] rounded-full border border-white/10 flex items-center justify-center backdrop-blur-[2px] bg-white/5 shadow-2xl">
+                    
+                    <div class="text-center p-12">
+                        <div class="w-24 h-24 bg-gradient-to-tr from-blue-600 to-emerald-500 rounded-3xl rotate-12 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-blue-500/20">
+                            <i class="fa-solid fa-stethoscopes text-white text-4xl -rotate-12"></i>
+                        </div>
+                        <h2 class="text-5xl font-black text-white mb-2">4 'D's</h2>
+                        <p class="text-blue-200 font-bold tracking-widest uppercase text-xs">Priority Health Checks</p>
+                    </div>
+
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl flex items-center gap-4 shadow-2xl transform hover:-translate-y-2 transition-transform">
+                        <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center text-white">❤️</div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Birth Defects</p>
+                            <p class="text-white/50 text-[10px]">Early Detection</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute top-1/2 -right-16 -translate-y-1/2 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl flex items-center gap-4 shadow-2xl transform hover:translate-x-2 transition-transform">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white">💊</div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Diseases</p>
+                            <p class="text-white/50 text-[10px]">Free Management</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl flex items-center gap-4 shadow-2xl transform hover:translate-y-2 transition-transform">
+                        <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center text-white">🧠</div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Development</p>
+                            <p class="text-white/50 text-[10px]">Delay Support</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute top-1/2 -left-16 -translate-y-1/2 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl flex items-center gap-4 shadow-2xl transform hover:-translate-x-2 transition-transform">
+                        <div class="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center text-white">🥦</div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Deficiency</p>
+                            <p class="text-white/50 text-[10px]">Nutrition Check</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="absolute w-[600px] h-[600px] border border-dashed border-white/10 rounded-full animate-[spin_30s_linear_infinite]"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="relative w-full min-h-[700px] bg-[#064e3b] overflow-hidden flex items-center py-20">
+
+    <div class="absolute top-0 left-0 w-full h-full opacity-40 pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-emerald-600 rounded-full blur-[180px]"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-lime-400 rounded-full blur-[150px] opacity-20"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div class="space-y-10">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/30 px-4 py-2 rounded-full">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                        </span>
+                        <span class="text-emerald-300 text-xs font-bold uppercase tracking-widest">National Child Health Mission</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight">
+                        Healthy Kids, <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-lime-300">Stronger India</span>
+                        <br> Every Child Counts.
+                    </h1>
+                    
+                    <p class="text-xl text-emerald-100/80 max-w-lg leading-relaxed font-medium">
+                        RBSK ensures universal health screening for children from birth to 18 years, providing free treatment and early intervention services.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-5">
+                    <button class="bg-emerald-500 hover:bg-emerald-600 text-[#064e3b] px-10 py-4 rounded-full font-bold shadow-2xl shadow-emerald-500/30 transition-all transform active:scale-95 flex items-center gap-2">
+                        Get Started <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+                    <button class="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 px-10 py-4 rounded-full font-bold transition-all backdrop-blur-sm">
+                        Referral Tracking
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-10 pt-4 border-t border-white/10 w-fit">
+                    <div class="text-white">
+                        <p class="text-4xl font-black">12.4 Cr+</p>
+                        <p class="text-[11px] uppercase tracking-widest text-emerald-400 font-bold">Screened</p>
+                    </div>
+                    <div class="w-px h-12 bg-white/20"></div>
+                    <div class="text-white">
+                        <p class="text-4xl font-black">30+</p>
+                        <p class="text-[11px] uppercase tracking-widest text-emerald-400 font-bold">Conditions Covered</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative hidden lg:flex justify-center items-center">
+                <div class="relative w-[480px] h-[480px] rounded-full border border-white/10 flex items-center justify-center backdrop-blur-md bg-white/5 shadow-[0_0_100px_rgba(16,185,129,0.1)]">
+                    
+                    <div class="text-center p-12">
+                        <div class="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/40">
+                            <i class="fa-solid fa-child-reaching text-white text-4xl"></i>
+                        </div>
+                        <h2 class="text-4xl font-black text-white">4 'D's</h2>
+                        <p class="text-emerald-200 text-xs font-bold uppercase tracking-widest mt-2">Health Priority</p>
+                    </div>
+
+                    <div class="absolute -top-4 left-10 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-4 rounded-2xl shadow-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🏥</span>
+                            <div>
+                                <p class="text-white font-bold text-xs">Defects at Birth</p>
+                                <p class="text-emerald-400 text-[10px]">Early Identification</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute top-20 -right-12 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-4 rounded-2xl shadow-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🩺</span>
+                            <div>
+                                <p class="text-white font-bold text-xs">Diseases</p>
+                                <p class="text-emerald-400 text-[10px]">Free Treatment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-10 -left-12 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-4 rounded-2xl shadow-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🍎</span>
+                            <div>
+                                <p class="text-white font-bold text-xs">Deficiencies</p>
+                                <p class="text-emerald-400 text-[10px]">Nutrition Support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -bottom-6 right-10 bg-emerald-900/80 backdrop-blur-md border border-emerald-400/30 p-4 rounded-2xl shadow-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🧩</span>
+                            <div>
+                                <p class="text-white font-bold text-xs">Dev. Delays</p>
+                                <p class="text-emerald-400 text-[10px]">Special Care</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute w-[580px] h-[580px] border border-dashed border-emerald-500/20 rounded-full animate-[spin_40s_linear_infinite]"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <main id="main" class="max-w-7xl mx-auto px-4 py-12">
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl shadow-xl shadow-slate-200/50">
+            <h2 class="text-3xl font-bold mb-4">Welcome to RBSK Portal</h2>
+            <p class="text-slate-600 leading-relaxed max-w-2xl">
+                Rashtriya Bal Swasthya Karyakram (RBSK) is an innovative initiative aiming at early identification and early intervention for children from birth to 18 years to cover 4 ‘D’s viz. Defects at birth, Deficiencies, Diseases, Development delays including disability.
+            </p>
+        </div>
+    </main>
+
+    <script>
+        // 1. Font Size Control logic
+        function changeFontSize(size) {
+            const html = document.documentElement;
+            if(size === 'small') html.style.fontSize = '14px';
+            else if(size === 'normal') html.style.fontSize = '16px';
+            else if(size === 'large') html.style.fontSize = '20px';
+        }
+
+        // 2. High Contrast Logic
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+            // Store preference in localStorage if needed
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSK Redesign | Accessibility Ready</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <style>
+        .high-contrast {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+        }
+
+
+        .high-contrast section,
+        .high-contrast div,
+        .high-contrast header,
+        .high-contrast footer,
+        .high-contrast nav {
+            background-color: #000000 !important;
+            background-image: none !important;
+            border-color: #ffff00 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target text elements */
+        .high-contrast h1,
+        .high-contrast h2,
+        .high-contrast h3,
+        .high-contrast h4,
+        .high-contrast h5,
+        .high-contrast h6,
+        .high-contrast p,
+        .high-contrast span,
+        .high-contrast a,
+        .high-contrast li {
+            color: #ffff00 !important;
+        }
+
+        /* Target Buttons and Interactive Elements */
+        .high-contrast button {
+            background-color: #000000 !important;
+            color: #ffff00 !important;
+            border: 2px solid #ffff00 !important;
+        }
+
+        .high-contrast {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+        }
+
+        /* Target the Accessibility Bar specifically */
+        .high-contrast div[class*="bg-[#f8fafc]"] {
+            background-color: #111111 !important;
+            border-color: #ffff00 !important;
+        }
+
+        /* Fix for all buttons in high contrast */
+        .high-contrast button {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+            border: 1px solid #ffff00 !important;
+        }
+
+        /* Normal state for buttons */
+        .font-btn {
+            transition: all 0.3s ease;
+            color: #475569;
+            /* slate-600 */
+        }
+
+        /* Active state - isse green color fix hoga */
+        .font-btn.active {
+            background-color: #059669 !important;
+            /* emerald-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="transition-all duration-300">
+    <div id="header-placeholder"></div>
+
+    <section class="pt-24 pb-12 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+                <a href="#" class="hover:text-emerald-600">Home</a>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                <span class="text-slate-900">Operational Guidelines</span>
+            </nav>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">
+                Implementation & <span class="text-emerald-600">Protocols</span>
+            </h1>
+            <p class="text-slate-500 mt-4 max-w-2xl font-medium">
+                National Health Mission dwara jari ki gayi official guidelines aur SOPs ka sangrah.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12">
+
+                <aside class="lg:col-span-3">
+                    <div class="sticky top-32 space-y-4">
+                        <h4 class="text-xs font-black uppercase tracking-widest text-slate-400 px-4">Jump to Section
+                        </h4>
+                        <nav class="flex flex-col gap-1">
+                            <a href="#operational"
+                                class="px-4 py-3 rounded-xl bg-emerald-50 text-emerald-700 font-bold text-sm transition border-l-4 border-emerald-600">Operational
+                                Manual</a>
+                            <a href="#screening"
+                                class="px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 font-bold text-sm transition border-l-4 border-transparent">Screening
+                                Tools</a>
+                            <a href="#deic"
+                                class="px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 font-bold text-sm transition border-l-4 border-transparent">DEIC
+                                Management</a>
+                            <a href="#financial"
+                                class="px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 font-bold text-sm transition border-l-4 border-transparent">Financial
+                                Norms</a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <div class="lg:col-span-9 space-y-16">
+
+                    <div id="operational" class="scroll-mt-32">
+                        <h3 class="text-2xl font-black text-slate-900 mb-8 flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-sm">01</span>
+                            Main Operational Guidelines
+                        </h3>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div
+                                class="group p-6 bg-white border border-slate-100 rounded-[2rem] hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col justify-between">
+                                <div>
+                                    <div
+                                        class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mb-6">
+                                        <i class="fa-solid fa-file-pdf text-xl"></i>
+                                    </div>
+                                    <h5 class="font-black text-slate-900 mb-2 group-hover:text-emerald-600">RBSK
+                                        Operational Manual (2013)</h5>
+                                    <p class="text-xs text-slate-500 leading-relaxed">The foundational document
+                                        outlining the strategy, 4Ds, and implementation model.</p>
+                                </div>
+                                <a href="https://nhm.gov.in/index1.php?lang=1&level=5&sublinkid=1193&lid=372" target="_blank"
+                                    class="mt-8 flex items-center justify-between font-bold text-xs uppercase tracking-widest text-emerald-600 hover:text-slate-900 transition">
+                                    View Document <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div
+                                class="group p-6 bg-white border border-slate-100 rounded-[2rem] hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col justify-between">
+                                <div>
+                                    <div
+                                        class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                                        <i class="fa-solid fa-book text-xl"></i>
+                                    </div>
+                                    <h5 class="font-black text-slate-900 mb-2 group-hover:text-emerald-600">Trainer's
+                                        Guide for MHT</h5>
+                                    <p class="text-xs text-slate-500 leading-relaxed">Training modules for Mobile Health
+                                        Teams on how to conduct screenings.</p>
+                                </div>
+                                <a href="https://nhm.gov.in/index4.php?lang=1&level=0&linkid=536&lid=776" target="_blank"
+                                    class="mt-8 flex items-center justify-between font-bold text-xs uppercase tracking-widest text-emerald-600 hover:text-slate-900 transition">
+                                    View Manual <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="screening" class="scroll-mt-32">
+                        <h3 class="text-2xl font-black text-slate-900 mb-8 flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-sm">02</span>
+                            Screening Tools & Formats
+                        </h3>
+                        <div class="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden">
+                            <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                                <div class="space-y-4">
+                                    <h4 class="text-2xl font-black">Age-Specific Checklists</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Download official screening cards
+                                        for Newborns, Preschoolers, and School Children.</p>
+                                    <div class="flex flex-wrap gap-3 pt-4">
+                                        <button
+                                            class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition border border-white/10">0-6
+                                            Weeks</button>
+                                        <button
+                                            class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition border border-white/10">6wks
+                                            - 6yrs</button>
+                                        <button
+                                            class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition border border-white/10">6yrs
+                                            - 18yrs</button>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center md:justify-end">
+                                    <i class="fa-solid fa-clipboard-list text-[100px] text-emerald-500/20"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="deic" class="scroll-mt-32 bg-emerald-50 rounded-[3rem] p-10 border border-emerald-100">
+                        <h3 class="text-2xl font-black text-slate-900 mb-6">DEIC Management Norms</h3>
+                        <p class="text-sm text-slate-600 mb-8">District Early Intervention Centres (DEIC) ke setup aur
+                            human resource management ke liye niyam.</p>
+                        <ul class="grid md:grid-cols-2 gap-4">
+                            <li
+                                class="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-emerald-100">
+                                <i class="fa-solid fa-user-doctor text-emerald-600"></i>
+                                <span class="text-sm font-bold text-slate-700">Staffing Patterns</span>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-emerald-100">
+                                <i class="fa-solid fa-stethoscope text-emerald-600"></i>
+                                <span class="text-sm font-bold text-slate-700">Equipment List</span>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-emerald-100">
+                                <i class="fa-solid fa-hospital text-emerald-600"></i>
+                                <span class="text-sm font-bold text-slate-700">Infrastructure Norms</span>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-emerald-100">
+                                <i class="fa-solid fa-chart-line text-emerald-600"></i>
+                                <span class="text-sm font-bold text-slate-700">Reporting Formats</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

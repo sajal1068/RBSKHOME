@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSK Portal Creative Banner</title>
+    <style>
+        /* Basic Reset */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; }
+
+        /* Banner Container */
+        .rbsk-banner {
+            background: linear-gradient(135deg, #e6f3f0 0%, #f7fcfb 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 2fr 1.2fr;
+            gap: 30px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 40px auto;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        /* Left Side: Content */
+        .banner-content { padding-right: 20px; }
+        .program-tag { color: #2e8b57; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .main-title { color: #1a1a1a; font-size: 40px; font-weight: 800; line-height: 1.2; margin-top: 0; margin-bottom: 15px; }
+        .main-title span { color: #2e8b57; }
+        .description { color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 30px; max-width: 550px; }
+
+        /* 4Ds Focus Areas */
+        .focus-areas { display: flex; gap: 15px; margin-bottom: 35px; align-items: center; }
+        .focus-circle { text-align: center; flex-shrink: 0; }
+        .circle-icon {
+            width: 65px; height: 65px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 8px; border: 2px solid;
+            transition: transform 0.3s ease;
+        }
+        .circle-icon:hover { transform: scale(1.1); }
+        .focus-label { font-size: 12px; color: #333; font-weight: 600; margin: 0; }
+
+        /* Colors for 4Ds */
+        .defect { background: #fde8e8; border-color: #f98080; color: #e02424; }
+        .disease { background: #e1effe; border-color: #3f83f8; color: #1c64f2; }
+        .delay { background: #fef3c7; border-color: #f59e0b; color: #b45309; }
+        .deficiency { background: #fce8f3; border-color: #e74694; color: #bf125d; }
+
+        .focus-text { text-align: left; padding-left: 10px; }
+        .focus-title-small { font-size: 10px; text-transform: uppercase; color: #666; font-weight: bold; }
+        .focus-title-large { font-size: 20px; color: #333; font-weight: 800; }
+
+        /* Call to Action Buttons */
+        .cta-group { display: flex; gap: 15px; }
+        .btn { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px; transition: all 0.3s ease; }
+        .btn-primary { background-color: #2e8b57; color: white; box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3); }
+        .btn-primary:hover { background-color: #246b43; transform: translateY(-2px); }
+        .btn-secondary { background-color: white; color: #2e8b57; border: 2px solid #2e8b57; }
+        .btn-secondary:hover { background-color: #e6f3f0; }
+        .link-more { color: #555; display: flex; align-items: center; gap: 5px; font-weight: 600; }
+
+        /* Right Side: Process Flow (Glassmorphism card) */
+        .banner-process {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.8);
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .process-title { color: #1a1a1a; font-size: 20px; font-weight: 700; margin: 0; padding-bottom: 10px; border-bottom: 2px solid #2e8b57; display: inline-block; }
+        .process-steps { display: flex; flex-direction: column; gap: 18px; }
+        .step { display: flex; gap: 15px; align-items: start; }
+        .step-number {
+            width: 35px; height: 35px; border-radius: 50%;
+            font-weight: bold; font-size: 15px;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .step-title { font-weight: bold; color: #333; font-size: 14px; margin: 0; }
+        .step-desc { color: #666; font-size: 12px; margin: 2px 0 0; line-height: 1.5; }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .rbsk-banner { grid-template-columns: 1fr; padding: 30px; }
+            .main-title { font-size: 32px; }
+            .focus-areas { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="rbsk-banner">
+        <div class="banner-content">
+            <p class="program-tag">RBSK Portal: Rashtriya Bal Swasthya Karyakram</p>
+            <h1 class="main-title">Childhood, Reimagined: <span>Birth to 18 Years.</span></h1>
+            <p class="description">A holistic healthcare initiative by the Ministry of Health & Family Welfare for the health and well-being of every child, offering comprehensive care from birth up to 18 years.</p>
+            
+            <div class="focus-areas">
+                <div class="focus-circle">
+                    <div class="circle-icon defect">
+                        <span style="font-size:30px;">🩸</span>
+                    </div>
+                    <p class="focus-label">Defects</p>
+                </div>
+                <div class="focus-circle">
+                    <div class="circle-icon disease">
+                        <span style="font-size:30px;">🦠</span>
+                    </div>
+                    <p class="focus-label">Diseases</p>
+                </div>
+                <div class="focus-circle">
+                    <div class="circle-icon delay">
+                        <span style="font-size:30px;">⏱️</span>
+                    </div>
+                    <p class="focus-label">Delays</p>
+                </div>
+                <div class="focus-circle">
+                    <div class="circle-icon deficiency">
+                        <span style="font-size:30px;">🥗</span>
+                    </div>
+                    <p class="focus-label">Deficiencies</p>
+                </div>
+                <div class="focus-text">
+                    <span class="focus-title-small">Our Focus</span><br>
+                    <span class="focus-title-large">the 4 D's</span>
+                </div>
+            </div>
+
+            <div class="cta-group">
+                <a href="#" class="btn btn-primary">Portal Login</a>
+                <a href="#" class="btn btn-secondary">New Registration</a>
+                <a href="#" class="link-more btn">How it Works →</a>
+            </div>
+        </div>
+
+        <div class="banner-process">
+            <h3 class="process-title">Our Process: Detection to Care</h3>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number disease">1</div>
+                    <div>
+                        <p class="step-title">Newborn Screening</p>
+                        <p class="step-desc">At delivery points, identifying defects in newborns.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number delay">2</div>
+                    <div>
+                        <p class="step-title">Community Screening</p>
+                        <p class="step-desc">MHTs conduct screenings in Anganwadis and schools.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number deficiency">3</div>
+                    <div>
+                        <p class="step-title">Referral Management</p>
+                        <p class="step-desc">Connecting for medical & surgical care, including Tertiary care for advanced interventions.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number defect">4</div>
+                    <div>
+                        <p class="step-title">DEIC Management & Care</p>
+                        <p class="step-desc">Holistic care under one roof at the District level.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

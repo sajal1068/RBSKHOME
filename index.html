@@ -65,23 +65,25 @@
             border: 1px solid #ffff00 !important;
         }
 
-       /* Normal state for buttons */
-.font-btn {
-    transition: all 0.3s ease;
-    color: #475569; /* slate-600 */
-}
+        /* Normal state for buttons */
+        .font-btn {
+            transition: all 0.3s ease;
+            color: #475569;
+            /* slate-600 */
+        }
 
-/* Active state - isse green color fix hoga */
-.font-btn.active {
-    background-color: #059669 !important; /* emerald-600 */
-    color: white !important;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-}
+        /* Active state - isse green color fix hoga */
+        .font-btn.active {
+            background-color: #059669 !important;
+            /* emerald-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 
 <body class="transition-all duration-300">
- <div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
 
     <section
@@ -219,483 +221,303 @@
 
     <main id="main">
 
-        <section class="py-16 md:py-28 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
-            <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto p-6 bg-slate-50 rounded-3xl grid grid-cols-1 md:grid-cols-3 gap-4 font-sans">
 
-                <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
+            <div
+                class="md:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden">
+                <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">About the Program</span>
+                <h1 class="text-3xl font-extrabold text-slate-800 mt-2 leading-tight">Comprehensive Care from <br><span
+                        class="text-emerald-500 underline decoration-emerald-200">Birth to 18 Years.</span></h1>
+                <p class="text-slate-500 mt-4 text-sm leading-relaxed max-w-md">Rashtriya Bal Swasthya Karyakram (RBSK)
+                    is a pioneering initiative for early identification of health conditions and linking them for
+                    medical and surgical management, providing holistic care for every child in the community.</p>
 
-                    <div class="lg:col-span-7 space-y-8 relative z-10">
-                        <div
-                            class="inline-flex items-center gap-3 bg-emerald-100/50 border border-emerald-200 px-4 py-2 rounded-full shadow-inner">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                            <h2 class="text-emerald-700 font-bold uppercase tracking-[0.25em] text-xs md:text-sm"
-                                data-i18n="about_tag">
-                                About the Program
-                            </h2>
-                        </div>
-
-                        <div class="space-y-6">
-                            <h3 class="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight"
-                                data-i18n="about_h3">
-                                Comprehensive Care from <br>
-                                <span
-                                    class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Birth
-                                    to 18 Years.</span>
-                            </h3>
-                            <p class="text-base md:text-xl text-slate-500 leading-relaxed max-w-xl font-medium"
-                                data-i18n="about_p">
-                                Rashtriya Bal Swasthya Karyakram (RBSK) is a pioneering initiative for early
-                                identification of health conditions and linking them for medical and surgical
-                                management, providing holistic care for every child in the community.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-5 relative group">
-                        <div
-                            class="absolute -top-16 -right-16 w-72 h-72 bg-emerald-200/40 rounded-full blur-3xl group-hover:bg-emerald-300/50 transition-colors duration-700">
-                        </div>
-                        <div
-                            class="absolute -bottom-16 -left-16 w-72 h-72 bg-teal-100/30 rounded-full blur-3xl group-hover:bg-teal-200/40 transition-colors duration-700">
-                        </div>
-
-                        <div
-                            class="relative z-10 bg-white p-4 rounded-[3.5rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden transform group-hover:-translate-y-3 transition-all duration-700 hover:rotate-1">
-                            <img src="assets/images/aboutus.png" alt="RBSK Early Intervention Illustration"
-                                class="w-full h-auto rounded-[3rem] object-cover block">
-
-                            <div
-                                class="absolute bottom-10 right-10 bg-slate-900/90 backdrop-blur-md text-white p-6 rounded-3xl shadow-2xl border border-white/10 flex flex-col items-center">
-                                <p class="text-4xl font-black text-emerald-400">4 'D's</p>
-                                <p class="text-[10px] uppercase font-bold tracking-[0.25em] opacity-60">Focus Area</p>
-                            </div>
-                        </div>
+                <div class="mt-8 flex gap-4">
+                    <div class="flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100">
+                        <span class="text-emerald-700 font-medium text-xs">4 D's Covered</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="grid md:grid-cols-2 gap-10">
+            <div
+                class="bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl p-6 flex flex-col justify-center items-center text-white relative">
+                <div class="absolute top-4 right-4 opacity-20"><svg width="40" height="40" fill="currentColor">...</svg>
+                </div>
+                <img src="assets/images/aboutus.png" class="w-40 drop-shadow-xl" alt="Child Health">
+                <p class="mt-4 font-bold text-center leading-tight">Early Detection <br> for Better Health</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-800 border-b pb-2 mb-4">Screening Process</h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 items-start text-xs text-slate-600">
+                        <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded font-bold">CNS</span>
+                        <span>Newborn screening at delivery points for birth defects.</span>
+                    </li>
+                    <li class="flex gap-3 items-start text-xs text-slate-600">
+                        <span class="bg-orange-100 text-orange-600 px-2 py-1 rounded font-bold">MHT</span>
+                        <span>Community screening at Anganwadis & Schools.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-800 border-b pb-2 mb-4">Management</h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-2 items-center text-xs text-slate-600">
+                        <span class="text-emerald-500">✔</span> <b>DEIC:</b> Care under one roof at Districts.
+                    </li>
+                    <li class="flex gap-2 items-center text-xs text-slate-600">
+                        <span class="text-emerald-500">✔</span> <b>Tertiary:</b> Specialized surgical management.
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-slate-900 text-white p-6 rounded-2xl flex justify-between items-center overflow-hidden relative">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase text-slate-400">Focus Areas</span>
+                    <span class="text-2xl font-black text-emerald-400">4 D's</span>
+                </div>
+                <div class="flex -space-x-3">
                     <div
-                        class="group relative p-1 bg-gradient-to-br from-slate-200 to-transparent rounded-[2.5rem] transition-all hover:from-emerald-300 hover:shadow-2xl">
-                        <div class="bg-white p-10 rounded-[2.4rem] h-full space-y-6">
-                            <div
-                                class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500">
-                                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                            </div>
-                            <h4 class="text-2xl font-black text-slate-900" data-i18n="screening_h4">Screening Process
-                            </h4>
-                            <ul class="space-y-6 text-sm md:text-base text-slate-600">
-                                <li class="flex gap-4">
-                                    <span
-                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs border border-emerald-200">1</span>
-                                    <p>CNS: Comprehensive newborn screening performed at delivery points to screen for
-                                        birth defects.</p>
-                                </li>
-                                <li class="flex gap-4">
-                                    <span
-                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs border border-emerald-200">2</span>
-                                    <p>Community Screening: Conducted by Mobile Health Teams (MHT) in Anganwadis &
-                                        schools.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
+                        class="h-10 w-10 rounded-full bg-red-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
+                        Defects</div>
                     <div
-                        class="group relative p-1 bg-gradient-to-br from-slate-200 to-transparent rounded-[2.5rem] transition-all hover:from-teal-300 hover:shadow-2xl">
-                        <div class="bg-white p-10 rounded-[2.4rem] h-full space-y-6">
-                            <div
-                                class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-inner group-hover:bg-teal-600 group-hover:text-white transition-all duration-500">
-                                <i class="fa-solid fa-hospital-user"></i>
-                            </div>
-                            <h4 class="text-2xl font-black text-slate-900" data-i18n="mgmt_h4">Management & Referral
-                            </h4>
-                            <ul class="space-y-6 text-sm md:text-base text-slate-600">
-                                <li class="flex gap-4">
-                                    <i class="fa-solid fa-check-double text-teal-500 mt-1 flex-shrink-0"></i>
-                                    <p>DEIC: Comprehensive management and care under one roof at District Early
-                                        Intervention Centers.</p>
-                                </li>
-                                <li class="flex gap-4">
-                                    <i class="fa-solid fa-check-double text-teal-500 mt-1 flex-shrink-0"></i>
-                                    <p>Tertiary Care: Specialized surgical management and advanced interventions like
-                                        Cochlear implants.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-       <section class="py-20 bg-slate-50">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-3">Portal Access</h2>
-            <h3 class="text-4xl font-black text-slate-900">Departmental Login</h3>
-            <p class="text-slate-500 mt-4 max-w-xl mx-auto">Please select your respective department to access the screening and management dashboards.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
-            <div class="group bg-white rounded-[2.5rem] p-8 shadow-xl shadow-slate-200/60 border border-slate-100 hover:border-emerald-500 transition-all duration-500 relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-50 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-truck-medical"></i>
-                    </div>
-                    <h4 class="text-2xl font-black text-slate-900 mb-2">MHT Login</h4>
-                    <p class="text-sm text-slate-500 mb-8 leading-relaxed">Access for Mobile Health Teams to record school and Anganwadi screenings.</p>
-                    
-                    <a href="/login/mht" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-emerald-600 transition-colors w-full justify-center">
-                        Login to Portal <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="group bg-slate-900 rounded-[2.5rem] p-8 shadow-2xl border border-slate-800 hover:border-emerald-500 transition-all duration-500 relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-emerald-500 text-slate-900 rounded-2xl flex items-center justify-center text-3xl mb-8">
-                        <i class="fa-solid fa-hospital-user"></i>
-                    </div>
-                    <h4 class="text-2xl font-black text-white mb-2">DEIC Login</h4>
-                    <p class="text-sm text-slate-400 mb-8 leading-relaxed">Management portal for referral tracking, diagnostics, and surgical interventions.</p>
-                    
-                    <a href="/login/deic" class="inline-flex items-center gap-2 bg-emerald-500 text-slate-900 px-6 py-3 rounded-xl font-bold hover:bg-white transition-colors w-full justify-center">
-                        Access Dashboard <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="group bg-white rounded-[2.5rem] p-8 shadow-xl shadow-slate-200/60 border border-slate-100 hover:border-emerald-500 transition-all duration-500 relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-50 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                        <i class="fa-solid fa-baby"></i>
-                    </div>
-                    <h4 class="text-2xl font-black text-slate-900 mb-2">CNS Login</h4>
-                    <p class="text-sm text-slate-500 mb-8 leading-relaxed">Health facility login for screening newborns at birth delivery points.</p>
-                    
-                    <a href="/login/cns" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-emerald-600 transition-colors w-full justify-center">
-                        Start Screening <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
-                    </a>
+                        class="h-10 w-10 rounded-full bg-blue-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
+                        Diseases</div>
+                    <div
+                        class="h-10 w-10 rounded-full bg-yellow-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
+                        Delay</div>
+                    <div
+                        class="h-10 w-10 rounded-full bg-pink-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
+                        Deficiency</div>
                 </div>
             </div>
 
         </div>
-    </div>
-</section>
+
        
-        <section class="py-20 md:py-32 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
-            <div class="container mx-auto px-6">
 
-                <div class="grid lg:grid-cols-12 gap-12 items-center mb-24">
 
-                    <div class="lg:col-span-7 space-y-8 relative z-10">
-                        <div
-                            class="inline-flex items-center gap-3 bg-emerald-100/50 border border-emerald-200 px-4 py-2 rounded-full">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                            <h2 class="text-emerald-700 font-bold uppercase tracking-widest text-xs md:text-sm"
-                                data-i18n="about_tag">
-                                About the Program
-                            </h2>
-                        </div>
 
-                        <div class="space-y-6">
-                            <h3 class="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight"
-                                data-i18n="about_h3">
-                                Comprehensive Care from <br>
-                                <span
-                                    class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Birth
-                                    to 18 Years.</span>
-                            </h3>
-                            <p class="text-lg md:text-xl text-slate-500 leading-relaxed max-w-2xl font-medium"
-                                data-i18n="about_p">
-                                Rashtriya Bal Swasthya Karyakram (RBSK) is a pioneering initiative for early
-                                identification
-                                of health conditions and linking them for medical management, providing holistic care
-                                for
-                                every child.
-                            </p>
-                        </div>
-                    </div>
+     
+      
+      
 
-                    <div class="lg:col-span-5 relative group">
-                        <div
-                            class="absolute -top-12 -right-12 w-64 h-64 bg-emerald-200/40 rounded-full blur-3xl group-hover:bg-emerald-300/50 transition-colors duration-700">
-                        </div>
-                        <div
-                            class="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100/40 rounded-full blur-3xl group-hover:bg-blue-200/50 transition-colors duration-700">
-                        </div>
 
-                        <div
-                            class="relative z-10 bg-white p-4 rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500">
-                            <img src="assets/images/aboutus.png" alt="RBSK Illustration"
-                                class="w-full h-auto rounded-[2.5rem] object-cover">
+        <section class="py-24 bg-[#f8fafc] relative overflow-hidden font-sans">
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-100/50 rounded-full blur-3xl"></div>
+                <div class="absolute top-1/2 -right-24 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl"></div>
+            </div>
 
-                            <div
-                                class="absolute bottom-8 right-8 bg-slate-900/90 backdrop-blur-md text-white p-6 rounded-3xl shadow-2xl border border-white/20 flex flex-col items-center">
-                                <p class="text-3xl font-black text-emerald-400">4 'D's</p>
-                                <p class="text-[10px] uppercase font-bold tracking-[0.2em] opacity-60">Priority Focus
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-20">
+                    <span
+                        class="bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
+                        Portal Access
+                    </span>
+                    <h3 class="text-5xl font-black text-slate-900 mt-6 tracking-tight">
+                        Departmental <span class="text-emerald-600">Login</span>
+                    </h3>
+                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto text-lg">
+                        Choose your specialized department to manage health screenings and track patient progress across
+                        the RBSK network.
+                    </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
                     <div
-                        class="group relative p-1 bg-gradient-to-br from-slate-200 to-transparent rounded-[3rem] transition-all hover:from-emerald-300 hover:shadow-2xl">
-                        <div class="bg-white p-10 rounded-[2.9rem] h-full space-y-6">
-                            <div
-                                class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500 shadow-sm">
-                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        class="group relative z-10 h-[350px] w-full rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2
+                before:absolute before:-bottom-2 before:-left-2 before:-z-10 before:h-24 before:w-24 before:rounded-bl-2xl before:border-b-8 before:border-l-8 before:border-blue-600 before:content-['']
+                after:absolute after:-top-2 after:-right-2 after:-z-10 after:h-24 after:w-24 after:rounded-tr-2xl after:border-t-8 after:border-r-8 after:border-blue-600 after:content-['']">
+
+                        <div class="flex h-full flex-col items-center justify-between">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="mb-4">
+                                    <div
+                                        class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-sm">
+                                        <i class="fa-solid fa-truck-medical"></i>
+                                    </div>
+                                </div>
+                                <h3 class="mb-2 text-3xl font-black leading-tight text-blue-900">MHT Login</h3>
+                                <p class="text-slate-400 text-base mb-2 leading-relaxed italic">"Record school and
+                                    Anganwadi screenings in real-time with mobile interface."</p>
                             </div>
-                            <h4 class="text-2xl font-black text-slate-900" data-i18n="screening_h4">Screening Process
-                            </h4>
-                            <ul class="space-y-6">
-                                <li class="flex gap-4">
-                                    <span
-                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">1</span>
-                                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                                        <strong class="text-slate-900" data-i18n="cns_title">CNS:</strong>
-                                        <span data-i18n="cns_desc">Comprehensive newborn screening performed at delivery
-                                            points to screen for birth defects.</span>
-                                    </p>
-                                </li>
-                                <li class="flex gap-4">
-                                    <span
-                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">2</span>
-                                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                                        <strong class="text-slate-900" data-i18n="community_title">Community:</strong>
-                                        <span data-i18n="community_desc">Conducted by Mobile Health Teams (MHT) in
-                                            Anganwadis and Government schools.</span>
-                                    </p>
-                                </li>
-                            </ul>
+
+                            <button
+                                class="relative mt-3 w-full overflow-hidden px-6 py-4 rounded-2xl bg-blue-600 text-white font-black transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 active:scale-95 flex items-center justify-center gap-2">
+                                LOGIN NOW <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
+                            </button>
                         </div>
                     </div>
 
                     <div
-                        class="group relative p-1 bg-gradient-to-br from-slate-200 to-transparent rounded-[3rem] transition-all hover:from-blue-300 hover:shadow-2xl">
-                        <div class="bg-white p-10 rounded-[2.9rem] h-full space-y-6">
-                            <div
-                                class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
-                                <i class="fa-solid fa-hospital-user"></i>
+                        class="group relative z-10 h-[350px] w-full rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2
+                before:absolute before:-bottom-2 before:-left-2 before:-z-10 before:h-24 before:w-24 before:rounded-bl-2xl before:border-b-8 before:border-l-8 before:border-orange-500 before:content-['']
+                after:absolute after:-top-2 after:-right-2 after:-z-10 after:h-24 after:w-24 after:rounded-tr-2xl after:border-t-8 after:border-r-8 after:border-orange-500 after:content-['']">
+
+                        <div class="flex h-full flex-col items-center justify-between">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="mb-4">
+                                    <div
+                                        class="w-16 h-16 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-sm">
+                                        <i class="fa-solid fa-hospital-user"></i>
+                                    </div>
+                                </div>
+                                <h3 class="mb-3 text-3xl font-black leading-tight text-orange-900">DEIC Login</h3>
+                                <p class="text-slate-400 text-base mb-2 leading-relaxed italic">"Central hub for
+                                    referral tracking, diagnostics, and surgical management."</p>
+
                             </div>
-                            <h4 class="text-2xl font-black text-slate-900" data-i18n="mgmt_h4">Management & Referral
-                            </h4>
-                            <ul class="space-y-6">
-                                <li class="flex gap-4">
+
+                            <button
+                                class="relative mt-3 w-full overflow-hidden px-6 py-4 rounded-2xl bg-orange-500 text-white font-black transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200 active:scale-95 flex items-center justify-center gap-2">
+                                ACCESS PORTAL <i class="fa-solid fa-circle-user text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative z-10 h-[350px] w-full rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2
+                before:absolute before:-bottom-2 before:-left-2 before:-z-10 before:h-24 before:w-24 before:rounded-bl-2xl before:border-b-8 before:border-l-8 before:border-emerald-500 before:content-['']
+                after:absolute after:-top-2 after:-right-2 after:-z-10 after:h-24 after:w-24 after:rounded-tr-2xl after:border-t-8 after:border-r-8 after:border-emerald-500 after:content-['']">
+
+                        <div class="flex h-full flex-col items-center justify-between">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="mb-4">
                                     <div
-                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs">
-                                        <i class="fa-solid fa-check"></i>
+                                        class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-sm">
+                                        <i class="fa-solid fa-baby"></i>
                                     </div>
-                                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                                        <strong class="text-slate-900" data-i18n="deic_title">DEIC:</strong>
-                                        <span data-i18n="deic_desc">Comprehensive management and care under one roof at
-                                            District Early Intervention Centers.</span>
-                                    </p>
-                                </li>
-                                <li class="flex gap-4">
-                                    <div
-                                        class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                                        <strong class="text-slate-900" data-i18n="tertiary_title">Tertiary
-                                            Care:</strong>
-                                        <span data-i18n="tertiary_desc">Specialized surgical management and advanced
-                                            interventions like Cochlear implants.</span>
-                                    </p>
-                                </li>
-                            </ul>
+                                </div>
+                                <h3 class="mb-3 text-3xl font-black leading-tight text-emerald-900">CNS Login</h3>
+                                <p class="text-slate-400 text-base mb-2 leading-relaxed italic">"Screen newborns at
+                                    birth delivery points to ensure early health detection."</p>
+                            </div>
+
+                            <button
+                                class="relative mt-3 w-full overflow-hidden px-6 py-4 rounded-2xl bg-emerald-500 text-white font-black transition-all hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-200 active:scale-95 flex items-center justify-center gap-2">
+                                DASHBOARD <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
                         </div>
                     </div>
 
                 </div>
+
+
             </div>
         </section>
-        <section class="py-16 md:py-24 bg-slate-50">
+
+        <section class="py-20 bg-white overflow-hidden">
             <div class="container mx-auto px-6">
 
-                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 md:mb-20">
-                    <div class="space-y-6">
-                        <h2 class="text-emerald-600 font-bold uppercase tracking-[0.2em] text-xs md:text-sm">
-                            About the Program
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <h2 class="text-emerald-600 font-bold uppercase tracking-[0.2em] text-xs mb-3">Visual Journey
                         </h2>
-                        <h3 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
-                            Comprehensive Care from <br class="hidden md:block">
-                            <span class="text-emerald-600">Birth to 18 Years.</span>
-                        </h3>
-                        <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
-                            Rashtriya Bal Swasthya Karyakram (RBSK) is a pioneering initiative for early identification
-                            of
-                            health conditions and linking them for medical and surgical management, providing holistic
-                            care
-                            for every child in the community.
-                        </p>
+                        <h3 class="text-4xl font-black text-slate-900">Photo Gallery & Highlights</h3>
                     </div>
+                    <a href="news.html"
+                        class="text-emerald-600 font-bold flex items-center gap-2 hover:gap-4 transition-all group">
+                        View All News <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
 
-                    <div class="relative group">
-                        <div
-                            class="absolute -inset-4 bg-emerald-50 rounded-[2.5rem] rotate-2 opacity-70 group-hover:rotate-0 transition-transform duration-500">
-                        </div>
+                <div class="grid lg:grid-cols-12 gap-8">
 
-                        <div
-                            class="relative bg-white p-3 rounded-[2rem]  border border-slate-100 overflow-hidden transition-transform duration-500 hover:scale-[1.02]">
-                            <img src="assets/images/aboutus.png"
-                                alt="RBSK Early Detection and Intervention Illustration"
-                                class="w-full h-auto rounded-2xl block object-cover">
+                    <div
+                        class="lg:col-span-7 relative group cursor-pointer overflow-hidden rounded-[2.5rem] shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200"
+                            alt="RBSK Activities"
+                            class="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-1000">
+
+                        <a href="gallery.html"
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent flex flex-col justify-end p-10 text-white no-underline">
+                            <div
+                                class="bg-white/20 backdrop-blur-md w-fit p-4 rounded-2xl mb-4 border border-white/30 group-hover:bg-emerald-500 transition-colors">
+                                <i class="fa-solid fa-images text-2xl"></i>
+                            </div>
+                            <h4 class="text-3xl font-bold mb-2 leading-tight">Glimpses of RBSK Field Activities</h4>
+                            <p class="text-slate-300 text-sm mb-4">Click here to view our latest health camps, awareness
+                                drives, and screening success stories.</p>
 
                             <div
-                                class="absolute bottom-4 right-4 bg-slate-900 text-white px-4 py-2 rounded-xl shadow-xl hidden sm:block border border-white/20">
-                                <p class="text-xs font-bold uppercase tracking-widest opacity-70">Focus Area</p>
-                                <p class="text-lg font-black text-emerald-400">4 'D's</p>
+                                class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
+                                <span>Enter Gallery</span>
+                                <i class="fa-solid fa-circle-arrow-right animate-pulse"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-5 flex flex-col gap-4 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
+
+                        <div
+                            class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-200 transition-all group relative">
+                            <div class="flex gap-4 items-center">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex flex-col items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-colors">
+                                    <span class="text-emerald-600 font-black text-lg leading-none">28</span>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Feb</span>
+                                </div>
+                                <div class="space-y-1 flex-1">
+                                    <h5
+                                        class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2 pr-10">
+                                        New Guidelines for Cochlear Implant Surgeries under RBSK Released.</h5>
+                                    <p class="text-xs text-slate-500">Updated protocols for tertiary care referrals.</p>
+                                </div>
+                                <a href="#"
+                                    class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all shadow-sm">
+                                    <i class="fa-solid fa-file-pdf text-lg"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-emerald-200 transition-all shadow-sm hover:shadow-lg group">
                         <div
-                            class="w-14 h-14 bg-white text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-200 transition-all group relative">
+                            <div class="flex gap-4 items-center">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex flex-col items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-colors">
+                                    <span class="text-emerald-600 font-black text-lg leading-none">25</span>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Feb</span>
+                                </div>
+                                <div class="space-y-1 flex-1">
+                                    <h5
+                                        class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2 pr-10">
+                                        Successful 10,000+ Screenings completed in Rural Anganwadis this month.</h5>
+                                    <p class="text-xs text-slate-500">MHT teams achieving record milestones.</p>
+                                </div>
+                                <a href="#"
+                                    class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all shadow-sm">
+                                    <i class="fa-solid fa-file-pdf text-lg"></i>
+                                </a>
+                            </div>
                         </div>
-                        <h4 class="text-2xl font-black text-slate-900 mb-4">Screening Process</h4>
-                        <ul class="space-y-4 text-sm md:text-base text-slate-600">
-                            <li class="flex gap-3">
-                                <span class="text-emerald-500 font-bold">i.</span>
-                                <span><b>CNS:</b> Comprehensive newborn screening performed at delivery points to screen
-                                    for
-                                    birth defects in newborns.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-emerald-500 font-bold">ii.</span>
-                                <span><b>Community Screening:</b> Conducted by Mobile Health Teams (MHT) in Anganwadis
-                                    and
-                                    Government schools.</span>
-                            </li>
-                        </ul>
+
                     </div>
 
-                    <div
-                        class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-emerald-200 transition-all shadow-sm hover:shadow-lg group">
-                        <div
-                            class="w-14 h-14 bg-white text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-hospital-user"></i>
-                        </div>
-                        <h4 class="text-2xl font-black text-slate-900 mb-4">Management & Referral</h4>
-                        <ul class="space-y-4 text-sm md:text-base text-slate-600">
-                            <li class="flex gap-3">
-                                <i class="fa-solid fa-check-double text-emerald-500 mt-1"></i>
-                                <span><b>DEIC:</b> Comprehensive management and care under one roof at District Early
-                                    Intervention Centers.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i class="fa-solid fa-check-double text-emerald-500 mt-1"></i>
-                                <span><b>Tertiary Care:</b> Specialized surgical management and advanced interventions
-                                    like
-                                    Cochlear implants.</span>
-                            </li>
-                        </ul>
-                    </div>
+
+
+
+
                 </div>
+
+
+
+
+
+
+
             </div>
         </section>
 
-   
-<section class="py-20 bg-white overflow-hidden">
-    <div class="container mx-auto px-6">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-            <div>
-                <h2 class="text-emerald-600 font-bold uppercase tracking-[0.2em] text-xs mb-3">Visual Journey</h2>
-                <h3 class="text-4xl font-black text-slate-900">Photo Gallery & Highlights</h3>
-            </div>
-            <a href="news.html" class="text-emerald-600 font-bold flex items-center gap-2 hover:gap-4 transition-all group">
-                View All News <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-
-        <div class="grid lg:grid-cols-12 gap-8">
-            
-            <div class="lg:col-span-7 relative group cursor-pointer overflow-hidden rounded-[2.5rem] shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200" alt="RBSK Activities" class="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-1000">
-                
-                <a href="gallery.html" class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent flex flex-col justify-end p-10 text-white no-underline">
-                    <div class="bg-white/20 backdrop-blur-md w-fit p-4 rounded-2xl mb-4 border border-white/30 group-hover:bg-emerald-500 transition-colors">
-                        <i class="fa-solid fa-images text-2xl"></i>
-                    </div>
-                    <h4 class="text-3xl font-bold mb-2 leading-tight">Glimpses of RBSK Field Activities</h4>
-                    <p class="text-slate-300 text-sm mb-4">Click here to view our latest health camps, awareness drives, and screening success stories.</p>
-                    
-                    <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
-                        <span>Enter Gallery</span>
-                        <i class="fa-solid fa-circle-arrow-right animate-pulse"></i>
-                    </div>
-                </a>
-            </div>
-
-            <div class="lg:col-span-5 flex flex-col gap-4 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
-                
-                <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-200 transition-all group relative">
-                    <div class="flex gap-4 items-center">
-                        <div class="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex flex-col items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-colors">
-                            <span class="text-emerald-600 font-black text-lg leading-none">28</span>
-                            <span class="text-[10px] uppercase font-bold text-slate-400">Feb</span>
-                        </div>
-                        <div class="space-y-1 flex-1">
-                            <h5 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2 pr-10">New Guidelines for Cochlear Implant Surgeries under RBSK Released.</h5>
-                            <p class="text-xs text-slate-500">Updated protocols for tertiary care referrals.</p>
-                        </div>
-                        <a href="#" class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all shadow-sm">
-                            <i class="fa-solid fa-file-pdf text-lg"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-200 transition-all group relative">
-                    <div class="flex gap-4 items-center">
-                        <div class="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex flex-col items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-colors">
-                            <span class="text-emerald-600 font-black text-lg leading-none">25</span>
-                            <span class="text-[10px] uppercase font-bold text-slate-400">Feb</span>
-                        </div>
-                        <div class="space-y-1 flex-1">
-                            <h5 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2 pr-10">Successful 10,000+ Screenings completed in Rural Anganwadis this month.</h5>
-                            <p class="text-xs text-slate-500">MHT teams achieving record milestones.</p>
-                        </div>
-                        <a href="#" class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all shadow-sm">
-                            <i class="fa-solid fa-file-pdf text-lg"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            
-
-              
-
-        </div>
-    </div>
-</section>
-      
-
-      
-
-     </main>
+    </main>
 
 
     <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
 </body>
+
 </html>

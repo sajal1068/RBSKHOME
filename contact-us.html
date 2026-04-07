@@ -9,215 +9,70 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
     <style>
-        .high-contrast {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-        }
-
-
-        .high-contrast section,
-        .high-contrast div,
-        .high-contrast header,
-        .high-contrast footer,
-        .high-contrast nav {
-            background-color: #000000 !important;
-            background-image: none !important;
-            border-color: #ffff00 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target text elements */
-        .high-contrast h1,
-        .high-contrast h2,
-        .high-contrast h3,
-        .high-contrast h4,
-        .high-contrast h5,
-        .high-contrast h6,
-        .high-contrast p,
-        .high-contrast span,
-        .high-contrast a,
-        .high-contrast li {
-            color: #ffff00 !important;
-        }
-
-        /* Target Buttons and Interactive Elements */
-        .high-contrast button {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-            border: 2px solid #ffff00 !important;
-        }
-
-        .high-contrast {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target the Accessibility Bar specifically */
-        .high-contrast div[class*="bg-[#f8fafc]"] {
-            background-color: #111111 !important;
-            border-color: #ffff00 !important;
-        }
-
-        /* Fix for all buttons in high contrast */
-        .high-contrast button {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-            border: 1px solid #ffff00 !important;
-        }
-
-        /* Normal state for buttons */
-        .font-btn {
-            transition: all 0.3s ease;
-            color: #475569;
-            /* slate-600 */
-        }
-
-        /* Active state - isse green color fix hoga */
-        .font-btn.active {
-            background-color: #059669 !important;
-            /* emerald-600 */
-            color: white !important;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
+        /* Custom shadows and transitions for sliding effect */
+        .contact-shadow { box-shadow: 20px 22px 44px rgba(204, 204, 204, 0.8); }
+        .move-class { transform: translateX(316px); }
     </style>
 </head>
 
 <body class="transition-all duration-300">
-   <div id="header-placeholder"></div> 
+    <div id="header-placeholder"></div>
 
 
-    <main id="main">      
-      
-   
+    <main id="main">
 
-      
+
+
+
 
         <section class="py-16 bg-slate-50">
             <div class="container mx-auto px-6 max-w-6xl">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
+                
+                    
+                        <div
+                            class="relative overflow-hidden bg-white border-[5px] border-white border-b-0 rounded-[25px] min-h-[450px] contact-shadow mb-10">
 
-                    <div class="w-full lg:w-1/2 relative">
-                        <div
-                            class="absolute -top-4 -left-4 w-24 h-24 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
-                        </div>
-                        <div
-                            class="absolute -bottom-8 -right-4 w-32 h-32 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
-                        </div>
+                            <div class="w-full h-full">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.551790447385!2d77.2104107!3d28.6132049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd4669866163%3A0xb33984e1b8c148e!2sNirman%20Bhawan!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin"
+                                    width="100%" height="450" class="border-0" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
 
-                        <div
-                            class="relative bg-white p-10 rounded-[3rem] shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 flex justify-center items-center">
-                            <div class="relative">
-                                <div
-                                    class="w-64 h-64 rounded-full bg-blue-50 flex items-center justify-center border-8 border-white shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-600" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                                        </path>
+                            <div id="contactInfo"
+                                class="absolute right-0 top-[18%] h-[250px] w-[320px] p-[40px_35px] rounded-l-[25px] bg-[#022759]/80 text-white transition-transform duration-500 ease-in-out">
+
+                                <div id="toggleArrow"
+                                    class="absolute -left-4 top-[45%] w-5 h-8 bg-[#ffcb00] rounded-sm flex items-center justify-center cursor-pointer p-[3px] transition-all duration-500">
+                                    <svg class="w-full h-full fill-current text-black transform transition-transform duration-500"
+                                        id="arrowSvg" viewBox="0 0 492.004 492.004">
+                                        <path
+                                            d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" />
                                     </svg>
                                 </div>
-                                <div
-                                    class="absolute -top-2 -right-2 bg-green-500 text-white p-2 rounded-full shadow-md">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
+
+                                <div class="leading-relaxed">
+                                    <strong class="text-xl block pb-2">Ministry of Health & Family Welfare,</strong>
+                                    <div class="text-base mt-2">Nirman Bhawan,</div>
+                                    <div class="text-base">New Delhi - 110011</div>
+                                    <div class="text-base">Ph: 91-011-23061281(O)</div>
                                 </div>
                             </div>
 
-                            <div
-                                class="absolute -bottom-10 -right-6 bg-emerald-600 text-white p-6 rounded-2xl shadow-xl hidden md:block">
-                                <svg class="w-8 h-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                                    </path>
-                                </svg>
-                                <span class="font-bold block">Protected</span>
-                                <span class="text-xs opacity-80">RBSK Portal Content</span>
-                            </div>
                         </div>
-                    </div>
-
-                    <div class="w-full lg:w-1/2">
-                        <div class="mb-8">
-                            <div class="flex items-center gap-2 mb-2">
-                                <span class="h-1 w-10 bg-emerald-500 rounded-full"></span>
-                                <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs">Legal
-                                    Notice</span>
-                            </div>
-                            <h2 class="text-4xl font-black text-slate-800 leading-tight">
-                                Copyright <span class="text-emerald-500">Policy</span>
-                            </h2>
-                        </div>
-
-                        <div class="space-y-6 text-slate-600 text-base leading-relaxed">
-                            <div class="bg-white p-6 rounded-2xl border-l-4 border-emerald-500 shadow-sm">
-                                <p>
-                                    The contents on this web portal may not be reproduced partially or fully, without
-                                    <strong>duly &amp; prominently acknowledging the source</strong>.
-                                    The contents of this portal cannot be used in any
-                                    <strong>misleading or objectionable context or derogatory manner</strong>.
-                                </p>
-                            </div>
-
-                            <div class="p-6 border-2 border-dashed border-slate-200 rounded-3xl">
-                                <p class="mb-4">
-                                    However, the permission to reproduce the material available on the RBSK Portal shall
-                                    not extend to any material, which is
-                                    <strong>identified as being copyright of a third party</strong>.
-                                </p>
-
-                                <div
-                                    class="flex items-start gap-4 bg-amber-50 p-5 rounded-2xl border border-amber-100 group">
-                                    <div class="bg-amber-100 p-2 rounded-lg group-hover:bg-amber-200 transition-colors">
-                                        <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <p class="text-sm font-medium text-amber-800 italic">
-                                        Authorization to reproduce such material must be obtained from the
-                                        Departments/copyright holders concerned.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    
+                
             </div>
         </section>
-
-        <div class="bg-slate-50 font-sans text-slate-900 overflow-hidden">
-            <section class="relative py-24 px-8 max-w-7xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-indigo-600 font-bold tracking-widest uppercase text-sm mb-4">National Health
-                            Mission</h2>
-                        <p class="text-lg text-slate-600 leading-relaxed mb-6">RBSK is an <span
-                                class="text-indigo-600 font-semibold underline decoration-wavy">ambitious
-                                initiative</span> that envisages child health screening as a systemic approach to
-                            linkage and care.</p>
-                    </div>
-                    <div class="bg-gradient-to-tr from-indigo-500 to-teal-400 p-1 rounded-3xl rotate-2 shadow-2xl">
-                        <div class="bg-white rounded-[22px] p-8 -rotate-2">
-                            <p class="italic text-xl text-slate-700">"Improving the overall quality of life, enabling
-                                children to achieve their full potential."</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-           
-          
-        </div>
 
        
 
 
 
-      
+
+
+
 
 
 
@@ -226,6 +81,19 @@
 
     <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
+    <script>
+        const arrow = document.getElementById('toggleArrow');
+        const infoSec = document.getElementById('contactInfo');
+        const arrowSvg = document.getElementById('arrowSvg');
+
+        arrow.addEventListener('click', () => {
+            // Toggle the slide class
+            infoSec.classList.toggle('move-class');
+            
+            // Rotate the arrow icon when clicked
+            arrowSvg.classList.toggle('rotate-180');
+        });
+    </script>
 </body>
 
 </html>

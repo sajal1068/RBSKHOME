@@ -95,90 +95,104 @@
 </section>
 
 
-<!-- Sticky Header with Solid Emerald Bottom Border -->
-<header id="navbar" class="sticky top-0 z-[100] w-full transition-all duration-500 bg-slate-950 border-b-2 border-emerald-500 shadow-xl">
+<!-- Sleek Slim WOW Navbar with Vertical Separators -->
+<header id="navbar" class="sticky top-0 z-[100] w-full transition-all duration-300 bg-slate-950/90 backdrop-blur-md border-b border-emerald-500/20 shadow-lg">
     <nav class="container mx-auto px-6 relative">
-        <div class="flex items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
+        <!-- Height strictly controlled: h-12 -->
+        <div class="flex items-center h-12 md:h-14 transition-all duration-300" id="nav-container">
             
-        
-
-            <!-- Desktop Menu: Starts from Left -->
-            <div class="hidden lg:flex items-center flex-grow h-full justify-between">
-                <ul class="flex items-center h-full gap-2">
+            <!-- Desktop Menu: Left Aligned with Vertical Separators -->
+            <div class="hidden lg:flex items-center flex-grow h-full">
+                <!-- divide-x adds vertical lines between children only on desktop -->
+                <ul class="flex items-center h-full divide-x divide-emerald-500/20">
+                    
                     <!-- Home -->
                     <li class="h-full flex items-center">
-                        <a href="index.html" class="relative px-5 py-2 text-[11px] font-black uppercase tracking-widest text-white hover:text-emerald-400 transition-all group">
+                        <a href="index.html" class="relative px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-emerald-400 transition-all group">
                             Home
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#10b981]"></span>
                         </a>
                     </li>
 
                     <!-- About Us Dropdown -->
                     <li class="relative group h-full flex items-center">
-                        <button class="flex items-center gap-2 px-5 py-2 text-[11px] font-black uppercase tracking-widest text-white group-hover:text-emerald-400 transition-all">
-                            About Us <i class="fa-solid fa-chevron-down text-[8px] group-hover:rotate-180 transition-transform duration-300"></i>
+                        <button class="flex items-center gap-1.5 px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-emerald-400 transition-all">
+                            About Us 
+                            <i class="fa-solid fa-chevron-down text-[7px] group-hover:rotate-180 transition-transform duration-500 text-emerald-500"></i>
                         </button>
                         
-                        <!-- Premium Dropdown Menu -->
-                        <div class="absolute top-[100%] left-0 w-64 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-full transition-all duration-300">
-                            <div class="bg-slate-900 border border-emerald-500/30 rounded-2xl shadow-2xl overflow-hidden p-2 backdrop-blur-xl">
-                                <a href="about-us.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-600 hover:text-white text-slate-300 text-[11px] font-bold transition-all group/item">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover/item:bg-white transition-colors"></div> 
-                                    About RBSK
+                        <!-- Slim Dropdown Card -->
+                        <div class="absolute top-full left-0 w-60 pt-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500">
+                            <div class="bg-slate-900 border border-emerald-500/20 rounded-b-2xl shadow-2xl overflow-hidden p-2 backdrop-blur-2xl">
+                                <a href="about-us.html" class="flex items-center justify-between px-4 py-2 rounded-xl hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all group/item">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider">About RBSK</span>
+                                    <i class="fa-solid fa-chevron-right text-[8px] opacity-0 group-hover/item:opacity-100 transition-all"></i>
                                 </a>
-                                <a href="program-overview.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-600 hover:text-white text-slate-300 text-[11px] font-bold transition-all group/item">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover/item:bg-white transition-colors"></div> 
-                                    Program Overview
+                                <a href="program-overview.html" class="flex items-center justify-between px-4 py-2 rounded-xl hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all group/item">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider">Overview</span>
+                                    <i class="fa-solid fa-chevron-right text-[8px] opacity-0 group-hover/item:opacity-100 transition-all"></i>
                                 </a>
-                                <a href="operational-guidelines.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-600 hover:text-white text-slate-300 text-[11px] font-bold transition-all group/item">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover/item:bg-white transition-colors"></div> 
-                                    Operational Guidelines
+                                <a href="operational-guidelines.html" class="flex items-center justify-between px-4 py-2 rounded-xl hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all group/item">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider">Guidelines</span>
+                                    <i class="fa-solid fa-chevron-right text-[8px] opacity-0 group-hover/item:opacity-100 transition-all"></i>
                                 </a>
                             </div>
                         </div>
                     </li>
 
                     <!-- Gallery -->
-                    <li class="h-full flex items-center">
-                        <a href="gallery.html" class="relative px-5 py-2 text-[11px] font-black uppercase tracking-widest text-white hover:text-emerald-400 transition-all group">
+                    <li class="h-full flex items-center border-r border-emerald-500/20">
+                        <a href="gallery.html" class="relative px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-emerald-400 transition-all group">
                             Gallery
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#10b981]"></span>
+                        </a>
+                    </li>
+
+                     <!-- Gallery -->
+                    <li class="h-full flex items-center border-r border-emerald-500/20">
+                        <a href="contact-us.html" class="relative px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-emerald-400 transition-all group">
+                            Contact Us
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#10b981]"></span>
                         </a>
                     </li>
                 </ul>
-
-                <!-- Right Side CTA -->
-                <div class="flex items-center">
-                    <a href="contact-us.html" class="px-7 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black uppercase tracking-widest rounded-xl shadow-[0_10px_20px_rgba(16,185,129,0.3)] transition-all active:scale-95">
-                        Get in Touch
-                    </a>
-                </div>
             </div>
 
             <!-- Mobile Toggle -->
             <div class="lg:hidden ml-auto">
-                <button onclick="toggleMobileMenu()" class="w-12 h-12 flex items-center justify-center bg-emerald-500/10 text-emerald-500 rounded-xl hover:bg-emerald-500 hover:text-slate-950 transition-all duration-300">
-                    <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
+                <button onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center text-emerald-500 transition-all">
+                    <i id="menuIcon" class="fa-solid fa-bars-staggered text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu (Slide Down) -->
-        <div id="mobileMenu" class="hidden lg:hidden overflow-hidden bg-slate-900 rounded-2xl mb-6 border border-emerald-500/20">
-            <div class="flex flex-col p-4 gap-2">
-                <a href="index.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-emerald-500 bg-emerald-500/10 rounded-xl">Home</a>
-                <a href="about-us.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-white hover:bg-emerald-600 rounded-xl transition">About Us</a>
-                <a href="gallery.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-white hover:bg-emerald-600 rounded-xl transition">Gallery</a>
-                <a href="contact-us.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-slate-950 bg-emerald-500 rounded-xl text-center mt-2 font-bold">Contact Us</a>
+        <!-- Mobile Menu (No vertical lines here for cleaner UI) -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900/95 backdrop-blur-xl rounded-b-2xl border-t border-emerald-500/20 shadow-2xl">
+            <div class="flex flex-col p-4 gap-1">
+                <a href="index.html" class="p-3 text-[11px] font-bold uppercase text-emerald-400 bg-emerald-500/5 rounded-lg">Home</a>
+                <a href="about-us.html" class="p-3 text-[11px] font-bold uppercase text-white hover:bg-white/5 rounded-lg">About Us</a>
+                <a href="gallery.html" class="p-3 text-[11px] font-bold uppercase text-white hover:bg-white/5 rounded-lg">Gallery</a>
             </div>
         </div>
     </nav>
 </header>
+
 <script>
+    // Slim on Scroll logic
+    window.addEventListener('scroll', () => {
+        const navContainer = document.getElementById('nav-container');
+        if (window.scrollY > 30) {
+            navContainer.classList.replace('md:h-16', 'md:h-12');
+            navContainer.classList.replace('h-14', 'h-12');
+        } else {
+            navContainer.classList.replace('md:h-12', 'md:h-16');
+            navContainer.classList.replace('h-12', 'h-14');
+        }
+    });
+
     function toggleMobileMenu() {
         const menu = document.getElementById('mobileMenu');
         const icon = document.getElementById('menuIcon');
-        
         if (menu.classList.contains('hidden')) {
             menu.classList.remove('hidden');
             icon.classList.replace('fa-bars-staggered', 'fa-xmark');
@@ -188,4 +202,3 @@
         }
     }
 </script>
-

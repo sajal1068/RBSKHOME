@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<section class="relative w-full  border-b-4 border-emerald-600 z-10 shadow-sm">
+<section class="relative w-full z-10 shadow-sm">
     <div class="container mx-auto px-4 py-4 lg:py-6">
         <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
 
@@ -95,163 +95,81 @@
 </section>
 
 
-<!-- <header class="sticky top-0 z-[100] w-full bg-white border-b-2 border-emerald-600 shadow-sm">
-    <nav class="container mx-auto px-6">
-        <div class="flex items-center justify-between h-20">
+<!-- Sticky Header with Solid Emerald Bottom Border -->
+<header id="navbar" class="sticky top-0 z-[100] w-full transition-all duration-500 bg-slate-950 border-b-2 border-emerald-500 shadow-xl">
+    <nav class="container mx-auto px-6 relative">
+        <div class="flex items-center h-16 md:h-20 transition-all duration-300" id="nav-container">
             
-            <div class="hidden lg:flex items-center">
-                <ul class="flex items-center gap-1">
-                    <li>
-                        <a href="index.html" class="px-5 py-3 text-[13px] font-black uppercase tracking-widest text-slate-900 hover:bg-emerald-600 hover:text-white rounded-xl transition-all duration-300">
+        
+
+            <!-- Desktop Menu: Starts from Left -->
+            <div class="hidden lg:flex items-center flex-grow h-full justify-between">
+                <ul class="flex items-center h-full gap-2">
+                    <!-- Home -->
+                    <li class="h-full flex items-center">
+                        <a href="index.html" class="relative px-5 py-2 text-[11px] font-black uppercase tracking-widest text-white hover:text-emerald-400 transition-all group">
                             Home
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </li>
 
-                    <li class="relative group">
-                        <button class="flex items-center gap-1.5 px-5 py-3 text-[13px] font-black uppercase tracking-widest text-slate-900 group-hover:bg-emerald-600 group-hover:text-white rounded-xl transition-all duration-300">
-                            About Us <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+                    <!-- About Us Dropdown -->
+                    <li class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-2 px-5 py-2 text-[11px] font-black uppercase tracking-widest text-white group-hover:text-emerald-400 transition-all">
+                            About Us <i class="fa-solid fa-chevron-down text-[8px] group-hover:rotate-180 transition-transform duration-300"></i>
                         </button>
-                        <ul class="absolute top-full left-0 w-64 bg-slate-900 shadow-2xl rounded-2xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all translate-y-3 group-hover:translate-y-0 border-t-4 border-emerald-500">
-                            <li><a href="program-overview.html" class="block px-6 py-2.5 text-sm text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Program Overview</a></li>
-                            <li class="relative group/nested">
-                                <a href="#" class="flex items-center justify-between px-6 py-2.5 text-sm text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">
-                                    The 4 'D's <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        
+                        <!-- Premium Dropdown Menu -->
+                        <div class="absolute top-[100%] left-0 w-64 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-full transition-all duration-300">
+                            <div class="bg-slate-900 border border-emerald-500/30 rounded-2xl shadow-2xl overflow-hidden p-2 backdrop-blur-xl">
+                                <a href="about-us.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-600 hover:text-white text-slate-300 text-[11px] font-bold transition-all group/item">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover/item:bg-white transition-colors"></div> 
+                                    About RBSK
                                 </a>
-                                <ul class="absolute top-0 left-full w-60 bg-slate-800 shadow-2xl rounded-2xl py-4 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all ml-2 border-l-4 border-emerald-500">
-                                    <li><a href="#" class="block px-6 py-2 text-sm text-slate-400 hover:text-emerald-400 font-bold">Defects at Birth</a></li>
-                                    <li><a href="#" class="block px-6 py-2 text-sm text-slate-400 hover:text-emerald-400 font-bold">Deficiencies</a></li>
-                                    <li><a href="#" class="block px-6 py-2 text-sm text-slate-400 hover:text-emerald-400 font-bold">Diseases</a></li>
-                                    <li><a href="#" class="block px-6 py-2 text-sm text-slate-400 hover:text-emerald-400 font-bold">Developmental Delays</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="operational-guidelines.html" class="block px-6 py-2.5 text-sm text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Operational Guidelines</a></li>
-                        </ul>
+                                <a href="program-overview.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-600 hover:text-white text-slate-300 text-[11px] font-bold transition-all group/item">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover/item:bg-white transition-colors"></div> 
+                                    Program Overview
+                                </a>
+                                <a href="operational-guidelines.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-600 hover:text-white text-slate-300 text-[11px] font-bold transition-all group/item">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover/item:bg-white transition-colors"></div> 
+                                    Operational Guidelines
+                                </a>
+                            </div>
+                        </div>
                     </li>
 
-                    <li class="relative group">
-                        <button class="flex items-center gap-1.5 px-5 py-3 text-[13px] font-black uppercase tracking-widest text-slate-900 group-hover:bg-emerald-600 group-hover:text-white rounded-xl transition-all duration-300">
-                            Resources <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
-                        </button>
-                        <ul class="absolute top-full left-0 w-60 bg-slate-900 shadow-2xl rounded-2xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all translate-y-3 group-hover:translate-y-0 border-t-4 border-emerald-500">
-                            <li><a href="#" class="block px-6 py-2.5 text-sm text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">DEIC Directory</a></li>
-                            <li><a href="#" class="block px-6 py-2.5 text-sm text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Training Manuals</a></li>
-                            <li><a href="#" class="block px-6 py-2.5 text-sm text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Downloads</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#" class="px-5 py-3 text-[13px] font-black uppercase tracking-widest text-slate-900 hover:bg-emerald-600 hover:text-white rounded-xl transition-all duration-300">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="lg:hidden ml-auto">
-                <button onclick="toggleMobileMenu()" class="text-slate-900 text-2xl p-2 hover:bg-emerald-50 rounded-xl transition">
-                    <i id="menuIcon" class="fa-solid fa-bars-staggered text-emerald-600"></i>
-                </button>
-            </div>
-        </div>
-
-        <div id="mobileMenu" class="hidden lg:hidden pb-10 pt-4 border-t border-slate-100">
-            <div class="flex flex-col gap-2">
-                <a href="index.html" class="text-sm font-black uppercase tracking-widest text-white bg-emerald-600 p-4 rounded-2xl shadow-lg">Home</a>
-                
-                <div class="p-4 bg-slate-900 rounded-2xl space-y-4">
-                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-500">Program Info</p>
-                    <div class="flex flex-col gap-3 pl-2">
-                        <a href="#" class="text-sm font-bold text-slate-300 hover:text-emerald-400">About Us</a>
-                        <a href="#" class="text-sm font-bold text-slate-300 hover:text-emerald-400">Operational Guidelines</a>
-                    </div>
-                </div>
-
-                <div class="p-4 bg-slate-900 rounded-2xl space-y-4">
-                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-500">Quick Links</p>
-                    <div class="flex flex-col gap-3 pl-2">
-                        <a href="#" class="text-sm font-bold text-slate-300 hover:text-emerald-400">DEIC Directory</a>
-                        <a href="#" class="text-sm font-bold text-slate-300 hover:text-emerald-400">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header> -->
-<header class="sticky top-0 z-[100] w-full bg-slate-950 border-b-2 border-emerald-500 shadow-lg">
-    <nav class="container mx-auto px-6">
-        <div class="flex items-center justify-between h-14">
-            
-            <div class="hidden lg:flex items-center h-full">
-                <ul class="flex items-center h-full">
-                    <li class="flex items-center h-full">
-                        <a href="index.html" class="px-5 py-1 text-[12px] font-black uppercase tracking-widest text-white hover:text-emerald-400 transition-all duration-300">
-                            Home
-                        </a>
-                        <div class="h-4 w-[1px] bg-slate-800"></div>
-                    </li>
-
-                    <li class="relative group flex items-center h-full">
-                        <button class="flex items-center gap-1.5 px-5 py-1 text-[12px] font-black uppercase tracking-widest text-white group-hover:text-emerald-400 transition-all duration-300">
-                            About Us <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform"></i>
-                        </button>
-                        <div class="h-4 w-[1px] bg-slate-800"></div>
-
-                        <ul class="absolute top-full left-0 w-64 bg-slate-900 shadow-2xl rounded-b-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all translate-y-0 border-t-2 border-emerald-500">
-                            <li><a href="about-us.html" class="block px-6 py-2 text-xs text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">About RBSK</a></li>
-                            <li class="border-t border-slate-800/50"></li>
-                            <li><a href="program-overview.html" class="block px-6 py-2 text-xs text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Program Overview</a></li>
-                            <li class="border-t border-slate-800/50"></li>
-                          
-                            <li class="border-t border-slate-800/50"></li>
-                            <li><a href="operational-guidelines.html" class="block px-6 py-2 text-xs text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Operational Guidelines</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="relative group flex items-center h-full">
-                        <button class="flex items-center gap-1.5 px-5 py-1 text-[12px] font-black uppercase tracking-widest text-white group-hover:text-emerald-400 transition-all duration-300">
-                            Resources <i class="fa-solid fa-chevron-down text-[9px] group-hover:rotate-180 transition-transform"></i>
-                        </button>
-                        <div class="h-4 w-[1px] bg-slate-800"></div>
-
-                        <ul class="absolute top-full left-0 w-60 bg-slate-900 shadow-2xl rounded-b-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all translate-y-0 border-t-2 border-emerald-500">
-                            <li><a href="#" class="block px-6 py-2 text-xs text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">DEIC Directory</a></li>
-                            <li class="border-t border-slate-800/50"></li>
-                            <li><a href="#" class="block px-6 py-2 text-xs text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Training Manuals</a></li>
-                            <li class="border-t border-slate-800/50"></li>
-                            <li><a href="#" class="block px-6 py-2 text-xs text-slate-300 hover:bg-emerald-600 hover:text-white font-bold transition">Downloads</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="flex items-center h-full">
-                        <a href="gallery.html" class="px-5 py-1 text-[12px] font-black uppercase tracking-widest text-white hover:text-emerald-400 transition-all duration-300">
+                    <!-- Gallery -->
+                    <li class="h-full flex items-center">
+                        <a href="gallery.html" class="relative px-5 py-2 text-[11px] font-black uppercase tracking-widest text-white hover:text-emerald-400 transition-all group">
                             Gallery
-                        </a>
-                    </li>
-
-                    <li class="flex items-center h-full">
-                        <a href="contact-us.html" class="px-5 py-1 text-[12px] font-black uppercase tracking-widest text-white hover:text-emerald-400 transition-all duration-300">
-                            Contact
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </li>
                 </ul>
+
+                <!-- Right Side CTA -->
+                <div class="flex items-center">
+                    <a href="contact-us.html" class="px-7 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black uppercase tracking-widest rounded-xl shadow-[0_10px_20px_rgba(16,185,129,0.3)] transition-all active:scale-95">
+                        Get in Touch
+                    </a>
+                </div>
             </div>
 
+            <!-- Mobile Toggle -->
             <div class="lg:hidden ml-auto">
-                <button onclick="toggleMobileMenu()" class="text-white text-xl p-2 hover:bg-slate-900 rounded-lg transition">
-                    <i id="menuIcon" class="fa-solid fa-bars-staggered text-emerald-500"></i>
+                <button onclick="toggleMobileMenu()" class="w-12 h-12 flex items-center justify-center bg-emerald-500/10 text-emerald-500 rounded-xl hover:bg-emerald-500 hover:text-slate-950 transition-all duration-300">
+                    <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobileMenu" class="hidden lg:hidden pb-6 pt-2 border-t border-slate-900">
-            <div class="flex flex-col gap-1">
-                <a href="index.html" class="text-[11px] font-black uppercase tracking-widest text-emerald-500 p-3 hover:bg-slate-900 rounded-xl transition">Home</a>
-                <div class="h-[1px] bg-slate-900 mx-2"></div>
-                <a href="#" class="text-[11px] font-black uppercase tracking-widest text-white p-3 hover:bg-slate-900 rounded-xl transition">About RBSK</a>
-                <div class="h-[1px] bg-slate-900 mx-2"></div>
-                <a href="#" class="text-[11px] font-black uppercase tracking-widest text-white p-3 hover:bg-slate-900 rounded-xl transition">Resources</a>
-                <div class="h-[1px] bg-slate-900 mx-2"></div>
-                <a href="#" class="text-[11px] font-black uppercase tracking-widest text-white p-3 hover:bg-slate-900 rounded-xl transition">Contact</a>
+        <!-- Mobile Menu (Slide Down) -->
+        <div id="mobileMenu" class="hidden lg:hidden overflow-hidden bg-slate-900 rounded-2xl mb-6 border border-emerald-500/20">
+            <div class="flex flex-col p-4 gap-2">
+                <a href="index.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-emerald-500 bg-emerald-500/10 rounded-xl">Home</a>
+                <a href="about-us.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-white hover:bg-emerald-600 rounded-xl transition">About Us</a>
+                <a href="gallery.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-white hover:bg-emerald-600 rounded-xl transition">Gallery</a>
+                <a href="contact-us.html" class="p-4 text-[11px] font-black uppercase tracking-widest text-slate-950 bg-emerald-500 rounded-xl text-center mt-2 font-bold">Contact Us</a>
             </div>
         </div>
     </nav>

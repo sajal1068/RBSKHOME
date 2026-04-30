@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,12 +79,46 @@
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
     </style>
-</head>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        teal: {
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            600: '#0d9488',
+                        },
+                        blue: {
+                            100: '#dbeafe',
+                            600: '#2563eb',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom class for the dashed connector line, ensuring it spans correctly */
+        .bg-dashed-line {
+            background-image: linear-gradient(to right, #f1f5f9 50%, rgba(255, 255, 255, 0) 0%);
+            background-position: bottom;
+            background-size: 15px 2px;
+            background-repeat: repeat-x;
+        }
+    </style>
+</head>
 <body class="transition-all duration-300">
     <div id="header-placeholder"></div>
-
-
     <section
         class="relative w-full min-h-[550px] md:min-h-[600px] bg-[#064e3b] overflow-hidden flex items-center py-12">
 
@@ -217,309 +250,631 @@
             </div>
         </div>
     </section>
-
-
     <main id="main">
 
-        <section class="w-full bg-slate-50 py-12">
-    <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+       <nav class="w-full bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border-y border-white/10 px-4 py-3 backdrop-blur-md sticky top-0 z-50">
+  
+  <div class="max-w-7xl mx-auto flex items-center space-x-2 text-sm">
+    
+    <a href="#" class="flex items-center group">
+      <div class="p-2 rounded-lg bg-white/5 group-hover:bg-indigo-500 transition-all duration-300 mr-2">
+        <svg class="w-4 h-4 text-indigo-300 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+        </svg>
+      </div>
+      <span class="text-slate-400 group-hover:text-white font-medium transition-colors">Home</span>
+    </a>
+
+    <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+    </svg>
+
+    <a href="#" class="flex items-center group px-3 py-1.5 rounded-full hover:bg-white/5 transition-all">
+      <span class="text-slate-400 group-hover:text-indigo-300 font-medium transition-colors">Resources</span>
+    </a>
+
+    <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+    </svg>
+
+    <div class="flex items-center px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.1)]">
+      <span class="bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent font-bold tracking-wide">
+        RBSK Dashboard
+      </span>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- Login Selection Section -->
+<section class="relative w-full py-20 px-6 overflow-hidden bg-slate-50">
+    
+    <!-- Background Decor (Optional) -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-teal-200 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-blue-200 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl font-black text-slate-900 uppercase tracking-widest mb-12">
+            Portal <span class="text-teal-600">Login</span> Access
+        </h2>
+
+        <!-- Login Buttons Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div class="lg:col-span-2 bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 relative overflow-hidden group">
-                <div class="relative z-10">
-                    <span class="text-emerald-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">National Program</span>
-                    <h1 class="text-4xl md:text-5xl font-black text-slate-800 leading-none tracking-tighter">
-                        Comprehensive Care from <br>
-                        <span class="text-emerald-500 italic underline decoration-emerald-200 decoration-8 underline-offset-8">Birth to 18 Years.</span>
-                    </h1>
-                    <p class="text-slate-500 mt-8 text-sm leading-relaxed max-w-lg">
-                        Rashtriya Bal Swasthya Karyakram (RBSK) is a pioneering initiative for early identification of health conditions. We bridge the gap between screening and surgical management, ensuring a healthy future for every child.
-                    </p>
+            <!-- MHT Login -->
+            <a href="mht-login.html" class="group relative overflow-hidden bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-200/50">
+                <div class="w-20 h-20 mx-auto bg-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-truck-medical text-3xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-black text-slate-800 uppercase tracking-tighter mb-2">MHT Login</h3>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Mobile Health Team</p>
+                <!-- Decorative Arrow -->
+                <div class="mt-6 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </a>
 
-                    <div class="mt-10 flex gap-6">
-                        <div class="flex items-center gap-3 bg-emerald-50 px-6 py-3 rounded-2xl border border-emerald-100 shadow-sm">
-                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
-                            <span class="text-emerald-700 font-black text-[10px] uppercase tracking-widest">4 D's Coverage</span>
-                        </div>
-                        <button class="text-[10px] font-black uppercase text-slate-400 hover:text-emerald-500 transition-all">Explore Guidelines <i class="fas fa-arrow-right ml-2"></i></button>
-                    </div>
+            <!-- DEIC Login -->
+            <a href="deic-login.html" class="group relative overflow-hidden bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-200/50">
+                <div class="w-20 h-20 mx-auto bg-teal-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-hospital-user text-3xl text-white"></i>
                 </div>
-                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-emerald-50 rounded-full blur-3xl opacity-50"></div>
-            </div>
+                <h3 class="text-lg font-black text-slate-800 uppercase tracking-tighter mb-2">DEIC Login</h3>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">District Intervention Centre</p>
+                <div class="mt-6 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </a>
 
-            <div class="bg-gradient-to-br from-emerald-500 to-teal-700 rounded-[3rem] p-8 flex flex-col justify-between text-white relative overflow-hidden shadow-xl shadow-emerald-200/50">
-                <div class="relative z-10">
-                    <i class="fas fa-heart-pulse text-3xl opacity-50"></i>
+            <!-- CNS Login -->
+            <a href="cns-login.html" class="group relative overflow-hidden bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-200/50">
+                <div class="w-20 h-20 mx-auto bg-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-orange-500/30 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-baby text-3xl text-white"></i>
                 </div>
-                <div class="relative z-10 text-center">
-                    <img src="assets/images/aboutus.png" class="w-48 mx-auto drop-shadow-2xl hover:scale-110 transition-transform duration-700" alt="Child Health">
-                    <p class="mt-6 font-black text-xl uppercase italic leading-none tracking-tighter italic">Early Detection <br> <span class="text-emerald-200">For Better Health</span></p>
+                <h3 class="text-lg font-black text-slate-800 uppercase tracking-tighter mb-2">CNS Login</h3>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Community Screening</p>
+                <div class="mt-6 text-orange-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <i class="fa-solid fa-arrow-right-long"></i>
                 </div>
-                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-            </div>
-
-            <div class="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-100 flex flex-col justify-between">
-                <div>
-                    <h3 class="font-black text-slate-800 uppercase tracking-widest text-[10px] border-b border-slate-50 pb-4 mb-6">Screening Protocol</h3>
-                    <ul class="space-y-6">
-                        <li class="flex gap-4 items-start group">
-                            <span class="bg-blue-100 text-blue-600 px-3 py-2 rounded-2xl font-black text-[10px] shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all">CNS</span>
-                            <p class="text-[11px] font-bold text-slate-500 leading-tight">Newborn screening at delivery points for vital birth defects.</p>
-                        </li>
-                        <li class="flex gap-4 items-start group">
-                            <span class="bg-orange-100 text-orange-600 px-3 py-2 rounded-2xl font-black text-[10px] shadow-sm group-hover:bg-orange-600 group-hover:text-white transition-all">MHT</span>
-                            <p class="text-[11px] font-bold text-slate-500 leading-tight">Comprehensive community screening at Anganwadis & Schools.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mt-8 pt-4 border-t border-slate-50">
-                    <p class="text-[9px] font-black text-[#75B175] uppercase italic tracking-widest text-center">Govt. Verified Process</p>
-                </div>
-            </div>
-
-            <div class="bg-[#003B1B] p-8 rounded-[3rem] text-white shadow-2xl lg:col-span-1">
-                <h3 class="font-black text-[#75B175] uppercase tracking-widest text-[10px] mb-8">Management & Care</h3>
-                <div class="space-y-6">
-                    <div class="flex gap-4 items-center p-4 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 transition-all">
-                        <div class="w-10 h-10 rounded-xl bg-[#75B175] text-[#003B1B] flex items-center justify-center font-black">✔</div>
-                        <div>
-                            <p class="text-[11px] font-black uppercase italic">DEIC District</p>
-                            <p class="text-[9px] text-white/40 uppercase">Care under one roof</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 items-center p-4 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 transition-all">
-                        <div class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center font-black">✔</div>
-                        <div>
-                            <p class="text-[11px] font-black uppercase italic">Tertiary Care</p>
-                            <p class="text-[9px] text-white/40 uppercase">Advanced Surgical Mgmt</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-3 bg-slate-900 text-white p-10 rounded-[3rem] flex flex-col md:flex-row justify-between items-center overflow-hidden relative group">
-                <div class="flex flex-col mb-6 md:mb-0 relative z-10">
-                    <span class="text-[10px] font-black uppercase text-slate-500 tracking-[0.4em] mb-2">Clinical Focus Areas</span>
-                    <span class="text-6xl font-black text-emerald-400 italic leading-none tracking-tighter">The 4 D's</span>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10 w-full md:w-auto">
-                    <div class="flex flex-col items-center">
-                        <div class="h-16 w-16 rounded-[1.5rem] bg-red-500/10 border-2 border-red-500 flex items-center justify-center text-[10px] font-black uppercase text-red-500 hover:bg-red-500 hover:text-white transition-all cursor-default">Defects</div>
-                        <p class="text-[8px] font-bold text-slate-500 uppercase mt-2">At Birth</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="h-16 w-16 rounded-[1.5rem] bg-blue-500/10 border-2 border-blue-500 flex items-center justify-center text-[10px] font-black uppercase text-blue-500 hover:bg-blue-500 hover:text-white transition-all cursor-default">Diseases</div>
-                        <p class="text-[8px] font-bold text-slate-500 uppercase mt-2">Children</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="h-16 w-16 rounded-[1.5rem] bg-yellow-500/10 border-2 border-yellow-500 flex items-center justify-center text-[10px] font-black uppercase text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all cursor-default">Delay</div>
-                        <p class="text-[8px] font-bold text-slate-500 uppercase mt-2">Development</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="h-16 w-16 rounded-[1.5rem] bg-pink-500/10 border-2 border-pink-500 flex items-center justify-center text-[10px] font-black uppercase text-pink-500 hover:bg-pink-500 hover:text-white transition-all cursor-default">Deficiency</div>
-                        <p class="text-[8px] font-bold text-slate-500 uppercase mt-2">Nutritional</p>
-                    </div>
-                </div>
-                
-                <div class="absolute right-0 top-0 text-[12rem] font-black text-white/[0.03] leading-none -mr-12 -mt-12 select-none group-hover:text-emerald-400/5 transition-all duration-700">RBSK</div>
-            </div>
+            </a>
 
         </div>
     </div>
 </section>
 
-        <div class="container mx-auto p-6 bg-slate-50 rounded-3xl grid grid-cols-1 md:grid-cols-3 gap-4 font-sans">
 
-            <div
-                class="md:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden">
-                <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">About the Program</span>
-                <h1 class="text-3xl font-extrabold text-slate-800 mt-2 leading-tight">Comprehensive Care from <br><span
-                        class="text-emerald-500 underline decoration-emerald-200">Birth to 18 Years.</span></h1>
-                <p class="text-slate-500 mt-4 text-sm leading-relaxed max-w-md">Rashtriya Bal Swasthya Karyakram (RBSK)
-                    is a pioneering initiative for early identification of health conditions and linking them for
-                    medical and surgical management, providing holistic care for every child in the community.</p>
 
-                <div class="mt-8 flex gap-4">
-                    <div class="flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100">
-                        <span class="text-emerald-700 font-medium text-xs">4 D's Covered</span>
+
+<!-- Unique Login Access Section -->
+<section class="py-24 bg-[#0a0f1a] overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-xl">
+                <h2 class="text-5xl font-black text-white leading-none tracking-tighter mb-4">
+                    SECURE <span class="text-emerald-500">ACCESS</span>
+                </h2>
+                <p class="text-slate-400 font-medium tracking-wide">Select your specialized portal to manage healthcare screenings and interventions.</p>
+            </div>
+            <div class="hidden md:block h-[1px] flex-grow mx-12 bg-gradient-to-r from-emerald-500/50 to-transparent"></div>
+        </div>
+
+        <!-- The Different Design: Sliding Glow Strips -->
+        <div class="flex flex-col gap-6">
+            
+            <!-- 1. MHT Login -->
+            <a href="#" class="group relative flex items-center justify-between p-2 bg-white/5 rounded-[2rem] border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)]">
+                <div class="flex items-center gap-8 p-4">
+                    <!-- Icon -->
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-600/40 group-hover:rotate-[360deg] transition-transform duration-700 shrink-0">
+                        <i class="fa-solid fa-truck-medical text-2xl text-white"></i>
+                    </div>
+                    <!-- Content -->
+                    <div class="max-w-md">
+                        <h3 class="text-2xl font-black text-white tracking-tight">MHT LOGIN</h3>
+                        <p class="text-slate-400 text-sm mt-1 leading-relaxed group-hover:text-blue-100 transition-colors">
+                            Record school and Anganwadi screenings in real-time with an intuitive mobile interface.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Side Arrow -->
+                <div class="mr-8 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-transparent transition-all shrink-0">
+                    <i class="fa-solid fa-arrow-right text-white group-hover:translate-x-1 transition-transform"></i>
+                </div>
+                <!-- Watermark -->
+                <span class="absolute right-24 top-1/2 -translate-y-1/2 text-8xl font-black text-white/[0.02] pointer-events-none group-hover:text-blue-500/10 transition-colors italic">01</span>
+            </a>
+
+            <!-- 2. DEIC Login -->
+            <a href="#" class="group relative flex items-center justify-between p-2 bg-white/5 rounded-[2rem] border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-emerald-500/50 hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]">
+                <div class="flex items-center gap-8 p-4">
+                    <!-- Icon -->
+                    <div class="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-emerald-600/40 group-hover:rotate-[360deg] transition-transform duration-700 shrink-0">
+                        <i class="fa-solid fa-hospital-user text-2xl text-white"></i>
+                    </div>
+                    <!-- Content -->
+                    <div class="max-w-md">
+                        <h3 class="text-2xl font-black text-white tracking-tight">DEIC LOGIN</h3>
+                        <p class="text-slate-400 text-sm mt-1 leading-relaxed group-hover:text-emerald-100 transition-colors">
+                            Central hub for referral tracking, diagnostics, and surgical management.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Side Arrow -->
+                <div class="mr-8 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-emerald-600 group-hover:border-transparent transition-all shrink-0">
+                    <i class="fa-solid fa-arrow-right text-white group-hover:translate-x-1 transition-transform"></i>
+                </div>
+                <span class="absolute right-24 top-1/2 -translate-y-1/2 text-8xl font-black text-white/[0.02] pointer-events-none group-hover:text-emerald-500/10 transition-colors italic">02</span>
+            </a>
+
+            <!-- 3. CNS Login -->
+            <a href="#" class="group relative flex items-center justify-between p-2 bg-white/5 rounded-[2rem] border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-orange-500/50 hover:shadow-[0_0_40px_rgba(249,115,22,0.2)]">
+                <div class="flex items-center gap-8 p-4">
+                    <!-- Icon -->
+                    <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-orange-600/40 group-hover:rotate-[360deg] transition-transform duration-700 shrink-0">
+                        <i class="fa-solid fa-baby text-2xl text-white"></i>
+                    </div>
+                    <!-- Content -->
+                    <div class="max-w-md">
+                        <h3 class="text-2xl font-black text-white tracking-tight">CNS LOGIN</h3>
+                        <p class="text-slate-400 text-sm mt-1 leading-relaxed group-hover:text-orange-100 transition-colors">
+                            Screen newborns at birth delivery points for early health detection.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Side Arrow -->
+                <div class="mr-8 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-transparent transition-all shrink-0">
+                    <i class="fa-solid fa-arrow-right text-white group-hover:translate-x-1 transition-transform"></i>
+                </div>
+                <span class="absolute right-24 top-1/2 -translate-y-1/2 text-8xl font-black text-white/[0.02] pointer-events-none group-hover:text-orange-500/10 transition-colors italic">03</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- One Row Login Section -->
+<section class="py-24 bg-[#0a0f1a] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter mb-4">
+                PORTAL <span class="text-emerald-500">GATEWAY</span>
+            </h2>
+            <p class="text-slate-400 font-medium">Select your department to access the RBSK management system.</p>
+        </div>
+
+        <!-- Three Boxes in One Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- 1. MHT Login -->
+            <a href="#" class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/[0.08] hover:border-blue-500/50 hover:-translate-y-3">
+                <!-- Icon & Number -->
+                <div class="flex justify-between items-start mb-8">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-600/40 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-truck-medical text-2xl text-white"></i>
+                    </div>
+                    <span class="text-5xl font-black text-white/5 group-hover:text-blue-500/20 transition-colors italic">01</span>
+                </div>
+                
+                <!-- Content -->
+                <h3 class="text-2xl font-black text-white mb-4 tracking-tight">MHT LOGIN</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-8 group-hover:text-slate-300 transition-colors">
+                    Record school and Anganwadi screenings in real-time with an intuitive mobile interface.
+                </p>
+
+                <!-- Footer Arrow -->
+                <div class="flex items-center gap-3 text-blue-500 font-black text-[10px] uppercase tracking-widest">
+                    Enter Portal <i class="fa-solid fa-arrow-right-long group-hover:translate-x-2 transition-transform"></i>
+                </div>
+
+                <!-- Bottom Glow Line -->
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 transition-all duration-500 rounded-full blur-sm"></div>
+            </a>
+
+            <!-- 2. DEIC Login -->
+            <a href="#" class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/[0.08] hover:border-emerald-500/50 hover:-translate-y-3">
+                <div class="flex justify-between items-start mb-8">
+                    <div class="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-emerald-600/40 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-hospital-user text-2xl text-white"></i>
+                    </div>
+                    <span class="text-5xl font-black text-white/5 group-hover:text-emerald-500/20 transition-colors italic">02</span>
+                </div>
+                
+                <h3 class="text-2xl font-black text-white mb-4 tracking-tight">DEIC LOGIN</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-8 group-hover:text-slate-300 transition-colors">
+                    Central hub for referral tracking, diagnostics, and surgical management.
+                </p>
+
+                <div class="flex items-center gap-3 text-emerald-500 font-black text-[10px] uppercase tracking-widest">
+                    Enter Portal <i class="fa-solid fa-arrow-right-long group-hover:translate-x-2 transition-transform"></i>
+                </div>
+
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-emerald-600 group-hover:w-1/2 transition-all duration-500 rounded-full blur-sm"></div>
+            </a>
+
+            <!-- 3. CNS Login -->
+            <a href="#" class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/[0.08] hover:border-orange-500/50 hover:-translate-y-3">
+                <div class="flex justify-between items-start mb-8">
+                    <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-orange-600/40 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-baby text-2xl text-white"></i>
+                    </div>
+                    <span class="text-5xl font-black text-white/5 group-hover:text-orange-500/20 transition-colors italic">03</span>
+                </div>
+                
+                <h3 class="text-2xl font-black text-white mb-4 tracking-tight">CNS LOGIN</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-8 group-hover:text-slate-300 transition-colors">
+                    Screen newborns at birth delivery points for early health detection.
+                </p>
+
+                <div class="flex items-center gap-3 text-orange-500 font-black text-[10px] uppercase tracking-widest">
+                    Enter Portal <i class="fa-solid fa-arrow-right-long group-hover:translate-x-2 transition-transform"></i>
+                </div>
+
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-orange-600 group-hover:w-1/2 transition-all duration-500 rounded-full blur-sm"></div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+        <section class="py-24 bg-white relative overflow-hidden font-sans bg-[#f1f0ee]">
+            <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+                <div class="absolute top-1/4 -left-20 w-64 h-64 bg-teal-50 rounded-full blur-3xl opacity-60"></div>
+                <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-60"></div>
+            </div>
+
+            <div class="max-w-7xl  mx-auto px-6 relative z-10 ">
+
+                
+                <div class="w-full bg-white px-6 md:px-10 py-16 mb-24">
+    
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+        
+        <div class="lg:w-2/5 w-full relative">
+            
+            
+            <div class="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-teal-950/20 aspect-[4/5] bg-teal-50">
+                
+                <img src="assets/images/aboutus.png" alt="RBSK Child Health Mission" class="w-full h-full object-cover">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-teal-900/60 via-transparent to-transparent"></div>
+            </div>
+
+            <div class="absolute -bottom-6 -left-6 p-4 bg-white rounded-3xl shadow-xl shadow-teal-500/10 animate-bounce delay-75 z-10">
+                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+            </div>
+
+            <div class="absolute -top-6 -right-6 p-4 bg-teal-600 rounded-3xl shadow-xl shadow-teal-950/30 animate-pulse delay-300 z-10 border-4 border-white">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="lg:w-3/5 w-full flex flex-col items-start pl-0 lg:pl-12">
+            
+            <span class="inline-block py-1.5 px-5 bg-teal-600 text-white text-[11px] font-black uppercase tracking-[0.35em] rounded-full mb-8 shadow-lg shadow-teal-200">
+                Mission Overview
+            </span>
+            
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-950 leading-[1.05] mb-8 tracking-tighter">
+                A Comprehensive <br><span class="text-teal-600">Health Umbrella</span> for our Future.
+            </h2>
+
+            <div class="border-l-4 border-teal-500 pl-10 pt-1">
+                <p class="text-xl md:text-2xl text-slate-600 leading-relaxed font-semibold italic opacity-90">
+                    "RBSK is a transformative program dedicated to early identification and management of critical health conditions, ensuring every child gets the medical or surgical care they deserve."
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Full Width Mission Section -->
+<section class="w-full bg-white px-4 md:px-10 py-20 mb-24 overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+        
+        <!-- =============================================
+             LEFT SIDE: Image Section (Optimized for Graphic)
+             ============================================= -->
+        <div class="lg:w-1/2 w-full relative group">
+            
+            <!-- Main Image Container -->
+            <div class="relative rounded-[2.5rem] bg-slate-50 p-4 md:p-8 border border-slate-100 shadow-2xl shadow-teal-900/5 transition-all duration-500 hover:shadow-teal-900/10">
+                
+                <!-- Your Provided Image -->
+                <img src="assets/images/aboutus.png" alt="Early Detection and Intervention" 
+                     class="w-full h-auto object-contain rounded-2xl transform transition-transform duration-700 group-hover:scale-[1.02]">
+
+                <!-- Decorative Elements to match the Graphic Style -->
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-teal-500/10 rounded-full blur-2xl -z-10"></div>
+                <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -z-10"></div>
+            </div>
+
+            <!-- Floating Badge for UX touch -->
+            <div class="absolute top-10 -left-6 hidden md:flex items-center gap-3 bg-white p-3 rounded-2xl shadow-xl border border-slate-50 animate-bounce transition-all">
+                <div class="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center text-white">
+                    <i class="fa-solid fa-check-double text-sm"></i>
+                </div>
+                <div class="flex flex-col pr-4">
+                    <span class="text-[10px] font-black uppercase text-slate-400 leading-none">Reliable</span>
+                    <span class="text-xs font-bold text-slate-800">Free Care</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =============================================
+             RIGHT SIDE: Text Content
+             ============================================= -->
+        <div class="lg:w-1/2 w-full flex flex-col items-start">
+            
+            <!-- Mission Tag -->
+            <span class="inline-flex items-center gap-2 py-1.5 px-5 bg-teal-600 text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full mb-8 shadow-lg shadow-teal-200/50">
+                <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                Mission Overview
+            </span>
+            
+            <!-- Headline -->
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-950 leading-[1.1] mb-8 tracking-tighter">
+                A Comprehensive <br>
+                <span class="relative inline-block">
+                    <span class="relative z-10 text-teal-600">Health Umbrella</span>
+                    <span class="absolute bottom-2 left-0 w-full h-3 bg-teal-100 -z-10 rounded-full"></span>
+                </span> 
+                for our Future.
+            </h2>
+
+            <!-- Quote with Creative Border -->
+            <div class="relative pl-10">
+                <div class="absolute left-0 top-0 w-1.5 h-full bg-gradient-to-b from-teal-500 via-teal-600 to-orange-400 rounded-full"></div>
+                <p class="text-xl md:text-2xl text-slate-600 leading-relaxed font-semibold italic opacity-95">
+                    "RBSK is a transformative program dedicated to early identification and management of critical health conditions, ensuring every child gets the medical or surgical care they deserve."
+                </p>
+            </div>
+
+            <!-- Action Button (Optional but good for UX) -->
+            <div class="mt-10">
+                <a href="#" class="flex items-center gap-3 group">
+                    <span class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center text-white group-hover:bg-teal-600 transition-all duration-300">
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                    <span class="text-sm font-black uppercase tracking-widest text-slate-900">Explore Services</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+                <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
+                    <div class="lg:w-2/5">
+                        <span
+                            class="inline-block py-1 px-4 bg-teal-600 text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full mb-6 shadow-lg shadow-teal-200">
+                            Mission Overview
+                        </span>
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] mb-6">
+                            A Comprehensive <br><span class="text-teal-600">Health Umbrella</span> for our Future.
+                        </h2>
+                    </div>
+                    <div class="lg:w-3/5 border-l-4 border-teal-500 pl-8">
+                        <p class="text-xl text-slate-600 leading-relaxed font-medium italic">
+                            "RBSK is a transformative program dedicated to early identification and management of
+                            critical health conditions, ensuring every child gets the medical or surgical care they
+                            deserve."
+                        </p>
+                    </div>
+                </div>
+
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative max-w-7xl mx-auto p-6">
+    
+    <div class="group bg-gradient-to-br from-emerald-800 to-emerald-950 p-8 rounded-[2.5rem] border-2 border-emerald-500/30 transition-all duration-500 shadow-2xl shadow-emerald-900/40 hover:scale-[1.02] hover:shadow-emerald-500/50">
+        <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-all duration-300">
+            <svg class="w-8 h-8 text-emerald-300 group-hover:text-emerald-700 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+        </div>
+        <h3 class="text-xs font-black text-emerald-300 uppercase tracking-widest mb-3">Phase 01: Screening</h3>
+        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">CNS at Delivery Points</h4>
+        <p class="text-emerald-100/80 text-sm leading-relaxed">
+            Comprehensive newborn screening at the moment of birth to identify and address birth defects immediately.
+        </p>
+    </div>
+
+    <div class="group bg-gradient-to-br from-teal-800 to-teal-950 p-8 rounded-[2.5rem] border-2 border-teal-500/30 transition-all duration-500 shadow-2xl shadow-teal-900/40 hover:scale-[1.02] hover:shadow-teal-500/50">
+        <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-all duration-300">
+            <svg class="w-8 h-8 text-teal-300 group-hover:text-teal-700 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+            </svg>
+        </div>
+        <h3 class="text-xs font-black text-teal-300 uppercase tracking-widest mb-3">Phase 02: Reach</h3>
+        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Mobile Health Teams</h4>
+        <p class="text-teal-100/80 text-sm leading-relaxed">
+            MHTs visit Anganwadis and Government Schools to ensure no child in the community is left behind.
+        </p>
+    </div>
+
+    <div class="group bg-gradient-to-br from-slate-800 to-slate-950 p-8 rounded-[2.5rem] border-2 border-slate-600/30 transition-all duration-500 shadow-2xl shadow-black/50 hover:scale-[1.02] hover:shadow-emerald-500/30">
+        <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-all duration-300">
+            <svg class="w-8 h-8 text-emerald-400 group-hover:text-slate-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.642.321a6 6 0 01-3.86.517l-2.388-.477a2 2 0 00-1.022.547l-1.168 1.168a2 2 0 001.414 3.415h12.914a2 2 0 001.414-3.415l-1.168-1.168z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11v-1a4 4 0 118 0v1M8 11H7a2 2 0 00-2 2v1h14v-1a2 2 0 00-2-2h-1M8 11a4 4 0 018 0"></path>
+            </svg>
+        </div>
+        <h3 class="text-xs font-black text-emerald-400 uppercase tracking-widest mb-3">Phase 03: Care</h3>
+        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">DEIC & Tertiary Support</h4>
+        <p class="text-slate-300 text-sm leading-relaxed">
+            From DEIC centers to Cochlear implants, we provide comprehensive surgical and medical management under NHM.
+        </p>
+    </div>
+
+</div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-dashed bg-slate-100 -z-10">
+                    </div>
+
+                    <div
+                        class="group bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-teal-100">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-8 group-hover:scale-110 transition-transform">
+                            <span class="filter grayscale group-hover:grayscale-0">🏥</span>
+                        </div>
+                        <h3 class="text-xs font-black text-teal-600 uppercase tracking-widest mb-3">Phase 01: Screening
+                        </h3>
+                        <h4 class="text-2xl font-bold text-slate-800 mb-4 tracking-tight">CNS at Delivery Points</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Comprehensive newborn screening at the moment of birth to identify and address birth defects
+                            immediately.
+                        </p>
+                    </div>
+
+                    <div
+                        class="group bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-blue-100">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-8 group-hover:scale-110 transition-transform">
+                            <span class="filter grayscale group-hover:grayscale-0">🚐</span>
+                        </div>
+                        <h3 class="text-xs font-black text-blue-600 uppercase tracking-widest mb-3">Phase 02: Reach</h3>
+                        <h4 class="text-2xl font-bold text-slate-800 mb-4 tracking-tight">Mobile Health Teams</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            MHTs visit Anganwadis and Government Schools to ensure no child in the community is left
+                            behind.
+                        </p>
+                    </div>
+
+                    <div
+                        class="group bg-slate-900 p-8 rounded-[2.5rem] text-white transition-all duration-500 hover:shadow-2xl hover:shadow-slate-300">
+                        <div
+                            class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-8 group-hover:scale-110 transition-transform">
+                            <span class="filter brightness-200">🛠️</span>
+                        </div>
+                        <h3 class="text-xs font-black text-teal-400 uppercase tracking-widest mb-3">Phase 03: Care</h3>
+                        <h4 class="text-2xl font-bold mb-4 tracking-tight">DEIC & Tertiary Support</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            From DEIC centers to Cochlear implants, we provide comprehensive surgical and medical
+                            management under NHM.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="mt-16 bg-teal-50 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between border border-teal-100">
+                    <div class="flex items-center gap-4 mb-4 md:mb-0">
+                        <div
+                            class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold">
+                            !</div>
+                        <p class="text-teal-800 font-bold">Linking identification to medical & surgical management.</p>
+                    </div>
+                    <button
+                        class="px-8 py-3 bg-white text-teal-600 font-black rounded-xl shadow-sm hover:shadow-md transition-all text-sm uppercase tracking-wider">
+                        View Guidelines
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+<section class="min-h-screen bg-[#f3faf8] py-16 px-6 font-sans relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none z-0">
+        <div class="absolute -top-20 -left-20 w-[400px] h-[400px] rounded-full bg-teal-100 opacity-70 blur-[120px]"></div>
+        <div class="absolute top-1/2 -right-40 w-[500px] h-[500px] rounded-full bg-blue-100 opacity-60 blur-[150px]"></div>
+    </div>
+
+    <div class="container mx-auto max-w-7xl relative z-10">
+        <div class="text-center mb-16">
+            <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">Portal Access</span>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4 tracking-tight">Departmental <span class="text-emerald-600">Login</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+            <div class="group relative flex flex-col">
+                <div class="absolute -inset-1 bg-gradient-to-tr from-blue-600 to-teal-400 rounded-[2.5rem] opacity-10 group-hover:opacity-30 transition-opacity blur-sm"></div>
+                
+                <div class="relative z-10 flex flex-col h-full bg-white/50 backdrop-blur-xl rounded-[2.5rem] border border-white shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    
+                    <div class="p-10 pb-0 text-center flex-grow flex flex-col items-center">
+                        <div class="relative inline-block mb-6">
+                            <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl relative z-10">
+                                <i class="fa-solid fa-truck-medical"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-blue-400 rounded-full blur-2xl opacity-20 scale-150"></div>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800">MHT Login</h3>
+                        <p class="text-slate-500 mt-4 text-sm leading-relaxed mb-6">
+                            Record school and Anganwadi screenings in real-time with an intuitive mobile interface.
+                        </p>
+                    </div>
+
+                    <div class="p-10 pt-4"> 
+                        <button class="w-full py-4 rounded-2xl bg-blue-600 text-white font-bold shadow-lg shadow-blue-100 hover:bg-blue-700 transition-all active:scale-95">
+                            LOGIN NOW →
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div
-                class="bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl p-6 flex flex-col justify-center items-center text-white relative">
-                <div class="absolute top-4 right-4 opacity-20"><svg width="40" height="40" fill="currentColor">...</svg>
+            <div class="group relative flex flex-col">
+                <div class="absolute -inset-1 bg-gradient-to-tr from-orange-500 to-yellow-400 rounded-[2.5rem] opacity-10 group-hover:opacity-30 transition-opacity blur-sm"></div>
+                <div class="relative z-10 flex flex-col h-full bg-white/50 backdrop-blur-xl rounded-[2.5rem] border border-white shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="p-10 pb-0 text-center flex-grow flex flex-col items-center">
+                        <div class="relative inline-block mb-6">
+                            <div class="w-20 h-20 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-4xl relative z-10">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-orange-400 rounded-full blur-2xl opacity-20 scale-150"></div>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800">DEIC Login</h3>
+                        <p class="text-slate-500 mt-4 text-sm leading-relaxed mb-6">
+                            Central hub for referral tracking, diagnostics, and surgical management.
+                        </p>
+                    </div>
+                    <div class="p-10 pt-4">
+                        <button class="w-full py-4 rounded-2xl bg-orange-500 text-white font-bold shadow-lg shadow-orange-100 hover:bg-orange-600 transition-all">
+                            ACCESS PORTAL ⚙
+                        </button>
+                    </div>
                 </div>
-                <img src="assets/images/aboutus.png" class="w-40 drop-shadow-xl" alt="Child Health">
-                <p class="mt-4 font-bold text-center leading-tight">Early Detection <br> for Better Health</p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <h3 class="font-bold text-slate-800 border-b pb-2 mb-4">Screening Process</h3>
-                <ul class="space-y-4">
-                    <li class="flex gap-3 items-start text-xs text-slate-600">
-                        <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded font-bold">CNS</span>
-                        <span>Newborn screening at delivery points for birth defects.</span>
-                    </li>
-                    <li class="flex gap-3 items-start text-xs text-slate-600">
-                        <span class="bg-orange-100 text-orange-600 px-2 py-1 rounded font-bold">MHT</span>
-                        <span>Community screening at Anganwadis & Schools.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <h3 class="font-bold text-slate-800 border-b pb-2 mb-4">Management</h3>
-                <ul class="space-y-4">
-                    <li class="flex gap-2 items-center text-xs text-slate-600">
-                        <span class="text-emerald-500">✔</span> <b>DEIC:</b> Care under one roof at Districts.
-                    </li>
-                    <li class="flex gap-2 items-center text-xs text-slate-600">
-                        <span class="text-emerald-500">✔</span> <b>Tertiary:</b> Specialized surgical management.
-                    </li>
-                </ul>
-            </div>
-
-            <div
-                class="bg-slate-900 text-white p-6 rounded-2xl flex justify-between items-center overflow-hidden relative">
-                <div class="flex flex-col">
-                    <span class="text-[10px] uppercase text-slate-400">Focus Areas</span>
-                    <span class="text-2xl font-black text-emerald-400">4 D's</span>
-                </div>
-                <div class="flex -space-x-3">
-                    <div
-                        class="h-10 w-10 rounded-full bg-red-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
-                        Defects</div>
-                    <div
-                        class="h-10 w-10 rounded-full bg-blue-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
-                        Diseases</div>
-                    <div
-                        class="h-10 w-10 rounded-full bg-yellow-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
-                        Delay</div>
-                    <div
-                        class="h-10 w-10 rounded-full bg-pink-500 border-2 border-slate-900 flex items-center justify-center text-[8px]">
-                        Deficiency</div>
+            <div class="group relative flex flex-col">
+                <div class="absolute -inset-1 bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-[2.5rem] opacity-10 group-hover:opacity-30 transition-opacity blur-sm"></div>
+                <div class="relative z-10 flex flex-col h-full bg-white/50 backdrop-blur-xl rounded-[2.5rem] border border-white shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="p-10 pb-0 text-center flex-grow flex flex-col items-center">
+                        <div class="relative inline-block mb-6">
+                            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-4xl relative z-10">
+                                <i class="fa-solid fa-baby"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-emerald-400 rounded-full blur-2xl opacity-20 scale-150"></div>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800">CNS Login</h3>
+                        <p class="text-slate-500 mt-4 text-sm leading-relaxed mb-6">
+                            Screen newborns at birth delivery points for early health detection.
+                        </p>
+                    </div>
+                    <div class="p-10 pt-4">
+                        <button class="w-full py-4 rounded-2xl bg-emerald-500 text-white font-bold shadow-lg shadow-emerald-100 hover:bg-emerald-600 transition-all">
+                            DASHBOARD ❯
+                        </button>
+                    </div>
                 </div>
             </div>
 
         </div>
-
-       
-
-
-
-     
-      
-      
-
-
-        <section class="py-24 bg-[#f8fafc] relative overflow-hidden font-sans">
-            <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-100/50 rounded-full blur-3xl"></div>
-                <div class="absolute top-1/2 -right-24 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl"></div>
-            </div>
-
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center mb-20">
-                    <span
-                        class="bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
-                        Portal Access
-                    </span>
-                    <h3 class="text-5xl font-black text-slate-900 mt-6 tracking-tight">
-                        Departmental <span class="text-emerald-600">Login</span>
-                    </h3>
-                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto text-lg">
-                        Choose your specialized department to manage health screenings and track patient progress across
-                        the RBSK network.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-                    <div
-                        class="group relative z-10 h-[350px] w-full rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2
-                before:absolute before:-bottom-2 before:-left-2 before:-z-10 before:h-24 before:w-24 before:rounded-bl-2xl before:border-b-8 before:border-l-8 before:border-blue-600 before:content-['']
-                after:absolute after:-top-2 after:-right-2 after:-z-10 after:h-24 after:w-24 after:rounded-tr-2xl after:border-t-8 after:border-r-8 after:border-blue-600 after:content-['']">
-
-                        <div class="flex h-full flex-col items-center justify-between">
-                            <div class="flex flex-col items-center justify-center">
-                                <div class="mb-4">
-                                    <div
-                                        class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-sm">
-                                        <i class="fa-solid fa-truck-medical"></i>
-                                    </div>
-                                </div>
-                                <h3 class="mb-2 text-3xl font-black leading-tight text-blue-900">MHT Login</h3>
-                                <p class="text-slate-400 text-base mb-2 leading-relaxed italic">"Record school and
-                                    Anganwadi screenings in real-time with mobile interface."</p>
-                            </div>
-
-                            <button
-                                class="relative mt-3 w-full overflow-hidden px-6 py-4 rounded-2xl bg-blue-600 text-white font-black transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 active:scale-95 flex items-center justify-center gap-2">
-                                LOGIN NOW <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div
-                        class="group relative z-10 h-[350px] w-full rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2
-                before:absolute before:-bottom-2 before:-left-2 before:-z-10 before:h-24 before:w-24 before:rounded-bl-2xl before:border-b-8 before:border-l-8 before:border-orange-500 before:content-['']
-                after:absolute after:-top-2 after:-right-2 after:-z-10 after:h-24 after:w-24 after:rounded-tr-2xl after:border-t-8 after:border-r-8 after:border-orange-500 after:content-['']">
-
-                        <div class="flex h-full flex-col items-center justify-between">
-                            <div class="flex flex-col items-center justify-center">
-                                <div class="mb-4">
-                                    <div
-                                        class="w-16 h-16 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-sm">
-                                        <i class="fa-solid fa-hospital-user"></i>
-                                    </div>
-                                </div>
-                                <h3 class="mb-3 text-3xl font-black leading-tight text-orange-900">DEIC Login</h3>
-                                <p class="text-slate-400 text-base mb-2 leading-relaxed italic">"Central hub for
-                                    referral tracking, diagnostics, and surgical management."</p>
-
-                            </div>
-
-                            <button
-                                class="relative mt-3 w-full overflow-hidden px-6 py-4 rounded-2xl bg-orange-500 text-white font-black transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200 active:scale-95 flex items-center justify-center gap-2">
-                                ACCESS PORTAL <i class="fa-solid fa-circle-user text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div
-                        class="group relative z-10 h-[350px] w-full rounded-3xl bg-white p-8 text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2
-                before:absolute before:-bottom-2 before:-left-2 before:-z-10 before:h-24 before:w-24 before:rounded-bl-2xl before:border-b-8 before:border-l-8 before:border-emerald-500 before:content-['']
-                after:absolute after:-top-2 after:-right-2 after:-z-10 after:h-24 after:w-24 after:rounded-tr-2xl after:border-t-8 after:border-r-8 after:border-emerald-500 after:content-['']">
-
-                        <div class="flex h-full flex-col items-center justify-between">
-                            <div class="flex flex-col items-center justify-center">
-                                <div class="mb-4">
-                                    <div
-                                        class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-sm">
-                                        <i class="fa-solid fa-baby"></i>
-                                    </div>
-                                </div>
-                                <h3 class="mb-3 text-3xl font-black leading-tight text-emerald-900">CNS Login</h3>
-                                <p class="text-slate-400 text-base mb-2 leading-relaxed italic">"Screen newborns at
-                                    birth delivery points to ensure early health detection."</p>
-                            </div>
-
-                            <button
-                                class="relative mt-3 w-full overflow-hidden px-6 py-4 rounded-2xl bg-emerald-500 text-white font-black transition-all hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-200 active:scale-95 flex items-center justify-center gap-2">
-                                DASHBOARD <i class="fa-solid fa-chevron-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </section>
-
+    </div>
+</section>
         <section class="py-20 bg-white overflow-hidden">
             <div class="container mx-auto px-6">
 
@@ -621,10 +976,7 @@
 
             </div>
         </section>
-
     </main>
-
-
     <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
 </body>

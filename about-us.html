@@ -65,70 +65,109 @@
             border: 1px solid #ffff00 !important;
         }
 
-       /* Normal state for buttons */
-.font-btn {
-    transition: all 0.3s ease;
-    color: #475569; /* slate-600 */
-}
+        /* Normal state for buttons */
+        .font-btn {
+            transition: all 0.3s ease;
+            color: #475569;
+            /* slate-600 */
+        }
 
-/* Active state - isse green color fix hoga */
-.font-btn.active {
-    background-color: #059669 !important; /* emerald-600 */
-    color: white !important;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-}
+        /* Active state - isse green color fix hoga */
+        .font-btn.active {
+            background-color: #059669 !important;
+            /* emerald-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 
 <body class="transition-all duration-300">
- <div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
- <main>
-    <section class="relative pt-24 pb-20 bg-[#064e3b] overflow-hidden">
-    <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-3xl">
-            <h1 class="text-emerald-400 font-black uppercase tracking-widest text-sm mb-4">Our Mission</h1>
-            <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                Investing in the <br> <span class="text-emerald-300">Future of India.</span>
-            </h2>
-            <p class="text-emerald-100/80 text-lg leading-relaxed">
-                Rashtriya Bal Swasthya Karyakram (RBSK) is a systemic approach to early identification and management of 32 health conditions in children from birth to 18 years.
-            </p>
+    <section
+        class="relative w-full bg-emerald-600 py-10 md:py-12 overflow-hidden shadow-[inset_0_10px_20px_rgba(0,0,0,0.1)]">
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent skew-x-12 translate-x-20">
         </div>
-    </div>
-    <div class="absolute right-0 top-0 w-1/3 h-full bg-emerald-500/10 skew-x-12"></div>
-</section>
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
 
-<section class="py-24 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <h3 class="text-3xl font-black text-slate-900">What is RBSK?</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    Launched under the <strong>National Health Mission (NHM)</strong>, RBSK is a pioneering initiative that aims at early detection and early intervention for children. The program recognizes that the first few years of a child’s life are critical for their long-term health and development.
-                </p>
-                <div class="bg-emerald-50 p-6 rounded-2xl border-l-4 border-emerald-500">
-                    <p class="text-emerald-900 font-bold italic">
-                        "Early identification leads to early intervention, preventing lifelong disabilities and reducing the financial burden on families."
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="max-w-2xl">
+                    <nav
+                        class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
+                        <a href="#" class="hover:text-white">Home</a>
+                        <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                        <span class="text-white">About Us</span>
+                    </nav>
+
+
+                    <h1 class="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter">
+                        About RBSK
+                        <!-- <span class="text-emerald-300">&</span>
+                        <span class="relative inline-block">
+                            <span
+                                class="relative z-10 bg-gradient-to-b from-white to-emerald-200 bg-clip-text text-transparent">Notifications</span>
+
+                            <span class="absolute bottom-1 left-0 w-full h-1 bg-emerald-400/30 -rotate-1"></span>
+                        </span> -->
+                    </h1>
+
+                    <p class="mt-2 text-xs md:text-sm text-emerald-50/70 font-medium tracking-wide">
+                        Rashtriya Bal Swasthya Karyakram (RBSK) is a systemic approach to early identification and management of 32 health conditions in children from birth to 18 years.
                     </p>
                 </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-slate-50 p-8 rounded-[2rem] text-center">
-                    <h4 class="text-4xl font-black text-emerald-600">32</h4>
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">Conditions Covered</p>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-[2rem] text-center">
-                    <h4 class="text-4xl font-black text-emerald-600">0-18</h4>
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">Target Age Group</p>
+
+                <div class="hidden md:block">
+                    <div
+                        class="w-20 h-20 border-2 border-dashed border-emerald-300/30 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                        <i class="fa-solid fa-shield-heart text-emerald-200 text-2xl"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <main>
+        
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-black text-slate-900">What is RBSK?</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Launched under the <strong>National Health Mission (NHM)</strong>, RBSK is a pioneering
+                            initiative that aims at early detection and early intervention for children. The program
+                            recognizes that the first few years of a child’s life are critical for their long-term
+                            health and development.
+                        </p>
+                        <div class="bg-emerald-50 p-6 rounded-2xl border-l-4 border-emerald-500">
+                            <p class="text-emerald-900 font-semibold italic">
+                                "Early identification leads to early intervention, preventing lifelong disabilities and
+                                reducing the financial burden on families."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-8 rounded-[2rem] text-center">
+                            <h4 class="text-4xl font-black text-emerald-600">32</h4>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">Conditions
+                                Covered</p>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-[2rem] text-center">
+                            <h4 class="text-4xl font-black text-emerald-600">0-18</h4>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">Target Age Group
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-<!-- <section class="py-24 bg-white relative overflow-hidden">    
+        <!-- <section class="py-24 bg-white relative overflow-hidden">    
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" aria-hidden="true">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -159,62 +198,75 @@
         </div>
     </div>
 </section> -->
-<section class="py-24 bg-slate-50 relative overflow-hidden">   
+        <section class="py-24 bg-slate-50 relative overflow-hidden">
 
-    <div class="container mx-auto px-6 max-w-5xl relative z-10">
-        <h3 class="text-3xl font-black text-slate-900 mb-16 text-center">
-            How We <span class="text-emerald-600">Operate</span>
-        </h3>
+            <div class="container mx-auto px-6 max-w-5xl relative z-10">
+                <h3 class="text-3xl font-black text-slate-900 mb-16 text-center">
+                    How We <span class="text-emerald-600">Operate</span>
+                </h3>
 
-        <div class="relative ml-4">
-            <div class="absolute left-0 top-0 h-full w-[2px] bg-gradient-to-b from-emerald-500 via-emerald-200 to-transparent"></div>
-
-            <div class="space-y-12">
-                <div class="relative pl-12 group">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 bg-emerald-600 rounded-full ring-4 ring-emerald-100 group-hover:ring-emerald-200 transition-all"></div>
-                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <h5 class="text-xl font-bold text-slate-900">Newborn Screening</h5>
-                        <p class="text-slate-500 mt-2">Facility-based screening at public health institutions and home-based screening by ASHA workers.</p>
+                <div class="relative ml-4">
+                    <div
+                        class="absolute left-0 top-0 h-full w-[2px] bg-gradient-to-b from-emerald-500 via-emerald-200 to-transparent">
                     </div>
-                </div>
 
-                <div class="relative pl-12 group">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 bg-emerald-600 rounded-full ring-4 ring-emerald-100 group-hover:ring-emerald-200 transition-all"></div>
-                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <h5 class="text-xl font-bold text-slate-900">Mobile Health Teams (MHT)</h5>
-                        <p class="text-slate-500 mt-2">Dedicated teams visit Anganwadis (twice a year) and Schools (once a year) to screen every child.</p>
-                    </div>
-                </div>
+                    <div class="space-y-12">
+                        <div class="relative pl-12 group">
+                            <div
+                                class="absolute -left-[9px] top-1 w-4 h-4 bg-emerald-600 rounded-full ring-4 ring-emerald-100 group-hover:ring-emerald-200 transition-all">
+                            </div>
+                            <div
+                                class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                                <h5 class="text-xl font-bold text-slate-900">Newborn Screening</h5>
+                                <p class="text-slate-500 mt-2">Facility-based screening at public health institutions
+                                    and home-based screening by ASHA workers.</p>
+                            </div>
+                        </div>
 
-                <div class="relative pl-12 group">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 bg-emerald-600 rounded-full ring-4 ring-emerald-100 group-hover:ring-emerald-200 transition-all"></div>
-                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
-                        <h5 class="text-xl font-bold text-slate-900">Referral & Management</h5>
-                        <p class="text-slate-500 mt-2">Children identified with health conditions are referred to District Early Intervention Centres (DEIC) or tertiary hospitals for <span class="text-emerald-600 font-bold underline decoration-emerald-200 underline-offset-4">Free Treatment</span>.</p>
+                        <div class="relative pl-12 group">
+                            <div
+                                class="absolute -left-[9px] top-1 w-4 h-4 bg-emerald-600 rounded-full ring-4 ring-emerald-100 group-hover:ring-emerald-200 transition-all">
+                            </div>
+                            <div
+                                class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                                <h5 class="text-xl font-bold text-slate-900">Mobile Health Teams (MHT)</h5>
+                                <p class="text-slate-500 mt-2">Dedicated teams visit Anganwadis (twice a year) and
+                                    Schools (once a year) to screen every child.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-12 group">
+                            <div
+                                class="absolute -left-[9px] top-1 w-4 h-4 bg-emerald-600 rounded-full ring-4 ring-emerald-100 group-hover:ring-emerald-200 transition-all">
+                            </div>
+                            <div
+                                class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h5 class="text-xl font-bold text-slate-900">Referral & Management</h5>
+                                <p class="text-slate-500 mt-2">Children identified with health conditions are referred
+                                    to District Early Intervention Centres (DEIC) or tertiary hospitals for <span
+                                        class="text-emerald-600 font-bold underline decoration-emerald-200 underline-offset-4">Free
+                                        Treatment</span>.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="py-10 bg-slate-50 relative overflow-hidden">
-    
-    <div class="absolute inset-0 opacity-[0.05] pointer-events-none" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
-    </div>
+        <section class="py-10 bg-slate-50 relative overflow-hidden">
 
-    <div class="absolute top-1/4 right-0 w-64 h-32 opacity-10 pointer-events-none hidden md:block">
-        <svg viewBox="0 0 200 100" class="w-full h-full">
-            <path d="M0,50 L40,50 L50,20 L60,80 L70,50 L200,50" 
-                  stroke="#10b981" 
-                  stroke-width="3" 
-                  fill="none" 
-                  stroke-dasharray="400" 
-                  class="animate-pulse" />
-        </svg>
-    </div>
+            <div class="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
+            </div>
 
-    <!-- <div class="container mx-auto px-6 max-w-5xl relative z-10">
+            <div class="absolute top-1/4 right-0 w-64 h-32 opacity-10 pointer-events-none hidden md:block">
+                <svg viewBox="0 0 200 100" class="w-full h-full">
+                    <path d="M0,50 L40,50 L50,20 L60,80 L70,50 L200,50" stroke="#10b981" stroke-width="3" fill="none"
+                        stroke-dasharray="400" class="animate-pulse" />
+                </svg>
+            </div>
+
+            <!-- <div class="container mx-auto px-6 max-w-5xl relative z-10">
         <div class="text-center mb-16">
             <h3 class="text-4xl font-black text-slate-900">How We Operate</h3>
             <div class="mt-2 flex justify-center">
@@ -262,9 +314,9 @@
             </div>
         </div>
     </div> -->
-</section>
+        </section>
 
-<!-- <section class="py-24 bg-slate-50">
+        <!-- <section class="py-24 bg-slate-50">
     <div class="container mx-auto px-6 max-w-5xl">
         <h3 class="text-3xl font-black text-slate-900 mb-12 text-center">How We Operate</h3>
         <div class="relative border-l-2 border-emerald-200 ml-4 space-y-12">
@@ -287,57 +339,74 @@
     </div>
 </section> -->
 
-<section class="py-24 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-8">
-            
-            <div class="group relative p-10 md:p-16 bg-emerald-50 rounded-[3rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-100 border border-emerald-100">
-                <div class="absolute -top-12 -right-12 w-40 h-40 bg-emerald-200/30 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-lg shadow-emerald-200">
-                        <i class="fa-solid fa-bullseye"></i>
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-8">
+
+                    <div
+                        class="group relative p-10 md:p-16 bg-emerald-50 rounded-[3rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-100 border border-emerald-100">
+                        <div
+                            class="absolute -top-12 -right-12 w-40 h-40 bg-emerald-200/30 rounded-full group-hover:scale-150 transition-transform duration-700">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-lg shadow-emerald-200">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-3xl font-black text-slate-900 mb-6 uppercase tracking-tighter">Our Mission
+                            </h3>
+                            <p class="text-lg text-slate-700 leading-relaxed font-medium">
+                                To improve the overall quality of life of children through <span
+                                    class="text-emerald-700 font-bold">early identification</span> of health conditions
+                                and providing <span class="text-emerald-700 font-bold">comprehensive care</span> from
+                                birth to 18 years, ensuring no child is left behind due to preventable health issues.
+                            </p>
+                            <ul class="mt-8 space-y-3">
+                                <li class="flex items-center gap-3 text-sm font-bold text-emerald-800">
+                                    <i class="fa-solid fa-check-circle"></i> Universal Screening
+                                </li>
+                                <li class="flex items-center gap-3 text-sm font-bold text-emerald-800">
+                                    <i class="fa-solid fa-check-circle"></i> Zero-Cost Medical Intervention
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3 class="text-3xl font-black text-slate-900 mb-6 uppercase tracking-tighter">Our Mission</h3>
-                    <p class="text-lg text-slate-700 leading-relaxed font-medium">
-                        To improve the overall quality of life of children through <span class="text-emerald-700 font-bold">early identification</span> of health conditions and providing <span class="text-emerald-700 font-bold">comprehensive care</span> from birth to 18 years, ensuring no child is left behind due to preventable health issues.
-                    </p>
-                    <ul class="mt-8 space-y-3">
-                        <li class="flex items-center gap-3 text-sm font-bold text-emerald-800">
-                            <i class="fa-solid fa-check-circle"></i> Universal Screening
-                        </li>
-                        <li class="flex items-center gap-3 text-sm font-bold text-emerald-800">
-                            <i class="fa-solid fa-check-circle"></i> Zero-Cost Medical Intervention
-                        </li>
-                    </ul>
+
+                    <div
+                        class="group relative p-10 md:p-16 bg-slate-900 rounded-[3rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-slate-300">
+                        <div
+                            class="absolute -bottom-12 -right-12 w-48 h-48 bg-emerald-500/10 rounded-full group-hover:scale-150 transition-transform duration-700">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-16 h-16 bg-white/10 text-emerald-400 rounded-2xl flex items-center justify-center text-3xl mb-8 border border-white/10">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Our Vision</h3>
+                            <p class="text-lg text-slate-300 leading-relaxed font-medium">
+                                To build a <span class="text-white font-bold">Healthy and Resilient India</span> where
+                                every child, regardless of their socio-economic background, has access to timely
+                                healthcare services, allowing them to achieve their <span
+                                    class="text-emerald-400 font-bold">full developmental potential.</span>
+                            </p>
+                            <div class="mt-10 pt-10 border-t border-white/10">
+                                <p class="text-xs uppercase tracking-[0.3em] font-bold text-emerald-500">Toward a Viksit
+                                    Bharat</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="group relative p-10 md:p-16 bg-slate-900 rounded-[3rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-slate-300">
-                <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-emerald-500/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-white/10 text-emerald-400 rounded-2xl flex items-center justify-center text-3xl mb-8 border border-white/10">
-                        <i class="fa-solid fa-eye"></i>
-                    </div>
-                    <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Our Vision</h3>
-                    <p class="text-lg text-slate-300 leading-relaxed font-medium">
-                        To build a <span class="text-white font-bold">Healthy and Resilient India</span> where every child, regardless of their socio-economic background, has access to timely healthcare services, allowing them to achieve their <span class="text-emerald-400 font-bold">full developmental potential.</span>
-                    </p>
-                    <div class="mt-10 pt-10 border-t border-white/10">
-                        <p class="text-xs uppercase tracking-[0.3em] font-bold text-emerald-500">Toward a Viksit Bharat</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
- </main>
+        </section>
+    </main>
 
 
 
- <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
 </body>
+
 </html>

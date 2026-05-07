@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBSK Redesign | Accessibility Ready</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <body class="transition-all duration-300">
+            <div id="header-placeholder"></div>
+           
+            <section
+                class="relative w-full bg-emerald-600 py-10 md:py-12 overflow-hidden shadow-[inset_0_10px_20px_rgba(0,0,0,0.1)]">                
+                <div
+                    class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent skew-x-12 translate-x-20">
+                </div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">                        
+                        <div class="max-w-2xl">
+                            <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
+            <a href="#" class="hover:text-white">Home</a>
+            <i class="fa-solid fa-chevron-right text-[8px]"></i>
+            <span class="text-white">Operational Guidelines</span>
+        </nav>
+                            <!-- <nav
+                                class="flex items-center gap-2 text-xs font-black uppercase tracking-[0.3em] text-emerald-100/60 mb-3">
+                                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                                <span class="w-1 h-1 bg-emerald-300 rounded-full"></span>
+                                <span class="text-white">Updates & Notifications</span>
+                            </nav> -->
+
+                            <h1 class="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter">
+                                Updates <span class="text-emerald-300">&</span>
+                                <span class="relative inline-block">
+                                    <span
+                                        class="relative z-10 bg-gradient-to-b from-white to-emerald-200 bg-clip-text text-transparent">Notifications</span>
+
+                                    <span
+                                        class="absolute bottom-1 left-0 w-full h-1 bg-emerald-400/30 -rotate-1"></span>
+                                </span>
+                            </h1>
+
+                            <p class="mt-2 text-xs md:text-sm text-emerald-50/70 font-medium tracking-wide">
+                                A comprehensive collection of the latest official guidelines, circulars, and reports
+                                issued by the Rashtriya Bal Swasthya Karyakram (RBSK).
+                            </p>
+                        </div>
+
+                        <div class="hidden md:block">
+                            <div
+                                class="w-20 h-20 border-2 border-dashed border-emerald-300/30 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                                <i class="fa-solid fa-shield-heart text-emerald-200 text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+          
+            <section class="min-h-screen bg-slate-50 py-12 md:py-20 px-4 md:px-6">
+                <div class="max-w-5xl mx-auto">
+
+                    <!-- Page Header -->
+                    <div class="mb-12 md:mb-16 text-center">
+                        <span
+                            class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest rounded-full mb-4">
+                            Official Announcements
+                        </span>
+                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter mb-4">
+                            Updates & <span class="text-emerald-600">Notifications</span>
+                        </h1>
+                        <p class="text-slate-500 max-w-xl mx-auto font-medium text-sm md:text-base leading-relaxed">
+                            Stay informed with the latest official guidelines, screening protocols, and performance
+                            reports.
+                        </p>
+                    </div>
+
+                    <!-- Filter Tabs (Light UI) -->
+                    <div class="flex flex-wrap gap-2 md:gap-3 mb-12 justify-center">
+                        <button
+                            class="px-6 py-2.5 bg-emerald-600 text-white text-[10px] font-black uppercase rounded-xl shadow-lg shadow-emerald-600/20">All
+                            Updates</button>
+                        <button
+                            class="px-6 py-2.5 bg-white text-slate-600 border border-slate-200 text-[10px] font-black uppercase rounded-xl hover:bg-slate-100 transition-all">Guidelines</button>
+                        <button
+                            class="px-6 py-2.5 bg-white text-slate-600 border border-slate-200 text-[10px] font-black uppercase rounded-xl hover:bg-slate-100 transition-all">Notifications</button>
+                        <button
+                            class="px-6 py-2.5 bg-white text-slate-600 border border-slate-200 text-[10px] font-black uppercase rounded-xl hover:bg-slate-100 transition-all">Reports</button>
+                    </div>
+
+                    <!-- Updates Feed -->
+                    <div class="space-y-6">
+
+                        <!-- Update Card 1 -->
+                        <div
+                            class="group relative bg-white p-5 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-500/30 transition-all duration-500">
+                            <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+
+                                <!-- Calendar Style Date -->
+                                <div
+                                    class="flex-shrink-0 w-20 h-20 bg-emerald-50 rounded-3xl flex flex-col items-center justify-center border-2 border-emerald-100 group-hover:bg-emerald-600 transition-all duration-500">
+                                    <span
+                                        class="text-2xl font-black text-emerald-600 group-hover:text-white leading-none">04</span>
+                                    <span
+                                        class="text-[10px] font-black text-emerald-600/60 group-hover:text-white/80 uppercase mt-1">May
+                                        2026</span>
+                                </div>
+
+                                <!-- Content Area -->
+                                <div class="flex-grow">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span
+                                            class="text-[8px] font-black text-white bg-emerald-600 px-2 py-0.5 rounded-full uppercase">Active</span>
+                                        <span
+                                            class="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono">Ref:
+                                            RBSK/2026/042</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-tight">
+                                        Implementation of new screening protocols for Anganwadi centers in rural
+                                        regions.
+                                    </h3>
+                                </div>
+
+                                <!-- Action Button -->
+                                <div class="w-full md:w-auto">
+                                    <a href="#"
+                                        class="flex items-center justify-center gap-3 px-6 py-4 bg-red-50 text-red-600 hover:bg-red-600 hover:text-white rounded-2xl transition-all font-black text-[10px] uppercase group/pdf shadow-sm">
+                                        <i class="fa-solid fa-file-pdf text-lg"></i>
+                                        Download PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Update Card 2 -->
+                        <div
+                            class="group relative bg-white p-5 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm hover:shadow-xl hover:border-teal-500/30 transition-all duration-500">
+                            <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+
+                                <div
+                                    class="flex-shrink-0 w-20 h-20 bg-teal-50 rounded-3xl flex flex-col items-center justify-center border-2 border-teal-100 group-hover:bg-teal-600 transition-all duration-500">
+                                    <span
+                                        class="text-2xl font-black text-teal-600 group-hover:text-white leading-none">28</span>
+                                    <span
+                                        class="text-[10px] font-black text-teal-600/60 group-hover:text-white/80 uppercase mt-1">Feb
+                                        2026</span>
+                                </div>
+
+                                <div class="flex-grow">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span
+                                            class="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono">Ref:
+                                            RBSK/2026/015</span>
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-tight">
+                                        Operational guidelines for 4Ds screening updated for the financial year 2026-27.
+                                    </h3>
+                                </div>
+
+                                <div class="w-full md:w-auto">
+                                    <a href="#"
+                                        class="flex items-center justify-center gap-3 px-6 py-4 bg-red-50 text-red-600 hover:bg-red-600 hover:text-white rounded-2xl transition-all font-black text-[10px] uppercase shadow-sm">
+                                        <i class="fa-solid fa-file-pdf text-lg"></i>
+                                        Download PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination (Optional UX) -->
+                    <div class="mt-12 flex justify-center gap-2">
+                        <button
+                            class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-400 flex items-center justify-center hover:bg-emerald-50 hover:text-emerald-600 transition-all"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button
+                            class="w-10 h-10 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-600/20">1</button>
+                        <button
+                            class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-600 font-bold text-xs hover:bg-slate-50 transition-all">2</button>
+                        <button
+                            class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-400 flex items-center justify-center hover:bg-emerald-50 hover:text-emerald-600 transition-all"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

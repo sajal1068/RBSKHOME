@@ -182,3 +182,23 @@ window.addEventListener('scroll', () => {
         }
     }
 
+
+     const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+
+        function openModal(imgSrc) {
+            modalImg.src = imgSrc;
+            modal.classList.remove('modal-hidden');
+            document.body.style.overflow = 'hidden'; // Stop scroll
+        }
+
+        function closeModal() {
+            modal.classList.add('modal-hidden');
+            document.body.style.overflow = 'auto'; // Enable scroll
+            setTimeout(() => { modalImg.src = ''; }, 300); // Clear src after fade
+        }
+
+        // Close modal if clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });

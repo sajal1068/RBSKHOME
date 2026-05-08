@@ -12,6 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" >
+    <style>
+         .modal-hidden {
+        display: none !important;
+    }   
+   
+    .modal {
+        transition: all 0.3s ease-in-out;
+    }     
+    
+    </style>
 </head>
 
 <body class="transition-all duration-300">
@@ -121,30 +131,27 @@
         </div>
     </div>
 
-    <script>
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImg');
-
-        function openModal(imgSrc) {
-            modalImg.src = imgSrc;
-            modal.classList.remove('modal-hidden');
-            document.body.style.overflow = 'hidden'; // Stop scroll
-        }
-
-        function closeModal() {
-            modal.classList.add('modal-hidden');
-            document.body.style.overflow = 'auto'; // Enable scroll
-            setTimeout(() => { modalImg.src = ''; }, 300); // Clear src after fade
-        }
-
-        // Close modal if clicking outside the image
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-    </script>
+    
 
     <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
+    <!-- <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        function openModal(imgSrc) {
+            modalImg.src = imgSrc;
+            modal.classList.remove('modal-hidden');
+            document.body.style.overflow = 'hidden'; 
+        }
+        function closeModal() {
+            modal.classList.add('modal-hidden');
+            document.body.style.overflow = 'auto'; 
+            setTimeout(() => { modalImg.src = ''; }, 300); 
+        }        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    </script> -->
 </body>
 
 </html>

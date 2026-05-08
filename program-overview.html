@@ -8,11 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" >
 </head>
-
 <body class="transition-all duration-300">
     <div id="header-placeholder"></div>
+     <main id="main">
     <section
         class="relative w-full bg-emerald-600 py-10 md:py-12 overflow-hidden shadow-[inset_0_10px_20px_rgba(0,0,0,0.1)]">
         <div
@@ -58,85 +61,89 @@
     </section>
 
     <section class="py-24 bg-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic">
-                Operational <span class="text-emerald-600">Workflow</span>
-            </h2>
-            <div class="h-1.5 w-24 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
-        </div>
+        <div class="max-w-7xl mx-auto px-6">
 
-        <div class="relative">
-            <div class="absolute top-1/2 left-0 w-full h-[2px] bg-slate-100 hidden lg:block -translate-y-1/2"></div>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic">
+                    Operational <span class="text-emerald-600">Workflow</span>
+                </h2>
+                <div class="h-1.5 w-24 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-6 relative">
-                
-                <div class="flex flex-col items-center text-center group">
-                    <div class="relative flex flex-col items-center mb-8">
-                        <span class="text-[10px] font-black text-emerald-600 mb-2 tracking-widest">STEP 01</span>
-                        <div class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500"></div>
+            <div class="relative">
+                <div class="absolute top-1/2 left-0 w-full h-[2px] bg-slate-100 hidden lg:block -translate-y-1/2"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-6 relative">
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="relative flex flex-col items-center mb-8">
+                            <span class="text-[10px] font-black text-emerald-600 mb-2 tracking-widest">STEP 01</span>
+                            <div
+                                class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
+                            <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Screening</h3>
+                            <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
+                                Mobile Health Teams visit schools and Anganwadis for check-ups.
+                            </p>
+                        </div>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
-                        <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Screening</h3>
-                        <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
-                            Mobile Health Teams visit schools and Anganwadis for check-ups.
-                        </p>
+
+                    <div class="flex flex-col lg:flex-col-reverse items-center text-center group lg:translate-y-6">
+                        <div class="relative flex flex-col items-center mb-8 lg:mb-0 lg:mt-8">
+                            <div
+                                class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500">
+                            </div>
+                            <span class="text-[10px] font-black text-emerald-600 mt-2 tracking-widest">STEP 02</span>
+                        </div>
+                        <div
+                            class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
+                            <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Referral</h3>
+                            <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
+                                Identified cases are referred to District Early Intervention Centres.
+                            </p>
+                        </div>
                     </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="relative flex flex-col items-center mb-8">
+                            <span class="text-[10px] font-black text-emerald-600 mb-2 tracking-widest">STEP 03</span>
+                            <div
+                                class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
+                            <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Management
+                            </h3>
+                            <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
+                                Therapeutic care and specialist consultation at DEIC facilities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-col-reverse items-center text-center group lg:translate-y-6">
+                        <div class="relative flex flex-col items-center mb-8 lg:mb-0 lg:mt-8">
+                            <div
+                                class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500">
+                            </div>
+                            <span class="text-[10px] font-black text-emerald-600 mt-2 tracking-widest">STEP 04</span>
+                        </div>
+                        <div
+                            class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
+                            <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Treatment</h3>
+                            <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
+                                Free surgeries and medical interventions at tertiary hospitals.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="flex flex-col lg:flex-col-reverse items-center text-center group lg:translate-y-6">
-                    <div class="relative flex flex-col items-center mb-8 lg:mb-0 lg:mt-8">
-                        <div class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500"></div>
-                        <span class="text-[10px] font-black text-emerald-600 mt-2 tracking-widest">STEP 02</span>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
-                        <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Referral</h3>
-                        <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
-                            Identified cases are referred to District Early Intervention Centres.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-center text-center group">
-                    <div class="relative flex flex-col items-center mb-8">
-                        <span class="text-[10px] font-black text-emerald-600 mb-2 tracking-widest">STEP 03</span>
-                        <div class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500"></div>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
-                        <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Management</h3>
-                        <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
-                            Therapeutic care and specialist consultation at DEIC facilities.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col lg:flex-col-reverse items-center text-center group lg:translate-y-6">
-                    <div class="relative flex flex-col items-center mb-8 lg:mb-0 lg:mt-8">
-                        <div class="relative z-10 w-5 h-5 bg-emerald-500 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] group-hover:scale-125 transition-transform duration-500"></div>
-                        <span class="text-[10px] font-black text-emerald-600 mt-2 tracking-widest">STEP 04</span>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500">
-                        <h3 class="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">Treatment</h3>
-                        <p class="text-[11px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
-                            Free surgeries and medical interventions at tertiary hospitals.
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
-</section>
-
-
-
-
- 
-
-
-
-
+    </section>
 
     <section class="py-24 bg-slate-50 font-sans">
         <div class="container mx-auto px-6">
@@ -304,9 +311,6 @@
         </div>
     </section>
 
-
-
-
     <section class="pt-24 pb-12 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-emerald-600 font-black uppercase tracking-[0.3em] text-xs mb-4">Core Framework</h1>
@@ -318,106 +322,6 @@
             </p>
         </div>
     </section>
-
- 
-
-
-
-    <!-- <section class="py-24 bg-white overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6">
-        
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase italic">
-                Operational <span class="text-emerald-500">Workflow</span>
-            </h2>
-            <p class="mt-6 text-slate-500 font-medium max-w-2xl mx-auto">
-                A seamless journey from early screening to free medical intervention, ensuring every child receives the care they deserve.
-            </p>
-        </div>
-
-        <div class="relative">
-            <div class="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 hidden lg:block -translate-x-1/2"></div>
-
-            <div class="space-y-16 lg:space-y-24">
-                
-                <div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-                    <div class="lg:w-1/2 lg:pr-20 text-center lg:text-right">
-                        <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Step 01</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-4 mb-3 uppercase">Systemic Identification</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">
-                            Children are identified at Birth Points, Anganwadi centers, and Schools. ASHA workers also conduct home visits for newborn screening.
-                        </p>
-                    </div>
-                    <div class="relative z-10 w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center shadow-xl shadow-emerald-500/20 transform hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-users-viewfinder text-white text-xl"></i>
-                    </div>
-                    <div class="lg:w-1/2 lg:pl-20 hidden lg:block">
-                         <div class="w-full h-1 bg-slate-50 rounded-full border border-slate-100"></div>
-                    </div>
-                </div>
-
-                <div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-                    <div class="lg:w-1/2 lg:pr-20 hidden lg:block text-right">
-                         <div class="w-full h-1 bg-slate-50 rounded-full border border-slate-100"></div>
-                    </div>
-                    <div class="relative z-10 w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-stethoscope text-emerald-400 text-xl"></i>
-                    </div>
-                    <div class="lg:w-1/2 lg:pl-20 text-center lg:text-left">
-                        <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Step 02</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-4 mb-3 uppercase">Clinical Assessment</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">
-                            Mobile Health Teams (MHT) conduct 4Ds screening. If a child is identified with any condition, a referral card is issued on the spot.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-                    <div class="lg:w-1/2 lg:pr-20 text-center lg:text-right">
-                        <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Step 03</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-4 mb-3 uppercase">Specialized Diagnosis</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">
-                            Referred children visit the District Early Intervention Centre (DEIC). Specialized doctors and therapists validate the condition and plan the management.
-                        </p>
-                    </div>
-                    <div class="relative z-10 w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-xl shadow-emerald-600/20 transform hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-hospital-user text-white text-xl"></i>
-                    </div>
-                    <div class="lg:w-1/2 lg:pl-20 hidden lg:block">
-                         <div class="w-full h-1 bg-slate-50 rounded-full border border-slate-100"></div>
-                    </div>
-                </div>
-
-                <div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-                    <div class="lg:w-1/2 lg:pr-20 hidden lg:block text-right">
-                         <div class="w-full h-1 bg-slate-50 rounded-full border border-slate-100"></div>
-                    </div>
-                    <div class="relative z-10 w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center shadow-xl shadow-emerald-500/30 animate-pulse">
-                        <i class="fa-solid fa-heart-pulse text-white text-xl"></i>
-                    </div>
-                    <div class="lg:w-1/2 lg:pl-20 text-center lg:text-left">
-                        <span class="text-[10px] font-black text-white uppercase tracking-widest bg-emerald-600 px-3 py-1 rounded-full shadow-lg">Final Step</span>
-                        <h3 class="text-2xl font-black text-emerald-600 mt-4 mb-3 uppercase">Free Intervention</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed font-bold">
-                            Treatment is 100% free. 
-                            <span class="font-medium block mt-2 opacity-80 italic">Tertiary care surgeries (e.g., heart surgery) are performed at empanelled hospitals at no cost to the family.</span>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-
-
-
-
-
-
-
 
     <section class="pb-24 bg-white">
         <div class="container mx-auto px-6">
@@ -588,10 +492,8 @@
             </div>
         </div>
     </section>
-
-
+    </main>
     <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
 </body>
-
 </html>

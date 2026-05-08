@@ -11,7 +11,7 @@
             <div class="hidden lg:flex items-center gap-4 border-r border-slate-200 pr-4">
                 <a href="#main" class="hover:text-emerald-700 transition font-medium" data-i18n="skip_content">Skip
                     to Main Content</a>
-                <a href="#" class="hover:text-emerald-700 transition flex items-center gap-1">
+                <a href="screen-reader.html" class="hover:text-emerald-700 transition flex items-center gap-1">
                     <i class="fa-solid fa-eye"></i> <span data-i18n="screen_reader">Screen Reader</span>
                 </a>
             </div>
@@ -95,134 +95,73 @@
 </section>
 
 
-<header id="navbar" class="sticky top-0 z-[100] w-full transition-all duration-300 bg-slate-950/90 backdrop-blur-md border-b border-emerald-500/20 shadow-lg">
-    <nav class="container mx-auto px-6 relative">
-        <div class="flex items-center h-14 md:h-16 transition-all duration-500" id="nav-container">
+<header class="sticky top-0 z-[110] w-full bg-slate-950 border-b border-emerald-500/20 shadow-xl">
+    <nav class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-14 md:h-14">
             
-            <div class="hidden lg:flex items-center flex-grow h-full">
-                <ul class="flex items-center h-full divide-x divide-emerald-500/20">
-                    <li class="h-full flex items-center">
-                        <a href="index.html" class="relative px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-emerald-400 transition-all group">
+            <div class="lg:hidden flex items-center">
+                <button id="unifiedMenuBtn" class="text-emerald-500 p-2 focus:outline-none">
+                    <i id="unifiedIcon" class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+
+            <div id="mainNavContainer" class="hidden lg:flex absolute lg:relative top-full lg:top-auto left-0 w-full lg:w-auto bg-slate-950 lg:bg-transparent border-t lg:border-none border-emerald-500/10 h-screen lg:h-full overflow-y-auto lg:overflow-visible">
+                
+                <ul class="flex flex-col lg:flex-row items-start lg:items-center w-full h-full lg:divide-x lg:divide-emerald-500/20">
+                    
+                    <li class="w-full lg:w-auto lg:h-full flex items-center">
+                        <a href="index.html" class="w-full lg:w-auto px-6 py-3 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
                             Home
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#10b981]"></span>
                         </a>
                     </li>
 
-                    <li class="relative group h-full flex items-center">
-                        <button class="flex items-center gap-1.5 px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 group-hover:text-emerald-400 transition-all">
+                    <li class="relative group w-full lg:w-auto lg:h-full flex flex-col lg:flex-row items-center">
+                        <button onclick="toggleMobileSub('aboutSub')" class="w-full lg:w-auto flex items-center justify-between lg:justify-start gap-2 px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 group-hover:text-emerald-400 transition-all">
                             About Us 
-                            <i class="fa-solid fa-chevron-down text-[7px] group-hover:rotate-180 transition-transform duration-500 text-emerald-500"></i>
+                            <i class="fa-solid fa-chevron-down text-[8px] transition-transform lg:group-hover:rotate-180 text-emerald-500"></i>
                         </button>
-                        
-                        <div class="absolute top-full left-0 w-60 pt-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500">
-                            <div class="bg-slate-900 border border-emerald-500/20 rounded-b-2xl shadow-2xl overflow-hidden p-2 backdrop-blur-2xl">
-                                <a href="about-us.html" class="flex items-center justify-between px-4 py-2 rounded-xl hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all group/item">
-                                    <span class="text-[10px] font-bold uppercase tracking-wider">About RBSK</span>
-                                    <i class="fa-solid fa-chevron-right text-[8px] opacity-0 group-hover/item:opacity-100 transition-all"></i>
-                                </a>
-                                <a href="program-overview.html" class="flex items-center justify-between px-4 py-2 rounded-xl hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all group/item">
-                                    <span class="text-[10px] font-bold uppercase tracking-wider">Overview</span>
-                                    <i class="fa-solid fa-chevron-right text-[8px] opacity-0 group-hover/item:opacity-100 transition-all"></i>
-                                </a>
-                                <a href="operational-guidelines.html" class="flex items-center justify-between px-4 py-2 rounded-xl hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all group/item">
-                                    <span class="text-[10px] font-bold uppercase tracking-wider">Guidelines</span>
-                                    <i class="fa-solid fa-chevron-right text-[8px] opacity-0 group-hover/item:opacity-100 transition-all"></i>
-                                </a>
-                            </div>
+
+                        <div id="aboutSub" class="hidden lg:block lg:absolute lg:top-full lg:left-0 w-full lg:w-64 lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible lg:translate-y-2 lg:group-hover:translate-y-0 transition-all duration-300 bg-slate-900/50 lg:bg-slate-900 border-l-4 lg:border-l lg:border border-emerald-500/20 lg:rounded-b-2xl p-2">
+                            <a href="about-us.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none">About RBSK</a>
+
+                             <a href="program-overview.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none">Program Overview</a>
+
+                              <a href="operational-guidelines.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none">Operational Guidelines</a>
+                            
+                            <!-- <div class="relative group/level3">
+                                <button onclick="toggleMobileSub('programSub')" class="w-full flex items-center justify-between p-4 lg:p-3 text-[11px] font-bold text-slate-400 hover:text-emerald-400 uppercase">
+                                    Programs <i class="fa-solid fa-chevron-right text-[8px] hidden lg:block"></i>
+                                    <i class="fa-solid fa-chevron-down text-[8px] lg:hidden"></i>
+                                </button>
+                                
+                                <div id="programSub" class="hidden lg:block lg:absolute lg:left-full lg:top-0 lg:ml-1 w-full lg:w-64 bg-slate-800 lg:bg-slate-900 lg:border lg:border-emerald-500/20 lg:rounded-2xl p-2">
+                                    <a href="#" class="block p-4 lg:p-2 text-[10px] font-bold text-slate-400 hover:text-emerald-400 uppercase">4Ds Framework</a>
+                                    <a href="#" class="block p-4 lg:p-2 text-[10px] font-bold text-slate-400 hover:text-emerald-400 uppercase">Workflow</a>
+                                </div>
+                            </div> -->
                         </div>
                     </li>
 
-                    <li class="h-full flex items-center">
-                        <a href="gallery.html" class="relative px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-emerald-400 transition-all group">
+                    <li class="w-full lg:w-auto lg:h-full flex items-center">
+                        <a href="gallery.html" class="w-full lg:w-auto px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
                             Gallery
                         </a>
                     </li>
-
-                    <li class="h-full flex items-center border-r border-emerald-500/20">
-                        <a href="contact-us.html" class="relative px-6 py-1 text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-emerald-400 transition-all group">
+                    <li class="w-full lg:w-auto lg:h-full flex items-center">
+                        <a href="serch.html" class="w-full lg:w-auto px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
+                            Find PHC
+                        </a>
+                    </li>
+                    <li class="w-full lg:w-auto lg:h-full flex items-center">
+                        <a href="contact-us.html" class="w-full lg:w-auto px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
                             Contact Us
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <div class="lg:hidden ml-auto">
-                <button id="menuBtn" class="w-10 h-10 flex items-center justify-center text-emerald-500 focus:outline-none transition-transform active:scale-90">
-                    <i id="menuIcon" class="fa-solid fa-bars-staggered text-xl"></i>
-                </button>
-            </div>
-        </div>
-
-        <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl rounded-b-2xl border-t border-emerald-500/20 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-300">
-            <div class="flex flex-col p-6 gap-2">
-                <a href="index.html" class="p-4 text-xs font-black uppercase text-emerald-400 bg-emerald-500/10 rounded-xl">Home</a>
-                <a href="about-us.html" class="p-4 text-xs font-black uppercase text-slate-300 hover:bg-emerald-500/10 rounded-xl transition-all">About Us</a>
-                <a href="gallery.html" class="p-4 text-xs font-black uppercase text-slate-300 hover:bg-emerald-500/10 rounded-xl transition-all">Gallery</a>
-                <a href="contact-us.html" class="p-4 text-xs font-black uppercase text-slate-300 hover:bg-emerald-500/10 rounded-xl transition-all">Contact Us</a>
-            </div>
         </div>
     </nav>
 </header>
 
-<script>
-    /**
-     * SLIM ON SCROLL LOGIC
-     * Using direct style.height for maximum reliability across browsers
-     */
-    window.addEventListener('scroll', () => {
-        const navContainer = document.getElementById('nav-container');
-        const isMobile = window.innerWidth < 1024;
-        
-        if (window.scrollY > 40) {
-            navContainer.style.height = isMobile ? "52px" : "48px"; // Slim state
-        } else {
-            navContainer.style.height = isMobile ? "56px" : "64px"; // Normal state
-        }
-    });
 
-   
-    
-document.addEventListener('click', (e) => {       
-    const menuBtn = e.target.closest('#menuBtn');
-    if (menuBtn) {
-        const menu = document.getElementById('mobileMenu');
-        const icon = document.getElementById('menuIcon');
-        
-        if (menu && icon) {
-            const isHidden = menu.classList.toggle('hidden');
-            if (!isHidden) {
-                icon.classList.remove('fa-bars-staggered');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars-staggered');
-            }
-        }
-    }
-
-    // 2. Click Outside to Close Logic
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    if (mobileMenu && !mobileMenu.contains(e.target) && !e.target.closest('#menuBtn')) {
-        mobileMenu.classList.add('hidden');
-        if (menuIcon) {
-            menuIcon.classList.remove('fa-xmark');
-            menuIcon.classList.add('fa-bars-staggered');
-        }
-    }
-});
-
-const scrollHandler = () => {
-    const navContainer = document.getElementById('nav-container');
-    if (!navContainer) return;
-
-    const isMobile = window.innerWidth < 1024;
-    if (window.scrollY > 40) {
-        navContainer.style.height = isMobile ? "52px" : "48px";
-    } else {
-        navContainer.style.height = isMobile ? "56px" : "64px";
-    }
-};
-
-window.addEventListener('scroll', scrollHandler);
-</script>

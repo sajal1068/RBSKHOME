@@ -100,4 +100,5 @@ function loadComponent(id, file) {
 window.onload = function() {
     loadComponent('header-placeholder', 'header.html');
     loadComponent('footer-placeholder', 'footer.html');
+    loadComponent('navbar-placeholder', 'navbar.html');
 };

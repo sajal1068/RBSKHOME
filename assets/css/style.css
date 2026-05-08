@@ -1,3 +1,7 @@
+* {
+        font-family: 'Poppins', sans-serif !important;
+    }
+ 
  .high-contrast {
             background-color: #000000 !important;
             color: #ffff00 !important;
@@ -77,3 +81,14 @@
     .modal {
         transition: all 0.3s ease-in-out;
     }
+
+
+
+
+
+
+     
+        .poppins-font {
+            font-family: 'Poppins', sans-serif;
+        }
+   

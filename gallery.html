@@ -8,31 +8,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-    <link href="assets/css/style.css" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" >
 </head>
 
 <body class="transition-all duration-300">
- <div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-         <section
-                class="relative w-full bg-emerald-600 py-10 md:py-12 overflow-hidden shadow-[inset_0_10px_20px_rgba(0,0,0,0.1)]">                
-                <div
-                    class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent skew-x-12 translate-x-20">
-                </div>
-                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+    <section
+        class="relative w-full bg-emerald-600 py-10 md:py-12 overflow-hidden shadow-[inset_0_10px_20px_rgba(0,0,0,0.1)]">
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent skew-x-12 translate-x-20">
+        </div>
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
 
-                <div class="container mx-auto px-6 relative z-10">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">                        
-                        <div class="max-w-2xl">
-                            <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
-            <a href="#" class="hover:text-white">Home</a>
-            <i class="fa-solid fa-chevron-right text-[8px]"></i>
-            <span class="text-white">Gallery</span>
-        </nav>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="max-w-2xl">
+                    <nav
+                        class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
+                        <a href="#" class="hover:text-white">Home</a>
+                        <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                        <span class="text-white">Gallery</span>
+                    </nav>
 
-                            <h1 class="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter">
-                                Galley 
-                                <!-- <span class="text-emerald-300">&</span>
+                    <h1 class="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter">
+                        Galley
+                        <!-- <span class="text-emerald-300">&</span>
                                 <span class="relative inline-block">
                                     <span
                                         class="relative z-10 bg-gradient-to-b from-white to-emerald-200 bg-clip-text text-transparent">Notifications</span>
@@ -40,54 +44,63 @@
                                     <span
                                         class="absolute bottom-1 left-0 w-full h-1 bg-emerald-400/30 -rotate-1"></span>
                                 </span> -->
-                            </h1>
+                    </h1>
 
-                            <p class="mt-2 text-xs md:text-sm text-emerald-50/70 font-medium tracking-wide">
-                                Capture the moments of RBSK health camps, screening drives, and success stories across the nation.
-                            </p>
-                        </div>
+                    <p class="mt-2 text-xs md:text-sm text-emerald-50/70 font-medium tracking-wide">
+                        Capture the moments of RBSK health camps, screening drives, and success stories across the
+                        nation.
+                    </p>
+                </div>
 
-                        <div class="hidden md:block">
-                            <div
-                                class="w-20 h-20 border-2 border-dashed border-emerald-300/30 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
-                                <i class="fa-solid fa-shield-heart text-emerald-200 text-2xl"></i>
-                            </div>
-                        </div>
+                <div class="hidden md:block">
+                    <div
+                        class="w-20 h-20 border-2 border-dashed border-emerald-300/30 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                        <i class="fa-solid fa-shield-heart text-emerald-200 text-2xl"></i>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-
-
- 
-
-    <main class="container mx-auto px-6 py-16">
+    <main id="main" class="container mx-auto px-6 py-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            
-            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all" onclick="openModal('https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1200')">
-                <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+
+            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all"
+                onclick="openModal('https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1200')">
+                <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <i class="fa-solid fa-expand text-white text-3xl"></i>
                 </div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all" onclick="openModal('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200')">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all"
+                onclick="openModal('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200')">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <i class="fa-solid fa-expand text-white text-3xl"></i>
                 </div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all" onclick="openModal('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200')">
-                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all"
+                onclick="openModal('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200')">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <i class="fa-solid fa-expand text-white text-3xl"></i>
                 </div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all" onclick="openModal('https://plus.unsplash.com/premium_photo-1664475477169-46b784084d4e?q=80&w=1200')">
-                <img src="https://plus.unsplash.com/premium_photo-1664475477169-46b784084d4e?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-200 aspect-square cursor-pointer shadow-sm hover:shadow-xl transition-all"
+                onclick="openModal('https://plus.unsplash.com/premium_photo-1664475477169-46b784084d4e?q=80&w=1200')">
+                <img src="https://plus.unsplash.com/premium_photo-1664475477169-46b784084d4e?q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-emerald-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <i class="fa-solid fa-expand text-white text-3xl"></i>
                 </div>
             </div>
@@ -95,13 +108,16 @@
         </div>
     </main>
 
-    <div id="imageModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/90 backdrop-blur-sm modal-hidden modal">
-        <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-4xl hover:text-emerald-500 transition">
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/90 backdrop-blur-sm modal-hidden modal">
+        <button onclick="closeModal()"
+            class="absolute top-6 right-6 text-white text-4xl hover:text-emerald-500 transition">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        
+
         <div class="max-w-5xl max-h-[85vh] p-4">
-            <img id="modalImg" src="" class="rounded-3xl shadow-2xl object-contain max-h-[80vh] mx-auto border-4 border-white/10">
+            <img id="modalImg" src=""
+                class="rounded-3xl shadow-2xl object-contain max-h-[80vh] mx-auto border-4 border-white/10">
         </div>
     </div>
 
@@ -127,7 +143,8 @@
         });
     </script>
 
- <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
 </body>
+
 </html>

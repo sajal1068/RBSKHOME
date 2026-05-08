@@ -8,108 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-    <style>
-        .high-contrast {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-        }
-
-
-        .high-contrast section,
-        .high-contrast div,
-        .high-contrast header,
-        .high-contrast footer,
-        .high-contrast nav {
-            background-color: #000000 !important;
-            background-image: none !important;
-            border-color: #ffff00 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target text elements */
-        .high-contrast h1,
-        .high-contrast h2,
-        .high-contrast h3,
-        .high-contrast h4,
-        .high-contrast h5,
-        .high-contrast h6,
-        .high-contrast p,
-        .high-contrast span,
-        .high-contrast a,
-        .high-contrast li {
-            color: #ffff00 !important;
-        }
-
-        /* Target Buttons and Interactive Elements */
-        .high-contrast button {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-            border: 2px solid #ffff00 !important;
-        }
-
-        .high-contrast {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target the Accessibility Bar specifically */
-        .high-contrast div[class*="bg-[#f8fafc]"] {
-            background-color: #111111 !important;
-            border-color: #ffff00 !important;
-        }
-
-        /* Fix for all buttons in high contrast */
-        .high-contrast button {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-            border: 1px solid #ffff00 !important;
-        }
-
-        /* Normal state for buttons */
-        .font-btn {
-            transition: all 0.3s ease;
-            color: #475569;
-            /* slate-600 */
-        }
-
-        /* Active state - isse green color fix hoga */
-        .font-btn.active {
-            background-color: #059669 !important;
-            /* emerald-600 */
-            color: white !important;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-    </style>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        slate: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        },
-                        teal: {
-                            100: '#ccfbf1',
-                            400: '#2dd4bf',
-                            600: '#0d9488',
-                        },
-                        blue: {
-                            100: '#dbeafe',
-                            600: '#2563eb',
-                        },
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-        /* Custom class for the dashed connector line, ensuring it spans correctly */
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" >   
+    <style>       
         .bg-dashed-line {
             background-image: linear-gradient(to right, #f1f5f9 50%, rgba(255, 255, 255, 0) 0%);
             background-position: bottom;
@@ -253,11 +156,6 @@
         </div>
     </section>
     <main id="main">
-
-
-
-
-
         <!-- Main Mission Container -->
         <section class="relative w-full py-20 px-6 bg-slate-50 overflow-hidden">
             <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-100/40 rounded-full blur-[120px] -z-10"></div>
@@ -361,12 +259,6 @@
                 </div>
             </div>
         </section>
-
-      
-
-
-
-
         <!-- Unique Login Access Section -->
         <!-- <section class="py-24 bg-[#0a0f1a] overflow-hidden">
             <div class="max-w-6xl mx-auto px-6">               
@@ -576,144 +468,199 @@
                 </div>
             </div>
         </section>
+        <!-- Home Page Split Section: Gallery & News -->
+        <section class="py-12 md:py-20 bg-slate-50 overflow-hidden">
+            <div class="container mx-auto px-4 md:px-6">
+                <!-- flex-row for desktop, flex-col for mobile. items-stretch makes them equal height -->
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch">
 
-       
-       <!-- Home Page Split Section: Gallery & News -->
-<section class="py-12 md:py-20 bg-slate-50 overflow-hidden">
-    <div class="container mx-auto px-4 md:px-6">
-        <!-- flex-row for desktop, flex-col for mobile. items-stretch makes them equal height -->
-        <div class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch">
-
-            <!-- LEFT HALF: Creative Gallery Preview -->
-            <div class="w-full lg:w-1/2 relative group">
-                <div class="absolute -inset-4 bg-emerald-500/5 rounded-[2rem] md:rounded-[3rem] blur-2xl group-hover:bg-emerald-500/10 transition-all"></div>
-
-                <!-- Fixed Height for matching: lg:h-[550px] -->
-                <div class="relative h-full min-h-[400px] lg:h-[550px] bg-white rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-8 shadow-xl border border-emerald-500/10 flex flex-col overflow-hidden">
-                    <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-xl md:text-2xl font-black text-slate-900 tracking-tighter uppercase italic">Visual Journey</h3>
-                        <a href="gallery.html" class="px-4 py-1.5 bg-emerald-500 text-slate-950 text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20">
-                            View All
-                        </a>
-                    </div>
-
-                    <!-- Gallery Grid: flex-grow ensures it fills the container height -->
-                    <a href="gallery.html" class="flex-grow grid grid-cols-2 gap-3 md:gap-4 group/gallery relative cursor-pointer overflow-hidden">
-                        <div class="relative rounded-2xl overflow-hidden shadow-md group-hover/gallery:-rotate-2 transition-transform duration-500">
-                            <img src="assets/images/home-01-800X600.jpg" alt="RBSK Activity" class="w-full h-full object-cover grayscale hover:grayscale-0">
-                            <div class="absolute inset-0 bg-emerald-900/20 group-hover/gallery:bg-transparent transition-colors"></div>
+                    <!-- LEFT HALF: Creative Gallery Preview -->
+                    <div class="w-full lg:w-1/2 relative group">
+                        <div
+                            class="absolute -inset-4 bg-emerald-500/5 rounded-[2rem] md:rounded-[3rem] blur-2xl group-hover:bg-emerald-500/10 transition-all">
                         </div>
-                        <div class="grid grid-rows-2 gap-3 md:gap-4">
-                            <div class="relative rounded-2xl overflow-hidden shadow-md group-hover/gallery:rotate-2 transition-transform duration-500">
-                                <img src="assets/images/home-02-390X600.jpg" alt="RBSK Screening" class="w-full h-full object-cover grayscale hover:grayscale-0">
-                                <div class="absolute inset-0 bg-emerald-900/20 group-hover/gallery:bg-transparent transition-colors"></div>
+
+                        <!-- Fixed Height for matching: lg:h-[550px] -->
+                        <div
+                            class="relative h-full min-h-[400px] lg:h-[550px] bg-white rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-8 shadow-xl border border-emerald-500/10 flex flex-col overflow-hidden">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3
+                                    class="text-xl md:text-2xl font-black text-slate-900 tracking-tighter uppercase italic">
+                                    Visual Journey</h3>
+                                <a href="gallery.html"
+                                    class="px-4 py-1.5 bg-emerald-500 text-slate-950 text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20">
+                                    View All
+                                </a>
                             </div>
-                            <div class="relative rounded-2xl overflow-hidden shadow-md group-hover/gallery:scale-95 transition-transform duration-500">
-                                <img src="assets/images/home-03-390X600.jpg" alt="RBSK Intervention" class="w-full h-full object-cover grayscale hover:grayscale-0">
-                                <div class="absolute inset-0 bg-emerald-900/20 group-hover/gallery:bg-transparent transition-colors"></div>
-                            </div>
-                        </div>
-                        <!-- Overlay on Hover -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-emerald-600/10 backdrop-blur-[2px] rounded-2xl">
-                            <span class="bg-white text-emerald-600 p-4 rounded-full shadow-2xl font-black text-xs uppercase tracking-[0.2em] scale-75 group-hover/gallery:scale-100 transition-transform">Enter Gallery</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
 
-            <!-- RIGHT HALF: Latest Updates Section -->
-            <div class="w-full lg:w-1/2">
-                <!-- Height set to match Gallery: lg:h-[550px] -->
-                <div class="h-full min-h-[450px] lg:h-[550px] bg-slate-900 rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 shadow-2xl border-b-8 border-emerald-500 relative overflow-hidden group flex flex-col">
-
-                    <!-- Background Decorative Glows -->
-                    <div class="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/20 rounded-full blur-[100px]"></div>
-                    <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-teal-500/10 rounded-full blur-[100px]"></div>
-
-                   <!-- Header Section Updated -->
-<div class="flex items-center justify-between mb-10 border-b border-white/10 pb-6 relative z-10">
-    <div class="flex items-center gap-4">
-        <div class="p-3 bg-emerald-500/20 rounded-2xl">
-            <i class="fa-solid fa-bolt-lightning text-emerald-400 animate-pulse"></i>
-        </div>
-        <div>
-            <h3 class="text-xl font-black text-white uppercase tracking-[0.2em]">Latest Updates</h3>
-            <p class="text-[9px] text-emerald-400/60 font-bold uppercase tracking-widest mt-1">Real-time Notifications</p>
-        </div>
-    </div>
-    <!-- New View All Link -->
-    <a href="latest-updates.html" class="group/btn flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-emerald-500 rounded-xl transition-all duration-300">
-        <span class="text-[10px] font-black uppercase text-white group-hover/btn:text-slate-950 transition-colors">View All</span>
-        <i class="fa-solid fa-arrow-right-long text-[10px] text-emerald-500 group-hover/btn:text-slate-950 transition-colors"></i>
-    </a>
-</div>
-
-                    <!-- News Scroll Container: flex-grow fills the remaining space -->
-                    <div class="relative flex-grow overflow-hidden z-10">
-                        <div class="animate-news-scroll space-y-4 md:space-y-6 hover:pause-animation">
-
-                            <!-- News Item 1 -->
-                            <div class="group flex items-center gap-4 md:gap-6 p-3 md:p-4 rounded-[1.5rem] md:rounded-[2rem] bg-white/5 border border-white/5 transition-all hover:bg-emerald-500/10 hover:border-emerald-500/30 cursor-pointer">
-                                <div class="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-emerald-500 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
-                                    <span class="text-lg md:text-xl font-black text-slate-950 leading-none">04</span>
-                                    <span class="text-[9px] font-black text-slate-950/70 uppercase mt-1">May</span>
+                            <!-- Gallery Grid: flex-grow ensures it fills the container height -->
+                            <a href="gallery.html"
+                                class="flex-grow grid grid-cols-2 gap-3 md:gap-4 group/gallery relative cursor-pointer overflow-hidden">
+                                <div
+                                    class="relative rounded-2xl overflow-hidden shadow-md group-hover/gallery:-rotate-2 transition-transform duration-500">
+                                    <img src="assets/images/home-01-800X600.jpg" alt="RBSK Activity"
+                                        class="w-full h-full object-cover grayscale hover:grayscale-0">
+                                    <div
+                                        class="absolute inset-0 bg-emerald-900/20 group-hover/gallery:bg-transparent transition-colors">
+                                    </div>
                                 </div>
-                                <div class="flex-grow">
-                                    <h4 class="text-xs md:text-sm font-bold text-slate-200 leading-snug group-hover:text-white">New screening protocols launched for rural Anganwadi centers.</h4>
-                                    <div class="mt-2 flex items-center justify-between">
-                                        <span class="text-[8px] font-black text-emerald-400 uppercase tracking-widest">Notification</span>
-                                        <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-all shadow-lg">
-                                            <i class="fa-solid fa-file-pdf text-xs"></i>
+                                <div class="grid grid-rows-2 gap-3 md:gap-4">
+                                    <div
+                                        class="relative rounded-2xl overflow-hidden shadow-md group-hover/gallery:rotate-2 transition-transform duration-500">
+                                        <img src="assets/images/home-02-390X600.jpg" alt="RBSK Screening"
+                                            class="w-full h-full object-cover grayscale hover:grayscale-0">
+                                        <div
+                                            class="absolute inset-0 bg-emerald-900/20 group-hover/gallery:bg-transparent transition-colors">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="relative rounded-2xl overflow-hidden shadow-md group-hover/gallery:scale-95 transition-transform duration-500">
+                                        <img src="assets/images/home-03-390X600.jpg" alt="RBSK Intervention"
+                                            class="w-full h-full object-cover grayscale hover:grayscale-0">
+                                        <div
+                                            class="absolute inset-0 bg-emerald-900/20 group-hover/gallery:bg-transparent transition-colors">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- News Item 2 -->
-                            <div class="group flex items-center gap-4 md:gap-6 p-4 rounded-[2rem] bg-white/5 border border-white/5 transition-all hover:bg-teal-500/10 hover:border-teal-500/30 cursor-pointer">
-                                <div class="flex-shrink-0 w-16 h-16 bg-teal-500 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
-                                    <span class="text-xl font-black text-slate-950 leading-none">28</span>
-                                    <span class="text-[10px] font-black text-slate-950/70 uppercase mt-1">Feb</span>
+                                <!-- Overlay on Hover -->
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-emerald-600/10 backdrop-blur-[2px] rounded-2xl">
+                                    <span
+                                        class="bg-white text-emerald-600 p-4 rounded-full shadow-2xl font-black text-xs uppercase tracking-[0.2em] scale-75 group-hover/gallery:scale-100 transition-transform">Enter
+                                        Gallery</span>
                                 </div>
-                                <div class="flex-grow">
-                                    <h4 class="text-sm font-bold text-slate-200 leading-snug group-hover:text-white">Operational guidelines for 4Ds screening updated.</h4>
-                                    <div class="mt-2 flex items-center justify-between">
-                                        <span class="text-[8px] font-black text-teal-400 uppercase tracking-widest">Guidelines</span>
-                                        <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-all shadow-lg">
-                                            <i class="fa-solid fa-file-pdf text-xs"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Fade Mask -->
-                    <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent pointer-events-none z-20"></div>
+                    <!-- RIGHT HALF: Latest Updates Section -->
+                    <div class="w-full lg:w-1/2">
+                        <!-- Height set to match Gallery: lg:h-[550px] -->
+                        <div
+                            class="h-full min-h-[450px] lg:h-[550px] bg-slate-900 rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 shadow-2xl border-b-8 border-emerald-500 relative overflow-hidden group flex flex-col">
+
+                            <!-- Background Decorative Glows -->
+                            <div
+                                class="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/20 rounded-full blur-[100px]">
+                            </div>
+                            <div
+                                class="absolute -bottom-24 -left-24 w-64 h-64 bg-teal-500/10 rounded-full blur-[100px]">
+                            </div>
+
+                            <!-- Header Section Updated -->
+                            <div
+                                class="flex items-center justify-between mb-10 border-b border-white/10 pb-6 relative z-10">
+                                <div class="flex items-center gap-4">
+                                    <div class="p-3 bg-emerald-500/20 rounded-2xl">
+                                        <i class="fa-solid fa-bolt-lightning text-emerald-400 animate-pulse"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-black text-white uppercase tracking-[0.2em]">Latest
+                                            Updates</h3>
+                                        <p
+                                            class="text-[9px] text-emerald-400/60 font-bold uppercase tracking-widest mt-1">
+                                            Real-time Notifications</p>
+                                    </div>
+                                </div>
+                                <!-- New View All Link -->
+                                <a href="latest-updates.html"
+                                    class="group/btn flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-emerald-500 rounded-xl transition-all duration-300">
+                                    <span
+                                        class="text-[10px] font-black uppercase text-white group-hover/btn:text-slate-950 transition-colors">View
+                                        All</span>
+                                    <i
+                                        class="fa-solid fa-arrow-right-long text-[10px] text-emerald-500 group-hover/btn:text-slate-950 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <!-- News Scroll Container: flex-grow fills the remaining space -->
+                            <div class="relative flex-grow overflow-hidden z-10">
+                                <div class="animate-news-scroll space-y-4 md:space-y-6 hover:pause-animation">
+
+                                    <!-- News Item 1 -->
+                                    <div
+                                        class="group flex items-center gap-4 md:gap-6 p-3 md:p-4 rounded-[1.5rem] md:rounded-[2rem] bg-white/5 border border-white/5 transition-all hover:bg-emerald-500/10 hover:border-emerald-500/30 cursor-pointer">
+                                        <div
+                                            class="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-emerald-500 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                                            <span
+                                                class="text-lg md:text-xl font-black text-slate-950 leading-none">04</span>
+                                            <span
+                                                class="text-[9px] font-black text-slate-950/70 uppercase mt-1">May</span>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h4
+                                                class="text-xs md:text-sm font-bold text-slate-200 leading-snug group-hover:text-white">
+                                                New screening protocols launched for rural Anganwadi centers.</h4>
+                                            <div class="mt-2 flex items-center justify-between">
+                                                <span
+                                                    class="text-[8px] font-black text-emerald-400 uppercase tracking-widest">Notification</span>
+                                                <div
+                                                    class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-all shadow-lg">
+                                                    <i class="fa-solid fa-file-pdf text-xs"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- News Item 2 -->
+                                    <div
+                                        class="group flex items-center gap-4 md:gap-6 p-4 rounded-[2rem] bg-white/5 border border-white/5 transition-all hover:bg-teal-500/10 hover:border-teal-500/30 cursor-pointer">
+                                        <div
+                                            class="flex-shrink-0 w-16 h-16 bg-teal-500 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                                            <span class="text-xl font-black text-slate-950 leading-none">28</span>
+                                            <span
+                                                class="text-[10px] font-black text-slate-950/70 uppercase mt-1">Feb</span>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h4
+                                                class="text-sm font-bold text-slate-200 leading-snug group-hover:text-white">
+                                                Operational guidelines for 4Ds screening updated.</h4>
+                                            <div class="mt-2 flex items-center justify-between">
+                                                <span
+                                                    class="text-[8px] font-black text-teal-400 uppercase tracking-widest">Guidelines</span>
+                                                <div
+                                                    class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-all shadow-lg">
+                                                    <i class="fa-solid fa-file-pdf text-xs"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Fade Mask -->
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent pointer-events-none z-20">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </section>
+        <style>
+            /* Responsive Animation Speed */
+            @keyframes news-scroll {
+                0% {
+                    transform: translateY(0);
+                }
 
-        </div>
-    </div>
-</section>
+                100% {
+                    transform: translateY(-50%);
+                }
+            }
 
-<style>
-    /* Responsive Animation Speed */
-    @keyframes news-scroll {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-50%); }
-    }
-    .animate-news-scroll {
-        animation: news-scroll 20s linear infinite;
-    }
-    .pause-animation:hover {
-        animation-play-state: paused;
-    }
-</style>
+            .animate-news-scroll {
+                animation: news-scroll 20s linear infinite;
+            }
+
+            .pause-animation:hover {
+                animation-play-state: paused;
+            }
+        </style>
     </main>
     <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
 </body>
-
 </html>

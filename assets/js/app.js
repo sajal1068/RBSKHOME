@@ -110,7 +110,8 @@ function loadComponent(id, file) {
 // Dono components ko call karein
 window.onload = function() {
     loadComponent('header-placeholder', 'header.html');
-    loadComponent('footer-placeholder', 'footer.html');
+    loadComponent('footer-placeholder', 'footer.html'); 
+    loadComponent('navbar-placeholder', 'navbar.html');
 };
 
 
@@ -138,3 +139,46 @@ window.addEventListener('scroll', () => {
         }
     }
 });
+
+
+
+
+    window.addEventListener('scroll', () => {
+        const navContainer = document.getElementById('nav-container');
+        const isMobile = window.innerWidth < 1024;
+        
+        if (window.scrollY > 40) {
+            navContainer.style.height = isMobile ? "52px" : "48px"; // Slim state
+        } else {
+            navContainer.style.height = isMobile ? "56px" : "64px"; // Normal state
+        }
+    });
+
+
+    /**   * Unified Toggle Logic      */
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('#unifiedMenuBtn');
+        const container = document.getElementById('mainNavContainer');
+        const icon = document.getElementById('unifiedIcon');
+
+        if (btn) {
+            const isHidden = container.classList.toggle('hidden');
+            // Toggle icons
+            if(!isHidden) {
+                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+                document.body.style.overflow = 'hidden'; // Stop scroll when menu open
+            } else {
+                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+
+    /**       * Sub-menu Toggle (Only for mobile)  */
+    function toggleMobileSub(id) {
+        if (window.innerWidth < 1024) {
+            const sub = document.getElementById(id);
+            sub.classList.toggle('hidden');
+        }
+    }
+

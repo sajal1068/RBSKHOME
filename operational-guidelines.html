@@ -8,101 +8,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-    <style>
-        .high-contrast {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-        }
-
-
-        .high-contrast section,
-        .high-contrast div,
-        .high-contrast header,
-        .high-contrast footer,
-        .high-contrast nav {
-            background-color: #000000 !important;
-            background-image: none !important;
-            border-color: #ffff00 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target text elements */
-        .high-contrast h1,
-        .high-contrast h2,
-        .high-contrast h3,
-        .high-contrast h4,
-        .high-contrast h5,
-        .high-contrast h6,
-        .high-contrast p,
-        .high-contrast span,
-        .high-contrast a,
-        .high-contrast li {
-            color: #ffff00 !important;
-        }
-
-        /* Target Buttons and Interactive Elements */
-        .high-contrast button {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-            border: 2px solid #ffff00 !important;
-        }
-
-        .high-contrast {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target the Accessibility Bar specifically */
-        .high-contrast div[class*="bg-[#f8fafc]"] {
-            background-color: #111111 !important;
-            border-color: #ffff00 !important;
-        }
-
-        /* Fix for all buttons in high contrast */
-        .high-contrast button {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-            border: 1px solid #ffff00 !important;
-        }
-
-        /* Normal state for buttons */
-        .font-btn {
-            transition: all 0.3s ease;
-            color: #475569;
-            /* slate-600 */
-        }
-
-        /* Active state - isse green color fix hoga */
-        .font-btn.active {
-            background-color: #059669 !important;
-            /* emerald-600 */
-            color: white !important;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" >
 </head>
 <body class="transition-all duration-300">
-    <div id="header-placeholder"></div>      
-    <section class="pt-24 pb-12 bg-emerald-600"> 
-    <div class="container mx-auto px-6">
-        <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
-            <a href="#" class="hover:text-white">Home</a>
-            <i class="fa-solid fa-chevron-right text-[8px]"></i>
-            <span class="text-white">Operational Guidelines</span>
-        </nav>
-        
-        <h1 class="text-4xl md:text-5xl font-black text-white tracking-tighter">
-            Implementation & <span class="text-emerald-400">Protocols</span>
-        </h1>
-        
-        <p class="text-emerald-100 mt-4 max-w-2xl font-medium">
-            National Health Mission dwara jari ki gayi official guidelines aur SOPs ka sangrah.
-        </p>
-    </div>
-</section>
+    <div id="header-placeholder"></div>
+     <main id="main">
+    <section class="pt-24 pb-12 bg-emerald-600">
+        <div class="container mx-auto px-6">
+            <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
+                <a href="#" class="hover:text-white">Home</a>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                <span class="text-white">Operational Guidelines</span>
+            </nav>
 
-   
+            <h1 class="text-4xl md:text-5xl font-black text-white tracking-tighter">
+                Implementation & <span class="text-emerald-400">Protocols</span>
+            </h1>
 
+            <p class="text-emerald-100 mt-4 max-w-2xl font-medium">
+                National Health Mission dwara jari ki gayi official guidelines aur SOPs ka sangrah.
+            </p>
+        </div>
+    </section>
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-12 gap-12">
@@ -150,7 +80,8 @@
                                     <p class="text-xs text-slate-500 leading-relaxed">The foundational document
                                         outlining the strategy, 4Ds, and implementation model.</p>
                                 </div>
-                                <a href="https://nhm.gov.in/index1.php?lang=1&level=5&sublinkid=1193&lid=372" target="_blank"
+                                <a href="https://nhm.gov.in/index1.php?lang=1&level=5&sublinkid=1193&lid=372"
+                                    target="_blank"
                                     class="mt-8 flex items-center justify-between font-bold text-xs uppercase tracking-widest text-emerald-600 hover:text-slate-900 transition">
                                     View Document <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -168,7 +99,8 @@
                                     <p class="text-xs text-slate-500 leading-relaxed">Training modules for Mobile Health
                                         Teams on how to conduct screenings.</p>
                                 </div>
-                                <a href="https://nhm.gov.in/index4.php?lang=1&level=0&linkid=536&lid=776" target="_blank"
+                                <a href="https://nhm.gov.in/index4.php?lang=1&level=0&linkid=536&lid=776"
+                                    target="_blank"
                                     class="mt-8 flex items-center justify-between font-bold text-xs uppercase tracking-widest text-emerald-600 hover:text-slate-900 transition">
                                     View Manual <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -239,7 +171,7 @@
             </div>
         </div>
     </section>
-
+    </main>
     <div id="footer-placeholder"></div>
     <script src="assets/js/app.js"></script>
 </body>

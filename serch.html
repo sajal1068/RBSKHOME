@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,173 +7,240 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div id="header-placeholder"></div>
+        <section
+            class="relative w-full bg-emerald-600 py-10 md:py-12 overflow-hidden shadow-[inset_0_10px_20px_rgba(0,0,0,0.1)]">
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent skew-x-12 translate-x-20">
+            </div>
+            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
 
-    </head>
-    <body>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <nav
+                            class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
+                            <a href="#" class="hover:text-white">Home</a>
+                            <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                            <span class="text-white">Program Overview </span>
+                        </nav>
 
-    
+                        <h1 class="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter">
+                            Program Overview
+                            <span class="text-emerald-300">&</span>
+                            <span class="relative inline-block">
+                                <span
+                                    class="relative z-10 bg-gradient-to-b from-white to-emerald-200 bg-clip-text text-transparent">Structure</span>
 
-<section class="min-h-screen bg-slate-50 pt-10 pb-20 px-4 md:px-10">
-    <div class="max-w-7xl mx-auto">
-        
-        <div class="mt-8 max-w-4xl mx-auto bg-white p-4 rounded-3xl shadow-xl shadow-slate-200 grid grid-cols-1 md:grid-cols-4 gap-4">
-    <select id="stateSelect" class="bg-slate-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-500 cursor-pointer">
-        <option value="">Select State</option>
-        <option value="delhi">Delhi</option>
-        <option value="up">Uttar Pradesh</option>
-        <option value="haryana">Haryana</option>
-    </select>
+                                <span class="absolute bottom-1 left-0 w-full h-1 bg-emerald-400/30 -rotate-1"></span>
+                            </span>
+                        </h1>
 
-    <select id="districtSelect" class="bg-slate-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-500 cursor-pointer" disabled>
-        <option value="">Select District</option>
-    </select>
+                        <p class="mt-2 text-xs md:text-sm text-emerald-50/70 font-medium tracking-wide">
+                            A comprehensive collection of the latest official guidelines, circulars, and reports issued
+                            by
+                            the Rashtriya Bal Swasthya Karyakram (RBSK).
+                        </p>
+                    </div>
 
-    <input type="text" placeholder="Enter Block or PIN" class="bg-slate-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-500">
-    
-    <button class="bg-teal-600 text-white rounded-xl font-bold hover:bg-teal-700 transition flex items-center justify-center gap-2">
-        <i class="fa-solid fa-magnifying-glass"></i> Search
-    </button>
-</div>
+                    <div class="hidden md:block">
+                        <div
+                            class="w-20 h-20 border-2 border-dashed border-emerald-300/30 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                            <i class="fa-solid fa-shield-heart text-emerald-200 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    // 1. Data Object (In real project, this can come from an API)
-    const stateDistrictData = {
-        "delhi": ["New Delhi", "North Delhi", "South Delhi", "West Delhi", "Central Delhi"],
-        "up": ["Lucknow", "Kanpur", "Varanasi", "Agra", "Noida", "Ghaziabad"],
-        "haryana": ["Gurugram", "Faridabad", "Panipat", "Ambala", "Rohtak"]
-    };
+        <section class="min-h-screen bg-slate-50 pt-10 pb-20 px-4 md:px-10">
+            <div class="max-w-7xl mx-auto">
 
-    // 2. Change Event on State Dropdown
-    $('#stateSelect').on('change', function() {
-        const selectedState = $(this).val();
-        const $districtDropdown = $('#districtSelect');
+                <div
+                    class="mt-8 max-w-4xl mx-auto bg-white p-4 rounded-3xl shadow-xl shadow-slate-200 grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <select id="stateSelect"
+                        class="bg-slate-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-500 cursor-pointer">
+                        <option value="">Select State</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="up">Uttar Pradesh</option>
+                        <option value="haryana">Haryana</option>
+                    </select>
 
-        // Clear previous options
-        $districtDropdown.empty().append('<option value="">Select District</option>');
+                    <select id="districtSelect"
+                        class="bg-slate-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-500 cursor-pointer"
+                        disabled>
+                        <option value="">Select District</option>
+                    </select>
 
-        if (selectedState && stateDistrictData[selectedState]) {
-            // Enable dropdown
-            $districtDropdown.prop('disabled', false).addClass('bg-white').removeClass('bg-slate-50');
-            
-            // Append new districts
-            stateDistrictData[selectedState].forEach(function(district) {
-                $districtDropdown.append($('<option>', {
-                    value: district.toLowerCase().replace(/\s+/g, '-'),
-                    text: district
-                }));
+                    <input type="text" placeholder="Enter Block or PIN"
+                        class="bg-slate-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-500">
+
+                    <button
+                        class="bg-teal-600 text-white rounded-xl font-bold hover:bg-teal-700 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </button>
+                </div>
+
+
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                    <div class="lg:col-span-5 space-y-4 h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+                        <p class="text-sm font-semibold text-slate-400 uppercase tracking-widest px-2">3 Centers Found
+                        </p>
+
+                        <div class="bg-white p-6 rounded-2xl border-2 border-teal-500 shadow-lg cursor-pointer">
+                            <div class="flex justify-between items-start mb-4">
+                                <span
+                                    class="px-3 py-1 bg-teal-100 text-teal-700 text-[10px] font-bold rounded-full">DEIC
+                                    CENTER</span>
+                                <span class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot"></i> 2.5
+                                    KM</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900">District Early Intervention Center</h3>
+                            <p class="text-sm text-slate-500 mt-1">Nodal Hospital, Sector 12, RK Puram</p>
+                            <div class="mt-4 flex gap-2">
+                                <button class="text-xs font-bold text-teal-600 hover:underline">View on Map</button>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-2xl border border-slate-100 hover:border-teal-200 shadow-sm cursor-pointer transition">
+                            <div class="flex justify-between items-start mb-4">
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded-full">SCREENING
+                                    POINT</span>
+                                <span class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot"></i> 4.1
+                                    KM</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900">CHC Health Block Center</h3>
+                            <p class="text-sm text-slate-500 mt-1">Community Health Centre, Mehrauli</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-2xl border border-slate-100 hover:border-teal-200 shadow-sm cursor-pointer transition">
+                            <div class="flex justify-between items-start mb-4">
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded-full">SCREENING
+                                    POINT</span>
+                                <span class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot"></i> 5.8
+                                    KM</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900">Primary Health Centre (PHC)</h3>
+                            <p class="text-sm text-slate-500 mt-1">Phas II, Badarpur Road</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div
+                            class="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-100 h-full flex flex-col">
+                            <div class="h-64 bg-slate-200 relative">
+                                <div class="absolute inset-0 flex items-center justify-center text-slate-400 italic">
+                                    <i class="fa-solid fa-map-location-dot text-5xl mb-2 block"></i>
+                                    <span>Interactive Map Component Placeholder</span>
+                                </div>
+                            </div>
+
+                            <div class="p-8 flex-1">
+                                <div class="flex justify-between items-center mb-6">
+                                    <h2 class="text-2xl font-bold text-slate-900">District Early Intervention Center
+                                        (DEIC)</h2>
+                                    <button
+                                        class="bg-teal-50 text-teal-600 p-3 rounded-xl hover:bg-teal-600 hover:text-white transition">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                    </button>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-6 mb-8">
+                                    <div class="space-y-1">
+                                        <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">
+                                            Timings</p>
+                                        <p class="text-sm font-semibold">09:00 AM - 04:00 PM (Mon-Sat)</p>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Nodal
+                                            Officer</p>
+                                        <p class="text-sm font-semibold">Dr. S. K. Verma</p>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">
+                                            Contact Number</p>
+                                        <p class="text-sm font-semibold text-teal-600">+91 11 2345 6789</p>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">
+                                            Emergency Services</p>
+                                        <p class="text-sm font-semibold text-rose-500">Available 24/7</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                    <h4 class="font-bold text-sm mb-3">Available Facilities:</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Physiotherapy</span>
+                                        <span
+                                            class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Dental
+                                            Checkup</span>
+                                        <span
+                                            class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Speech
+                                            Therapy</span>
+                                        <span
+                                            class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Vision
+                                            Screening</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8 flex gap-4">
+                                    <button
+                                        class="flex-1 bg-slate-900 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                                    </button>
+                                    <button
+                                        class="flex-1 border-2 border-slate-200 text-slate-700 py-4 rounded-xl font-bold hover:bg-slate-50 transition">
+                                        <i class="fa-solid fa-phone"></i> Call Center
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const stateDistrictData = {
+                "delhi": ["New Delhi", "North Delhi", "South Delhi", "West Delhi", "Central Delhi"],
+                "up": ["Lucknow", "Kanpur", "Varanasi", "Agra", "Noida", "Ghaziabad"],
+                "haryana": ["Gurugram", "Faridabad", "Panipat", "Ambala", "Rohtak"]
+            };
+            $('#stateSelect').on('change', function () {
+                const selectedState = $(this).val();
+                const $districtDropdown = $('#districtSelect');
+                $districtDropdown.empty().append('<option value="">Select District</option>');
+                if (selectedState && stateDistrictData[selectedState]) {
+                    $districtDropdown.prop('disabled', false).addClass('bg-white').removeClass('bg-slate-50');
+                    stateDistrictData[selectedState].forEach(function (district) {
+                        $districtDropdown.append($('<option>', {
+                            value: district.toLowerCase().replace(/\s+/g, '-'),
+                            text: district
+                        }));
+                    });
+                    $districtDropdown.addClass('ring-2 ring-teal-200');
+                    setTimeout(() => $districtDropdown.removeClass('ring-2 ring-teal-200'), 500);
+                } else {
+                    $districtDropdown.prop('disabled', true).addClass('bg-slate-50').removeClass('bg-white');
+                }
             });
-
-            // UX Animation: Thoda focus highlight dene ke liye
-            $districtDropdown.addClass('ring-2 ring-teal-200');
-            setTimeout(() => $districtDropdown.removeClass('ring-2 ring-teal-200'), 500);
-
-        } else {
-            // Disable if no state selected
-            $districtDropdown.prop('disabled', true).addClass('bg-slate-50').removeClass('bg-white');
-        }
-    });
-});
-</script>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            
-            <div class="lg:col-span-5 space-y-4 h-[600px] overflow-y-auto pr-2 custom-scrollbar">
-                <p class="text-sm font-semibold text-slate-400 uppercase tracking-widest px-2">3 Centers Found</p>
-                
-                <div class="bg-white p-6 rounded-2xl border-2 border-teal-500 shadow-lg cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-[10px] font-bold rounded-full">DEIC CENTER</span>
-                        <span class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot"></i> 2.5 KM</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900">District Early Intervention Center</h3>
-                    <p class="text-sm text-slate-500 mt-1">Nodal Hospital, Sector 12, RK Puram</p>
-                    <div class="mt-4 flex gap-2">
-                        <button class="text-xs font-bold text-teal-600 hover:underline">View on Map</button>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 hover:border-teal-200 shadow-sm cursor-pointer transition">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded-full">SCREENING POINT</span>
-                        <span class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot"></i> 4.1 KM</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900">CHC Health Block Center</h3>
-                    <p class="text-sm text-slate-500 mt-1">Community Health Centre, Mehrauli</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 hover:border-teal-200 shadow-sm cursor-pointer transition">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded-full">SCREENING POINT</span>
-                        <span class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot"></i> 5.8 KM</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900">Primary Health Centre (PHC)</h3>
-                    <p class="text-sm text-slate-500 mt-1">Phas II, Badarpur Road</p>
-                </div>
-            </div>
-
-            <div class="lg:col-span-7">
-                <div class="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-100 h-full flex flex-col">
-                    <div class="h-64 bg-slate-200 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 italic">
-                            <i class="fa-solid fa-map-location-dot text-5xl mb-2 block"></i>
-                            <span>Interactive Map Component Placeholder</span>
-                        </div>
-                    </div>
-                    
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-center mb-6">
-                            <h2 class="text-2xl font-bold text-slate-900">District Early Intervention Center (DEIC)</h2>
-                            <button class="bg-teal-50 text-teal-600 p-3 rounded-xl hover:bg-teal-600 hover:text-white transition">
-                                <i class="fa-solid fa-share-nodes"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-6 mb-8">
-                            <div class="space-y-1">
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Timings</p>
-                                <p class="text-sm font-semibold">09:00 AM - 04:00 PM (Mon-Sat)</p>
-                            </div>
-                            <div class="space-y-1">
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Nodal Officer</p>
-                                <p class="text-sm font-semibold">Dr. S. K. Verma</p>
-                            </div>
-                            <div class="space-y-1">
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Contact Number</p>
-                                <p class="text-sm font-semibold text-teal-600">+91 11 2345 6789</p>
-                            </div>
-                            <div class="space-y-1">
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Emergency Services</p>
-                                <p class="text-sm font-semibold text-rose-500">Available 24/7</p>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                            <h4 class="font-bold text-sm mb-3">Available Facilities:</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Physiotherapy</span>
-                                <span class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Dental Checkup</span>
-                                <span class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Speech Therapy</span>
-                                <span class="bg-white px-3 py-1.5 rounded-lg text-xs border border-slate-200">Vision Screening</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 flex gap-4">
-                            <button class="flex-1 bg-slate-900 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
-                            </button>
-                            <button class="flex-1 border-2 border-slate-200 text-slate-700 py-4 rounded-xl font-bold hover:bg-slate-50 transition">
-                                <i class="fa-solid fa-phone"></i> Call Center
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
+        });
+    </script>
 </body>
 </html>

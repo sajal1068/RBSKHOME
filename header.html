@@ -14,13 +14,7 @@
                 <a href="screen-reader.html" class="hover:text-emerald-700 transition flex items-center gap-1">
                     <i class="fa-solid fa-eye"></i> <span data-i18n="screen_reader">Screen Reader</span>
                 </a>
-            </div>
-
-            <!-- <div class="flex items-center gap-1 bg-slate-200/50 p-0.5 rounded-lg border border-slate-200">
-                <button onclick="changeFontSize('small', this)" class="font-btn px-2 py-1 hover:bg-white rounded-md transition font-bold">A-</button>
-                <button onclick="changeFontSize('normal', this)" class="font-btn px-2 py-1 bg-emerald-600 text-white rounded-md shadow-sm font-bold">A</button>
-                <button onclick="changeFontSize('large', this)" class="font-btn px-2 py-1 hover:bg-white rounded-md transition font-bold">A+</button>
-            </div> -->
+            </div>           
             <div class="flex items-center gap-1 bg-slate-200/50 p-1 rounded-lg border border-slate-200 w-fit">
                 <button onclick="changeFontSize('small', this)"
                     class="font-btn px-3 py-1 hover:bg-white rounded-md transition-all font-bold text-slate-600">
@@ -41,13 +35,7 @@
                     class="flex items-center gap-1.5 border border-slate-300 bg-white px-2 md:px-3 py-1 rounded-lg hover:bg-slate-50 transition shadow-sm font-semibold">
                     <i class="fa-solid fa-circle-half-stroke text-emerald-600"></i>
                     <span class="hidden sm:inline" data-i18n="contrast">Contrast</span>
-                </button>
-                <!-- <button onclick="toggleContrast()"
-                    class="flex items-center gap-1.5 border border-slate-300 bg-white px-2 md:px-3 py-1 rounded-lg hover:bg-slate-50 transition shadow-sm font-semibold">
-                    <i class="fa-solid fa-circle-half-stroke text-emerald-600"></i>
-                    <span class="hidden sm:inline" data-i18n="contrast">Contrast</span>
-                </button> -->
-
+                </button>  
                 <select id="languageSwitcher"
                     class="bg-white text-slate-700 border border-slate-300 rounded-lg px-1 md:px-2 py-1 outline-none cursor-pointer focus:border-emerald-500 shadow-sm font-medium">
                     <option value="en">English</option>
@@ -74,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col items-center justify-center px-2 order-2 lg:order-2 text-center">
+            <!-- <div class="flex flex-col items-center justify-center px-2 order-2 lg:order-2 text-center">
                 <h1
                     class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-slate-950 tracking-tight leading-tight">
                     <span class="block" data-i18n="rbsk_full">Rashtriya Bal Swasthya Karyakram</span>
@@ -86,7 +74,18 @@
                     <span class="w-2.5 h-2.5 rotate-45 bg-orange-500 rounded-sm"></span>
                     <span class="h-0.5 w-10 md:w-20 bg-emerald-600 rounded-full"></span>
                 </div>
-            </div>
+            </div> -->
+            <div class="hidden lg:flex flex-col items-center justify-center px-2 order-2 lg:order-2 text-center">
+    <h1 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+        <span class="block" data-i18n="rbsk_full">Rashtriya Bal Swasthya Karyakram</span>
+        <span class="text-emerald-700">(RBSK)</span>
+    </h1>
+    <div class="flex items-center gap-2 md:gap-3 mt-3 w-full justify-center">
+        <span class="h-0.5 w-10 md:w-20 bg-emerald-600 rounded-full"></span>
+        <span class="w-2.5 h-2.5 rotate-45 bg-orange-500 rounded-sm"></span>
+        <span class="h-0.5 w-10 md:w-20 bg-emerald-600 rounded-full"></span>
+    </div>
+</div>
 
             <div
                 class="hidden lg:flex items-center justify-center gap-8 order-3 transition-transform hover:scale-105 duration-300">
@@ -102,14 +101,19 @@
 
 <header class="sticky top-0 z-[99] w-full bg-slate-950 border-b border-emerald-500/20 shadow-xl">
     <nav class="container mx-auto px-4">
-        <div class="flex items-center justify-between h-14 md:h-14">
-            
-            <div class="lg:hidden flex items-center">
+        <div class="flex items-center justify-between h-14 md:h-14">            
+            <div class="lg:hidden flex flex-col justify-center">
+                <h2 class="text-white text-[10px] sm:text-xs font-bold leading-tight uppercase tracking-tight">
+                    Rashtriya Bal Swasthya Karyakram(RBSK)
+                </h2>
+                
+            </div>
+
+            <div class="lg:hidden">
                 <button id="unifiedMenuBtn" class="text-emerald-500 p-2 focus:outline-none">
                     <i id="unifiedIcon" class="fa-solid fa-bars-staggered text-xl"></i>
                 </button>
             </div>
-
             <div id="mainNavContainer" class="hidden lg:flex absolute lg:relative top-full lg:top-auto left-0 w-full lg:w-auto bg-slate-950 lg:bg-transparent border-t lg:border-none border-emerald-500/10 lg:h-full overflow-y-auto lg:overflow-visible">
                 
                 <ul class="flex flex-col lg:flex-row items-start lg:items-center w-full h-full lg:divide-x lg:divide-emerald-500/20">

@@ -1,4 +1,8 @@
 // app.js
+// website contrast
+window.toggleContrast = function() {
+    document.body.classList.toggle('high-contrast');
+};
 
 // 1. Resources for i18next
 const resources = {
@@ -95,22 +99,17 @@ function updateContent() {
 
 // 3. Font Size Function (Fixed)
 window.changeFontSize = function(size, btnElement) {
-    const html = document.documentElement; // Body ki jagah HTML par lagayein better control ke liye
-    
-    // Font size change logic
+    const html = document.documentElement;         
     if (size === 'small') html.style.fontSize = '14px';
     else if (size === 'normal') html.style.fontSize = '16px';
     else if (size === 'large') html.style.fontSize = '18px';
-
-    // UI: Active class logic
+   
     const allButtons = document.querySelectorAll('.font-btn');
-    allButtons.forEach(btn => {
-        // Reset classes for all buttons
+    allButtons.forEach(btn => {        
         btn.classList.remove('bg-emerald-600', 'text-white', 'active');
         btn.classList.add('text-slate-600', 'hover:bg-white');
     });
-
-    // Apply active styles to clicked button
+    
     if (btnElement) {
         btnElement.classList.add('bg-emerald-600', 'text-white', 'active');
         btnElement.classList.remove('text-slate-600', 'hover:bg-white');
@@ -129,53 +128,9 @@ document.addEventListener('change', function(e) {
 });
 
 
-// website contrast
 
-  // Function to handle High Contrast
-const initContrastMode = () => {
-    // 1. Page load par check karein
-    if (localStorage.getItem('contrastMode') === 'high') {
-        document.body.classList.add('high-contrast');
-    }
+  
 
-    // 2. Global Click Listener (Event Delegation)
-    document.addEventListener('click', (e) => {
-        // Toggle Contrast Button logic
-        // Check if clicked element or its parent has the toggle function
-        if (e.target.closest('[onclick="toggleContrast()"]') || e.target.closest('.contrast-btn')) {
-            // Prevent default if it's a link
-            e.preventDefault();
-            
-            const isEnabled = document.body.classList.toggle('high-contrast');
-            localStorage.setItem('contrastMode', isEnabled ? 'high' : 'normal');
-            
-            console.log("Contrast Toggled:", isEnabled);
-        }
-
-        // --- Mobile Menu Toggle Support (Fixed for injected headers) ---
-        const menuBtn = e.target.closest('#unifiedMenuBtn');
-        if (menuBtn) {
-            const container = document.getElementById('mainNavContainer');
-            const icon = document.getElementById('unifiedIcon');
-            if (container) {
-                const isHidden = container.classList.toggle('hidden');
-                if (icon) {
-                    icon.classList.toggle('fa-bars-staggered', isHidden);
-                    icon.classList.toggle('fa-xmark', !isHidden);
-                }
-            }
-        }
-    });
-};
-
-// Start the listener
-initContrastMode();
-
-// Header load hone ke liye agar aap fetch use kar rahe hain toh uska logic yahan ho sakta hai
-// Example:
-// fetch('header.html').then(res => res.text()).then(data => {
-//    document.getElementById('header-placeholder').innerHTML = data;
-// });
 
     // Function to load components
     function loadComponent(id, file) {
@@ -199,28 +154,28 @@ initContrastMode();
 
 
 
-// Back to Top Logic
-window.scrollToTop = function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-};
+    // Back to Top Logic
+    window.scrollToTop = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 
-// 2. Scroll event listener (safer version)
-window.addEventListener('scroll', () => {
-    const backToTopBtn = document.getElementById('backToTop');
-    
-    if (backToTopBtn) {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
-            backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
-        } else {
-            backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
-            backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+    // 2. Scroll event listener (safer version)
+    window.addEventListener('scroll', () => {
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        if (backToTopBtn) {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+                backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
+                backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            }
         }
-    }
-});
+    });
 
 
 
@@ -244,19 +199,16 @@ window.addEventListener('scroll', () => {
         const icon = document.getElementById('unifiedIcon');
 
         if (btn) {
-            const isHidden = container.classList.toggle('hidden');
-            // Toggle icons
+            const isHidden = container.classList.toggle('hidden');            
             if(!isHidden) {
                 icon.classList.replace('fa-bars-staggered', 'fa-xmark');
-                document.body.style.overflow = 'hidden'; // Stop scroll when menu open
+                document.body.style.overflow = 'hidden'; 
             } else {
                 icon.classList.replace('fa-xmark', 'fa-bars-staggered');
                 document.body.style.overflow = '';
             }
         }
-    });
-
-    /**       * Sub-menu Toggle (Only for mobile)  */
+    });    
     function toggleMobileSub(id) {
         if (window.innerWidth < 1024) {
             const sub = document.getElementById(id);
@@ -265,22 +217,21 @@ window.addEventListener('scroll', () => {
     }
 
 
-     const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImg');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
 
-        function openModal(imgSrc) {
-            modalImg.src = imgSrc;
-            modal.classList.remove('modal-hidden');
-            document.body.style.overflow = 'hidden'; // Stop scroll
-        }
+    function openModal(imgSrc) {
+        modalImg.src = imgSrc;
+        modal.classList.remove('modal-hidden');
+        document.body.style.overflow = 'hidden'; 
+    }
 
-        function closeModal() {
-            modal.classList.add('modal-hidden');
-            document.body.style.overflow = 'auto'; // Enable scroll
-            setTimeout(() => { modalImg.src = ''; }, 300); // Clear src after fade
-        }
-
-        // Close modal if clicking outside the image
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
+    function closeModal() {
+        modal.classList.add('modal-hidden');
+        document.body.style.overflow = 'auto'; 
+        setTimeout(() => { modalImg.src = ''; }, 300); 
+    }
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });

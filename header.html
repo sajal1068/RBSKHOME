@@ -37,11 +37,15 @@
                 </button>
             </div>
             <div class="flex items-center gap-2 md:gap-3">
-                <button onclick="toggleContrast()"
+                <button onclick="toggleContrast()" class="...">
+    <i class="fa-solid fa-circle-half-stroke"></i>
+    <span>Contrast</span>
+</button>
+                <!-- <button onclick="toggleContrast()"
                     class="flex items-center gap-1.5 border border-slate-300 bg-white px-2 md:px-3 py-1 rounded-lg hover:bg-slate-50 transition shadow-sm font-semibold">
                     <i class="fa-solid fa-circle-half-stroke text-emerald-600"></i>
                     <span class="hidden sm:inline" data-i18n="contrast">Contrast</span>
-                </button>
+                </button> -->
 
                 <select id="languageSwitcher"
                     class="bg-white text-slate-700 border border-slate-300 rounded-lg px-1 md:px-2 py-1 outline-none cursor-pointer focus:border-emerald-500 shadow-sm font-medium">
@@ -111,22 +115,22 @@
                     
                     <li class="w-full lg:w-auto lg:h-full flex items-center">
                         <a href="index.html" class="w-full lg:w-auto px-6 py-3 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
-                            Home
+                            <span data-i18n="home">Home</span>
                         </a>
                     </li>
 
                     <li class="relative group w-full lg:w-auto lg:h-full flex flex-col lg:flex-row items-center">
                         <button onclick="toggleMobileSub('aboutSub')" class="w-full lg:w-auto flex items-center justify-between lg:justify-start gap-2 px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 group-hover:text-emerald-400 transition-all">
-                            About Us 
+                            <span data-i18n="about_us">About Us</span> 
                             <i class="fa-solid fa-chevron-down text-[8px] transition-transform lg:group-hover:rotate-180 text-emerald-500"></i>
                         </button>
 
                         <div id="aboutSub" class="hidden lg:block lg:absolute lg:top-full lg:left-0 w-full lg:w-64 lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible lg:translate-y-2 lg:group-hover:translate-y-0 transition-all duration-300 bg-slate-900/50 lg:bg-slate-900 border-l-4 lg:border-l lg:border border-emerald-500/20 lg:rounded-b-2xl p-2">
-                            <a href="about-us.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none">About RBSK</a>
+                            <a href="about-us.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none"><span data-i18n="about_rbsk">About RBSK</span> </a>
 
-                             <a href="program-overview.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none">Program Overview</a>
+                             <a href="program-overview.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none"><span data-i18n="program_overview">Program Overview</span></a>
 
-                              <a href="operational-guidelines.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none">Operational Guidelines</a>
+                              <a href="operational-guidelines.html" class="block p-4 lg:p-3 text-xs font-bold text-slate-400 hover:text-emerald-400  border-b border-white/5 lg:border-none"><span data-i18n="operational_guidelines">Operational Guidelines</span></a>
                             
                             <!-- <div class="relative group/level3">
                                 <button onclick="toggleMobileSub('programSub')" class="w-full flex items-center justify-between p-4 lg:p-3 text-[11px] font-bold text-slate-400 hover:text-emerald-400 uppercase">
@@ -144,17 +148,17 @@
 
                     <li class="w-full lg:w-auto lg:h-full flex items-center">
                         <a href="gallery.html" class="w-full lg:w-auto px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
-                            Gallery
+                            <span data-i18n="gallery">Gallery</span>
                         </a>
                     </li>
                     <li class="w-full lg:w-auto lg:h-full flex items-center">
                         <a href="serch.html" class="w-full lg:w-auto px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
-                            Find PHC
+                            <span data-i18n="find_phc">Find PHC</span> 
                         </a>
                     </li>
                     <li class="w-full lg:w-auto lg:h-full flex items-center">
                         <a href="contact-us.html" class="w-full lg:w-auto px-6 py-4 lg:py-1 text-sm font-semibold tracking-widest text-slate-300 hover:text-emerald-400 hover:bg-white/5 lg:hover:bg-transparent transition-all">
-                            Contact Us
+                            <span data-i18n="contact_us">Contact Us</span> 
                         </a>
                     </li>
                 </ul>

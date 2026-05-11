@@ -1,84 +1,65 @@
 * {
-        font-family: 'Poppins', sans-serif !important;
-    }
- 
- .high-contrast {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-        }
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Default Theme Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #0f172a;
+    --border-color: #e2e8f0;
+    --accent-color: #10b981; /* Emerald-500 */
+}
+
+/* High Contrast Mode Core Logic */
+body.high-contrast, 
+body.high-contrast *:not(script):not(style) {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* Icons aur Buttons */
+body.high-contrast i, 
+body.high-contrast svg {
+    color: #ffff00 !important;
+    fill: #ffff00 !important;
+}
+
+/* Images ko contrast mode mein clear dikhane ke liye */
+body.high-contrast img {
+    filter: grayscale(100%) contrast(200%) brightness(150%) !important;
+    background-color: #fff !important; /* Logos ke piche light background for visibility */
+    padding: 2px;
+}
+
+/* Links accessibility */
+body.high-contrast a {
+    text-decoration: underline !important;
+}
+
+/* Buttons specifically */
+body.high-contrast button {
+    border: 2px solid #ffff00 !important;
+    background: transparent !important;
+}
 
 
-        .high-contrast section,
-        .high-contrast div,
-        .high-contrast header,
-        .high-contrast footer,
-        .high-contrast nav {
-            background-color: #000000 !important;
-            background-image: none !important;
-            border-color: #ffff00 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target text elements */
-        .high-contrast h1,
-        .high-contrast h2,
-        .high-contrast h3,
-        .high-contrast h4,
-        .high-contrast h5,
-        .high-contrast h6,
-        .high-contrast p,
-        .high-contrast span,
-        .high-contrast a,
-        .high-contrast li {
-            color: #ffff00 !important;
-        }
-
-        /* Target Buttons and Interactive Elements */
-        .high-contrast button {
-            background-color: #000000 !important;
-            color: #ffff00 !important;
-            border: 2px solid #ffff00 !important;
-        }
-
-        .high-contrast {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-        }
-
-        /* Target the Accessibility Bar specifically */
-        .high-contrast div[class*="bg-[#f8fafc]"] {
-            background-color: #111111 !important;
-            border-color: #ffff00 !important;
-        }
-
-        /* Fix for all buttons in high contrast */
-        .high-contrast button {
-            background-color: #000 !important;
-            color: #ffff00 !important;
-            border: 1px solid #ffff00 !important;
-        }
-
-       /* Normal state for buttons */
 .font-btn {
-    transition: all 0.3s ease;
-    color: #475569; /* slate-600 */
+  transition: all 0.3s ease;
+  color: #475569;
 }
-
-/* Active state - isse green color fix hoga */
 .font-btn.active {
-    background-color: #059669 !important; /* emerald-600 */
-    color: white !important;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  background-color: #059669 !important;
+  color: white !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
+.modal-hidden {
+  display: none !important;
+}
 
-
-    .modal-hidden {
-        display: none !important;
-    }   
-   
-    .modal {
-        transition: all 0.3s ease-in-out;
-    }     
-    
-   
+.modal {
+  transition: all 0.3s ease-in-out;
+}

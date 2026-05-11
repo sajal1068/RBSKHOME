@@ -15,9 +15,26 @@ const resources = {
             "about_h3": "Comprehensive Care from Birth to 18 Years.",
             "about_p": "Rashtriya Bal Swasthya Karyakram (RBSK) is a program for early identification of health conditions.",
             "copyright_text": "© 2026 RBSK Portal. All Rights Reserved.",
-            "ownership_text": "This site is owned by the National Health Mission (NHM), Ministry of Health and Family Welfare, Government of India.",            
+            "ownership_text": "This site is owned by the National Health Mission (NHM), Ministry of Health and Family Welfare, Government of India.", 
+            "copyright_policy":"copyright policy",  
+            "hyperlinking_policy":"Hyperlinking Policy" ,  
+            "last_updated":'Last Updated',      
             "footer_about_title": "About RBSK",
-            "footer_about_desc": "A flagship program under NHM for comprehensive care of children in the community."
+            "footer_about_desc": "A flagship program under NHM for comprehensive care of children in the community.",
+            "home": "Home",
+            "about_us": "About Us",
+            "gallery": "Gallery",
+            "find_phc": "Find PHC",
+            "contact_us": "Contact Us",
+            "search_phc": "Find Nearest PHC",
+            "select_state": "Select State",            
+            "about_rbsk": "About RBSK",
+            "program_overview": "Program Overview",
+            "operational_guidelines": "Operational Guidelines",
+            "hero_title": "Empowering the Future:",
+            "rbsk_name": "Rashtriya Bal Swasthya Karyakram",
+            "hero_description":"The Ministry of Health & Family Welfare, Government of India, under the National Health Mission, launched RBSK—an innovative initiative which envisages Child Health Screening and Early Intervention Services.",
+            "rbsk_mission_statement": "RBSK is a unique program aimed at improving the overall quality of life of children, enabling them to achieve their full potential by providing comprehensive care in the community. It involves screening of children from birth to 18 years for 4 Ds—Defects at birth, Diseases, Deficiencies, and Developmental delays—covering 32 common health conditions for early detection, free treatment, and necessary interventions, including surgeries at tertiary levels.",
         }
     },
     hi: {
@@ -36,7 +53,27 @@ const resources = {
             "ownership_text": "यह साइट राष्ट्रीय स्वास्थ्य मिशन (NHM), स्वास्थ्य और परिवार कल्याण मंत्रालय, भारत सरकार के स्वामित्व में है।",
             "footer_about_title": "आरबीएसके के बारे में",
             "footer_about_desc":"कम्युनिटी में बच्चों की पूरी देखभाल के लिए NHM के तहत एक फ्लैगशिप प्रोग्राम।",
-
+            "home": "होम",
+            "copyright_policy":"कॉपीराइट नीति",
+            "hyperlinking_policy":"हाइपरलिंकिंग नीति" , 
+            "last_updated":'अंतिम अपडेट',
+            "about_us": "हमारे बारे में",
+            "gallery": "Gallery",
+            "find_phc": "पीएचसी खोजें",
+            "contact_us": "संपर्क करें",
+            "search_phc": "नजदीकी पीएचसी खोजें",
+            "select_state": "राज्य चुनें",
+            "about_rbsk": "आरबीएसके के बारे में",
+            "program_overview": "कार्यक्रम विवरण",
+            "operational_guidelines": "परिचालन दिशानिर्देश",
+            "about_rbsk": "आरबीएसके के बारे में",
+            "program_overview": "कार्यक्रम विवरण",
+            "operational_guidelines": "परिचालन दिशानिर्देश",
+            "gallery": "गैलरी",
+            "hero_title": "भविष्य को सशक्त बनाना",
+            "rbsk_name": "राष्ट्रीय बाल स्वास्थ्य कार्यक्रम",
+            "hero_description": "स्वास्थ्य एवं परिवार कल्याण मंत्रालय, भारत सरकार ने राष्ट्रीय स्वास्थ्य मिशन के तहत RBSK की शुरुआत की—एक अभिनव पहल जो बाल स्वास्थ्य जांच और प्रारंभिक हस्तक्षेप सेवाओं की परिकल्पना करती है।",
+            "rbsk_mission_statement": "RBSK बच्चों के जीवन की समग्र गुणवत्ता में सुधार लाने के उद्देश्य से एक अनूठा कार्यक्रम है, जो उन्हें समुदाय में व्यापक देखभाल प्रदान करके अपनी पूरी क्षमता हासिल करने में सक्षम बनाता है। इसमें जन्म से 18 वर्ष तक के बच्चों की 4Ds—जन्म दोष, बीमारियाँ, कमियां और विकासात्मक देरी के लिए जांच शामिल है—जिसमें शीघ्र पहचान, मुफ्त उपचार और तृतीयक स्तर पर सर्जरी सहित आवश्यक हस्तक्षेपों के लिए 32 सामान्य स्वास्थ्य स्थितियों को कवर किया गया है।"
         }
     }
 };
@@ -90,34 +127,79 @@ document.addEventListener('change', function(e) {
         });
     }
 });
-window.toggleContrast = function() {
-    document.body.classList.toggle('high-contrast');
+
+
+// website contrast
+
+  // Function to handle High Contrast
+const initContrastMode = () => {
+    // 1. Page load par check karein
+    if (localStorage.getItem('contrastMode') === 'high') {
+        document.body.classList.add('high-contrast');
+    }
+
+    // 2. Global Click Listener (Event Delegation)
+    document.addEventListener('click', (e) => {
+        // Toggle Contrast Button logic
+        // Check if clicked element or its parent has the toggle function
+        if (e.target.closest('[onclick="toggleContrast()"]') || e.target.closest('.contrast-btn')) {
+            // Prevent default if it's a link
+            e.preventDefault();
+            
+            const isEnabled = document.body.classList.toggle('high-contrast');
+            localStorage.setItem('contrastMode', isEnabled ? 'high' : 'normal');
+            
+            console.log("Contrast Toggled:", isEnabled);
+        }
+
+        // --- Mobile Menu Toggle Support (Fixed for injected headers) ---
+        const menuBtn = e.target.closest('#unifiedMenuBtn');
+        if (menuBtn) {
+            const container = document.getElementById('mainNavContainer');
+            const icon = document.getElementById('unifiedIcon');
+            if (container) {
+                const isHidden = container.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('fa-bars-staggered', isHidden);
+                    icon.classList.toggle('fa-xmark', !isHidden);
+                }
+            }
+        }
+    });
 };
 
-// Function to load components
-function loadComponent(id, file) {
-    fetch(file)
-        .then(response => {
-            if (response.ok) return response.text();
-            throw new Error('File not found');
-        })
-        .then(data => {
-            document.getElementById(id).innerHTML = data;
-        })
-        .catch(error => console.error('Error loading component:', error));
-}
+// Start the listener
+initContrastMode();
 
-// Dono components ko call karein
-window.onload = function() {
-    loadComponent('header-placeholder', 'header.html');
-    loadComponent('footer-placeholder', 'footer.html'); 
-    loadComponent('navbar-placeholder', 'navbar.html');
-};
+// Header load hone ke liye agar aap fetch use kar rahe hain toh uska logic yahan ho sakta hai
+// Example:
+// fetch('header.html').then(res => res.text()).then(data => {
+//    document.getElementById('header-placeholder').innerHTML = data;
+// });
+
+    // Function to load components
+    function loadComponent(id, file) {
+        fetch(file)
+            .then(response => {
+                if (response.ok) return response.text();
+                throw new Error('File not found');
+            })
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+            })
+            .catch(error => console.error('Error loading component:', error));
+    }
+
+    // Dono components ko call karein
+    window.onload = function() {
+        loadComponent('header-placeholder', 'header.html');
+        loadComponent('footer-placeholder', 'footer.html'); 
+        loadComponent('navbar-placeholder', 'navbar.html');
+    };
 
 
 
 // Back to Top Logic
-// 1. Function ko window object par define karein taaki HTML 'onclick' ise dhoond sake
 window.scrollToTop = function() {
     window.scrollTo({
         top: 0,

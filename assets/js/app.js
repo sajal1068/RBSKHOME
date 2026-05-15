@@ -39,6 +39,16 @@ const resources = {
             "rbsk_name": "Rashtriya Bal Swasthya Karyakram",
             "hero_description":"The Ministry of Health & Family Welfare, Government of India, under the National Health Mission, launched RBSK—an innovative initiative which envisages Child Health Screening and Early Intervention Services.",
             "rbsk_mission_statement": "RBSK is a unique program aimed at improving the overall quality of life of children, enabling them to achieve their full potential by providing comprehensive care in the community. It involves screening of children from birth to 18 years for 4 Ds—Defects at birth, Diseases, Deficiencies, and Developmental delays—covering 32 common health conditions for early detection, free treatment, and necessary interventions, including surgeries at tertiary levels.",
+            "home_children_diagnosed_para":"Children diagnosed with select health conditions are offered early intervention services and follow-up care at the district level, completely free of cost. This reduces the financial burden on families by eliminating out-of-pocket healthcare expenses.",
+            "systematic_partnerships":"Systematic Partnerships",            
+            "partnership_start": "To streamline this process, RBSK partners with the",
+            "mwcd": "Ministry of Women and Child Development",
+            "partnership_middle": "for screening children aged 0–6 years at Anganwadi centres, and the",
+            "mhrd": "Ministry of Human Resource Development",
+            "partnership_end": "for school-going children.",
+            "newborns":"Newborns are also screened for birth defects by doctors in health facilities and ASHA workers during home visits.",
+            "quick_links":"Quick Links",
+            "contact_us":"Contact Us",
         }
     },
     hi: {
@@ -77,7 +87,17 @@ const resources = {
             "hero_title": "भविष्य को सशक्त बनाना",
             "rbsk_name": "राष्ट्रीय बाल स्वास्थ्य कार्यक्रम",
             "hero_description": "स्वास्थ्य एवं परिवार कल्याण मंत्रालय, भारत सरकार ने राष्ट्रीय स्वास्थ्य मिशन के तहत RBSK की शुरुआत की—एक अभिनव पहल जो बाल स्वास्थ्य जांच और प्रारंभिक हस्तक्षेप सेवाओं की परिकल्पना करती है।",
-            "rbsk_mission_statement": "RBSK बच्चों के जीवन की समग्र गुणवत्ता में सुधार लाने के उद्देश्य से एक अनूठा कार्यक्रम है, जो उन्हें समुदाय में व्यापक देखभाल प्रदान करके अपनी पूरी क्षमता हासिल करने में सक्षम बनाता है। इसमें जन्म से 18 वर्ष तक के बच्चों की 4Ds—जन्म दोष, बीमारियाँ, कमियां और विकासात्मक देरी के लिए जांच शामिल है—जिसमें शीघ्र पहचान, मुफ्त उपचार और तृतीयक स्तर पर सर्जरी सहित आवश्यक हस्तक्षेपों के लिए 32 सामान्य स्वास्थ्य स्थितियों को कवर किया गया है।"
+            "rbsk_mission_statement": "RBSK बच्चों के जीवन की समग्र गुणवत्ता में सुधार लाने के उद्देश्य से एक अनूठा कार्यक्रम है, जो उन्हें समुदाय में व्यापक देखभाल प्रदान करके अपनी पूरी क्षमता हासिल करने में सक्षम बनाता है। इसमें जन्म से 18 वर्ष तक के बच्चों की 4Ds—जन्म दोष, बीमारियाँ, कमियां और विकासात्मक देरी के लिए जांच शामिल है—जिसमें शीघ्र पहचान, मुफ्त उपचार और तृतीयक स्तर पर सर्जरी सहित आवश्यक हस्तक्षेपों के लिए 32 सामान्य स्वास्थ्य स्थितियों को कवर किया गया है।",
+            "home_children_diagnosed_para":"कुछ खास स्वास्थ्य समस्याओं से पीड़ित बच्चों को ज़िला स्तर पर, पूरी तरह से मुफ़्त में, शुरुआती इलाज और फ़ॉलो-अप देखभाल की सुविधा दी जाती है। इससे परिवारों पर पड़ने वाला आर्थिक बोझ कम हो जाता है, क्योंकि उन्हें अपनी जेब से स्वास्थ्य सेवाओं पर कोई खर्च नहीं करना पड़ता।",
+            "systematic_partnerships":"व्यवस्थित साझेदारियाँ",
+            "partnership_start": "इस प्रक्रिया को सुव्यवस्थित करने के लिए, RBSK",
+            "mwcd": "महिला एवं बाल विकास मंत्रालय",
+            "partnership_middle": "के साथ आंगनवाड़ी केंद्रों में 0-6 वर्ष की आयु के बच्चों की जांच के लिए, और",
+            "mhrd": "मानव संसाधन विकास मंत्रालय",
+            "partnership_end": "के साथ स्कूली बच्चों की जांच के लिए साझेदारी करता है।",
+            "newborns":"स्वास्थ्य केंद्रों में डॉक्टरों द्वारा और घर-घर जाकर आशा कार्यकर्ताओं द्वारा नवजात शिशुओं की जन्मजात विकृतियों के लिए भी जाँच की जाती है।",
+            "quick_links":"त्वरित सम्पक",
+             "contact_us":"हमसे संपर्क करें",
         }
     }
 };
